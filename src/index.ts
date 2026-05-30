@@ -8,6 +8,7 @@ import pipelineRoutes from './routes/pipeline';
 import rawDataRoutes from './routes/rawData';
 import aiRoutes, { generateForecastRoute } from './routes/ai';
 import notificationsRoutes from './routes/notifications';
+import uploadRoutes from './routes/upload';
 
 const app = new Hono();
 
@@ -41,6 +42,8 @@ app.route('/api/v1/ai', aiRoutes);
 app.route('/api/v1/dashboard/demand-forecast/generate', generateForecastRoute);
 // Notifications
 app.route('/api/v1/notifications', notificationsRoutes);
+// CSV Upload
+app.route('/api/v1/data/upload', uploadRoutes);
 
 // Error handling
 app.onError((err, c) => {

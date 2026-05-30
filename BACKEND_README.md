@@ -1115,7 +1115,247 @@ app.use('*', cors({
 
 ---
 
-## 14. Deployment Checklist (Vercel)
+## 14. CSV Upload
+
+SMEs can upload business data as CSV files. The backend parses the file, maps columns to the correct table, and inserts rows into the database.
+
+### New endpoint
+
+#### `POST /api/v1/data/upload` 🔒
+
+Accepts a `multipart/form-data` request with a CSV file and a `type` field indicating what kind of data is being uploaded.
+
+**Request (multipart/form-data):**
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `file` | File (.csv) | ✅ | The CSV file to upload |
+| `type` | string | ✅ | One of `sales`, `inventory`, `demand`, `expenses` |
+
+**Example curl:**
+```bash
+curl -X POST https://<app>.vercel.app/api/v1/data/upload \
+  -H "Authorization: Bearer <token>" \
+  -F "file=@sales_jan.csv" \
+  -F "type=sales"
+```
+
+**Response `200`:**
+```json
+{
+  "message": "Upload successful",
+  "type": "sales",
+  "rowsInserted": 240,
+  "rowsSkipped": 3,
+  "skippedReasons": ["Row 14: missing date", "Row 87: invalid value"]
+}
+```
+
+**Error `400`:**
+```json
+{
+  "error": "Invalid CSV format",
+  "code": "CSV_PARSE_ERROR",
+  "details": { "line": 5, "reason": "Expected 6 columns, got 4" }
+}
+```
+
+---
+
+### CSV format per type
+
+#### `type=sales` → inserts into `raw_data`
+
+```csv
+date,source,category,value
+2025-01-01,Shopify,Orders,1240.50
+2025-01-02,Shopify,Orders,980.00
+```
+
+| Column | Maps to | Required |
+|---|---|---|
+| `date` | `record_date` | ✅ |
+| `source` | `source` | ✅ |
+| `category` | `category` | ✅ |
+| `value` | `value` | ✅ |
+
+---
+
+#### `type=demand` → inserts into `demand_timeseries`
+
+```csv
+date,actual_demand,forecast_demand
+2025-01-01,4200,4050
+2025-01-02,4350,
+```
+
+| Column | Maps to | Notes |
+|---|---|---|
+| `date` | `record_date` | ✅ Required |
+| `actual_demand` | `actual_demand` | ✅ Required |
+| `forecast_demand` | `forecast_demand` | Optional, leave blank if unknown |
+
+---
+
+#### `type=inventory` → inserts into `raw_data` with `category = 'Inventory'`
+
+```csv
+date,source,product,quantity,value
+2025-01-01,Warehouse A,SKU-001,500,12500.00
+```
+
+| Column | Maps to | Notes |
+|---|---|---|
+| `date` | `record_date` | ✅ |
+| `source` | `source` | ✅ |
+| `product` | `metadata.product` (JSONB) | ✅ |
+| `quantity` | `metadata.quantity` (JSONB) | ✅ |
+| `value` | `value` | ✅ |
+
+---
+
+#### `type=expenses` → inserts into `raw_data` with `category = 'Expenses'`
+
+```csv
+date,source,description,amount
+2025-01-05,Operations,Office Rent,2500.00
+```
+
+| Column | Maps to | Notes |
+|---|---|---|
+| `date` | `record_date` | ✅ |
+| `source` | `source` | ✅ |
+| `description` | `metadata.description` (JSONB) | ✅ |
+| `amount` | `value` | ✅ |
+
+---
+
+### Parsing logic (`src/services/csvParser.ts`)
+
+Use the `papaparse` npm package (works in Bun).
+
+```typescript
+import Papa from 'papaparse'
+
+export function parseCSV(fileText: string) {
+  const result = Papa.parse(fileText, {
+    header: true,
+    skipEmptyLines: true,
+    transformHeader: (h) => h.trim().toLowerCase().replace(/\s+/g, '_'),
+  })
+  return { data: result.data, errors: result.errors }
+}
+```
+
+**Validation rules (apply to every row before insert):**
+- `date` must be a valid `YYYY-MM-DD` string
+- `value` / `amount` / `actual_demand` must be a finite number
+- Skip and log any row that fails validation instead of aborting the whole upload
+- Return the count of skipped rows and reasons in the response
+
+---
+
+### File size limit
+
+Reject files over **5MB** with `413 Payload Too Large`:
+
+```typescript
+if (file.size > 5 * 1024 * 1024) {
+  return c.json({ error: 'File too large. Maximum size is 5MB.', code: 'FILE_TOO_LARGE' }, 413)
+}
+```
+
+---
+
+### Test cases (`tests/upload.test.ts`)
+
+```typescript
+import { describe, it, expect, beforeAll } from 'bun:test'
+import app from '../src/index'
+import { registerAndLogin, authHeader } from './helpers'
+
+let token: string
+beforeAll(async () => { token = await registerAndLogin('upload@test.com', 'Pass1234!') })
+
+const makeFormData = (csvContent: string, type: string) => {
+  const form = new FormData()
+  form.append('file', new Blob([csvContent], { type: 'text/csv' }), 'test.csv')
+  form.append('type', type)
+  return form
+}
+
+describe('POST /data/upload', () => {
+  it('uploads a valid sales CSV and returns rowsInserted', async () => {
+    const csv = `date,source,category,value\n2025-01-01,Shopify,Orders,1200\n2025-01-02,Shopify,Orders,950`
+    const res = await app.request('/api/v1/data/upload', {
+      method: 'POST',
+      headers: authHeader(token),
+      body: makeFormData(csv, 'sales'),
+    })
+    expect(res.status).toBe(200)
+    const body = await res.json()
+    expect(body.rowsInserted).toBe(2)
+  })
+
+  it('uploads a valid demand CSV', async () => {
+    const csv = `date,actual_demand,forecast_demand\n2025-01-01,4200,4050\n2025-01-02,4350,4300`
+    const res = await app.request('/api/v1/data/upload', {
+      method: 'POST',
+      headers: authHeader(token),
+      body: makeFormData(csv, 'demand'),
+    })
+    expect(res.status).toBe(200)
+    const body = await res.json()
+    expect(body.rowsInserted).toBe(2)
+  })
+
+  it('skips invalid rows and reports them', async () => {
+    const csv = `date,source,category,value\n2025-01-01,Shopify,Orders,1200\nnot-a-date,Shopify,Orders,950`
+    const res = await app.request('/api/v1/data/upload', {
+      method: 'POST',
+      headers: authHeader(token),
+      body: makeFormData(csv, 'sales'),
+    })
+    expect(res.status).toBe(200)
+    const body = await res.json()
+    expect(body.rowsInserted).toBe(1)
+    expect(body.rowsSkipped).toBe(1)
+  })
+
+  it('returns 400 for unknown type', async () => {
+    const csv = `date,value\n2025-01-01,100`
+    const res = await app.request('/api/v1/data/upload', {
+      method: 'POST',
+      headers: authHeader(token),
+      body: makeFormData(csv, 'unknown_type'),
+    })
+    expect(res.status).toBe(400)
+  })
+
+  it('returns 401 without auth', async () => {
+    const csv = `date,source,category,value\n2025-01-01,Shopify,Orders,1200`
+    const res = await app.request('/api/v1/data/upload', {
+      method: 'POST',
+      body: makeFormData(csv, 'sales'),
+    })
+    expect(res.status).toBe(401)
+  })
+
+  it('returns 413 for file over 5MB', async () => {
+    const bigCSV = 'date,source,category,value\n' + '2025-01-01,Shopify,Orders,100\n'.repeat(300000)
+    const res = await app.request('/api/v1/data/upload', {
+      method: 'POST',
+      headers: authHeader(token),
+      body: makeFormData(bigCSV, 'sales'),
+    })
+    expect(res.status).toBe(413)
+  })
+})
+```
+
+---
+
+## 15. Deployment Checklist (Vercel)
 
 - [ ] Push repo to GitHub
 - [ ] Import project in Vercel dashboard
