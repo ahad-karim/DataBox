@@ -1,0 +1,109 @@
+import {
+  pgTable,
+  uuid,
+  text,
+  numeric,
+  integer,
+  timestamp,
+  date,
+  jsonb,
+  geometry,
+  index,
+} from 'drizzle-orm/pg-core';
+
+export const users = pgTable('users', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  name: text('name').notNull(),
+  email: text('email').unique().notNull(),
+  password: text('password').notNull(),
+  avatarUrl: text('avatar_url'),
+  plan: text('plan').default('free'),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+});
+
+export const kpiSnapshots = pgTable('kpi_snapshots', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id),
+  snapshotDate: date('snapshot_date').notNull(),
+  totalRevenue: numeric('total_revenue', { precision: 12, scale: 2 }),
+  activeProducts: integer('active_products'),
+  forecastAccuracy: numeric('forecast_accuracy', { precision: 5, scale: 2 }),
+  activeUsers: integer('active_users'),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+});
+
+export const demandTimeseries = pgTable('demand_timeseries', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id),
+  recordDate: date('record_date').notNull(),
+  actualDemand: numeric('actual_demand', { precision: 12, scale: 2 }),
+  forecastDemand: numeric('forecast_demand', { precision: 12, scale: 2 }),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+});
+
+export const channelPerformance = pgTable('channel_performance', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id),
+  period: date('period').notNull(),
+  channel: text('channel').notNull(),
+  revenue: numeric('revenue', { precision: 12, scale: 2 }),
+  percentage: numeric('percentage', { precision: 5, scale: 2 }),
+});
+
+export const performanceMetrics = pgTable('performance_metrics', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id),
+  period: text('period').notNull(),
+  dimension: text('dimension').notNull(),
+  value: numeric('value', { precision: 5, scale: 2 }),
+});
+
+export const regionalRevenue = pgTable('regional_revenue', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id),
+  period: date('period').notNull(),
+  region: text('region').notNull(),
+  revenue: numeric('revenue', { precision: 12, scale: 2 }),
+  percentage: numeric('percentage', { precision: 5, scale: 2 }),
+});
+
+export const marketForecasts = pgTable(
+  'market_forecasts',
+  {
+    id: uuid('id').defaultRandom().primaryKey(),
+    country: text('country').notNull(),
+    region: text('region').notNull(),
+    geom: geometry('geom', { type: 'point', mode: 'tuple', srid: 4326 }),
+    forecastedDemand: numeric('forecasted_demand', { precision: 12, scale: 2 }),
+    currentStock: numeric('current_stock', { precision: 12, scale: 2 }),
+    confidence: numeric('confidence', { precision: 5, scale: 2 }),
+    growthRate: numeric('growth_rate', { precision: 6, scale: 2 }),
+    period: date('period').notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+  },
+  (table) => ({
+    geomIdx: index('market_forecasts_geom_idx').using('gist', table.geom),
+  })
+);
+
+export const dataPipelineEvents = pgTable('data_pipeline_events', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id),
+  eventType: text('event_type').notNull(),
+  source: text('source'),
+  status: text('status').notNull(),
+  rowsAffected: integer('rows_affected'),
+  message: text('message'),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+});
+
+export const rawData = pgTable('raw_data', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id),
+  source: text('source'),
+  category: text('category'),
+  value: numeric('value', { precision: 12, scale: 2 }),
+  metadata: jsonb('metadata'),
+  recordDate: date('record_date'),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+});
