@@ -82,32 +82,15 @@ dashboardRoutes.get('/channel-performance', zValidator('query', monthPeriodSchem
 
 dashboardRoutes.get('/regional-revenue', zValidator('query', monthPeriodSchema), async (c) => {
   const userId = c.get('userId');
-  const userSales = await db.select().from(rawData).where(eq(rawData.userId, userId));
-
-  if (userSales.length === 0) {
-    const regions = await db.select().from(regionalRevenue).where(eq(regionalRevenue.userId, userId));
-    return c.json({
-      regions: regions.map(r => ({
-        region: r.region,
-        revenue: Number(r.revenue),
-        percentage: Number(r.percentage)
-      }))
-    });
-  }
-
-  const locationMap: Record<string, number> = {};
-  userSales.forEach(s => {
-    locationMap[s.location] = (locationMap[s.location] || 0) + Number(s.revenueBdt);
+  const regions = await db.select().from(regionalRevenue).where(eq(regionalRevenue.userId, userId));
+  
+  return c.json({
+    regions: regions.map(r => ({
+      region: r.region,
+      revenue: Number(r.revenue),
+      percentage: Number(r.percentage)
+    })).sort((a, b) => b.revenue - a.revenue)
   });
-
-  const totalRev = Object.values(locationMap).reduce((a, b) => a + b, 0) || 1;
-  const regions = Object.entries(locationMap).map(([region, rev]) => ({
-    region,
-    revenue: rev,
-    percentage: Number(((rev / totalRev) * 100).toFixed(1))
-  })).sort((a, b) => b.revenue - a.revenue);
-
-  return c.json({ regions });
 });
 
 dashboardRoutes.get('/performance-metrics', async (c) => {

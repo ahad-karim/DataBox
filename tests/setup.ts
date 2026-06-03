@@ -150,6 +150,39 @@ class InsertBuilder {
     try { resolve(this.execute()); }
     catch (e) { reject(e); }
   }
+class DeleteBuilder {
+  private tableRows: Record<string, unknown>[] = [];
+
+  constructor(table: unknown) {
+    try {
+      const name = getTableName(table as any);
+      this.tableRows = getTable(name);
+    } catch {
+      this.tableRows = [];
+    }
+  }
+
+  where(condition: unknown): this {
+    if (typeof condition === 'function') {
+      const pred = condition as any;
+      const toKeep = this.tableRows.filter((r) => !pred(r));
+      this.tableRows.length = 0;
+      this.tableRows.push(...toKeep);
+    } else {
+      const pred = sqlToPredicate(condition);
+      if (pred) {
+        const toKeep = this.tableRows.filter((r) => !pred(r));
+        this.tableRows.length = 0;
+        this.tableRows.push(...toKeep);
+      }
+    }
+    return this;
+  }
+
+  then(resolve: (v: unknown) => unknown, reject: (e: unknown) => unknown) {
+    try { resolve({ rowCount: 1 }); }
+    catch (e) { reject(e); }
+  }
 }
 
 // ─── mock db object ───────────────────────────────────────────────────────────
@@ -157,6 +190,7 @@ class InsertBuilder {
 const mockDb = {
   select: () => new SelectBuilder(),
   insert: (table: unknown) => new InsertBuilder(table),
+  delete: (table: unknown) => new DeleteBuilder(table),
   /** Used by markets routes for raw PostGIS SQL – return empty rows. */
   execute: async (_sql: unknown) => ({ rows: [] as unknown[] }),
 };
@@ -214,4 +248,14 @@ mockModuleUniversal('../src/services/groq', () => ({
   generateDemandForecast: async () => [
     { date: '2025-02-01', forecastDemand: 4600, confidence: 0.91 },
   ],
+  mapLocationsToDivisions: async (locations: string[]) => {
+    const mapping: Record<string, string> = {};
+    for (const loc of locations) {
+      mapping[loc] = loc === 'Chattogram' || loc === 'Chittagong' ? 'Chattogram' : 'Dhaka';
+    }
+    return mapping;
+  },
+  getDivisionFallback: (location: string) => {
+    return location === 'Chattogram' || location === 'Chittagong' ? 'Chattogram' : 'Dhaka';
+  },
 }));

@@ -1,0 +1,1001 @@
+Date      , Product_ID, Product_Name           , Category   , Location          , Sales_Channel, Units_Sold, Revenue_BDT, Unit_Price, Cost_Price, Current_Stock, Customer_Segment
+2024-01-02, SKU-F03   , Bookshelf              , Furniture  , Narayanganj Sadar , Retail       ,          2,        8400,       4200,       2500,           780, B2C
+2024-01-04, SKU-C02   , Herbal Shampoo         , Cosmetics  , Gazipur Sadar     , Wholesale    ,        162,       69255,        450,        250,           809, B2B
+2024-01-04, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Wholesale    ,        341,       95480,        280,        200,           500, B2B
+2024-01-04, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Retail       ,         69,       31050,        450,        320,           734, B2B
+2024-01-05, SKU-A03   , Denim Jeans            , Apparel    , Mymensingh Sadar  , Retail       ,         24,       43200,       1800,       1000,           203, B2C
+2024-01-05, SKU-A01   , Cotton Panjabi         , Apparel    , Nawabganj         , Online       ,          4,        6000,       1500,        900,           196, B2C
+2024-01-06, SKU-C02   , Herbal Shampoo         , Cosmetics  , Narayanganj Sadar , Wholesale    ,        237,      106650,        450,        250,           824, B2B
+2024-01-06, SKU-E03   , Mechanical Keyboard    , Electronics, Mohammadpur       , Online       ,         14,       49000,       3500,       2200,            18, B2C
+2024-01-07, SKU-A03   , Denim Jeans            , Apparel    , Keraniganj        , Wholesale    ,         86,      147060,       1800,       1000,           459, B2B
+2024-01-07, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Narayanganj Sadar , Wholesale    ,        275,     1436875,       5500,       3500,           623, B2B
+2024-01-07, SKU-G03   , Lentils (1kg)          , Groceries  , Nawabganj         , Retail       ,         23,        3220,        140,        100,           215, B2C
+2024-01-07, SKU-E01   , Smart Lamp             , Electronics, Gazipur Sadar     , Online       ,         15,       18000,       1200,        800,           411, B2C
+2024-01-08, SKU-A01   , Cotton Panjabi         , Apparel    , Narayanganj Sadar , Online       ,          6,        9000,       1500,        900,           544, B2C
+2024-01-10, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mymensingh Sadar  , Retail       ,         29,        7714,        280,        200,           305, B2C
+2024-01-10, SKU-A03   , Denim Jeans            , Apparel    , Savar             , Wholesale    ,        303,      545400,       1800,       1000,           654, B2B
+2024-01-11, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mymensingh Sadar  , Retail       ,         14,      168000,      12000,       8000,           385, B2C
+2024-01-11, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Online       ,          5,       60000,      12000,       8000,           823, B2C
+2024-01-12, SKU-A03   , Denim Jeans            , Apparel    , Gazipur Sadar     , Online       ,         14,       25200,       1800,       1000,           858, B2C
+2024-01-12, SKU-E01   , Smart Lamp             , Electronics, Narayanganj Sadar , Online       ,         28,       33600,       1200,        800,           751, B2C
+2024-01-12, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Retail       ,         43,       19350,        450,        320,           241, B2C
+2024-01-15, SKU-G02   , Mustard Oil (1L)       , Groceries  , Keraniganj        , Retail       ,         20,        5600,        280,        200,           886, B2C
+2024-01-16, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Online       ,          4,        7200,       1800,       1100,           756, B2C
+2024-01-17, SKU-A04   , Basic T-Shirt          , Apparel    , Savar             , Wholesale    ,        350,      140000,        400,        200,           829, B2B
+2024-01-17, SKU-E01   , Smart Lamp             , Electronics, Narayanganj Sadar , Online       ,          9,       10800,       1200,        800,            45, B2C
+2024-01-18, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Savar             , Retail       ,         27,       16200,        600,        350,           323, B2C
+2024-01-21, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Wholesale    ,        440,      123200,        280,        200,           941, B2B
+2024-01-22, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        400,      180000,        450,        320,           659, B2B
+2024-01-22, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Online       ,         27,       48600,       1800,       1100,           144, B2C
+2024-01-22, SKU-C02   , Herbal Shampoo         , Cosmetics  , Narayanganj Sadar , Online       ,         22,        9900,        450,        250,           528, B2C
+2024-01-23, SKU-G03   , Lentils (1kg)          , Groceries  , Mymensingh Sadar  , Retail       ,         57,        7980,        140,        100,           914, B2C
+2024-01-23, SKU-E01   , Smart Lamp             , Electronics, Sylhet Sadar      , Retail       ,          2,        2400,       1200,        800,           983, B2B
+2024-01-23, SKU-G02   , Mustard Oil (1L)       , Groceries  , Gazipur Sadar     , Retail       ,         21,        5880,        280,        200,           553, B2C
+2024-01-24, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        251,      112950,        450,        320,           692, B2B
+2024-01-25, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Wholesale    ,        391,      175950,        450,        320,           867, B2B
+2024-01-26, SKU-E03   , Mechanical Keyboard    , Electronics, Narayanganj Sadar , Retail       ,         29,      101500,       3500,       2200,           317, B2C
+2024-01-26, SKU-F03   , Bookshelf              , Furniture  , Narayanganj Sadar , Wholesale    ,        289,     1213800,       4200,       2500,           703, B2B
+2024-01-27, SKU-F02   , Office Desk            , Furniture  , Narayanganj Sadar , Retail       ,          9,       76500,       8500,       5000,           634, B2C
+2024-01-28, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Savar             , Retail       ,         28,       16800,        600,        350,           834, B2C
+2024-01-30, SKU-A03   , Denim Jeans            , Apparel    , Gazipur Sadar     , Online       ,         19,       34200,       1800,       1000,           820, B2C
+2024-01-30, SKU-A03   , Denim Jeans            , Apparel    , Sylhet Sadar      , Wholesale    ,        493,      887400,       1800,       1000,          1050, B2B
+2024-01-30, SKU-A01   , Cotton Panjabi         , Apparel    , Mymensingh Sadar  , Wholesale    ,        287,      430500,       1500,        900,           672, B2B
+2024-02-01, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Wholesale    ,        149,       20860,        140,        100,           354, B2B
+2024-02-01, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        131,       58950,        450,        320,           269, B2B
+2024-02-04, SKU-E01   , Smart Lamp             , Electronics, Savar             , Wholesale    ,        262,      282960,       1200,        800,           428, B2B
+2024-02-04, SKU-C01   , Skincare Gift Set      , Cosmetics  , Savar             , Wholesale    ,        328,      721600,       2200,       1200,           768, B2B
+2024-02-04, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Retail       ,         71,       31950,        450,        320,           304, B2C
+2024-02-07, SKU-E03   , Mechanical Keyboard    , Electronics, Mohammadpur       , Online       ,         27,       94500,       3500,       2200,           241, B2C
+2024-02-07, SKU-F02   , Office Desk            , Furniture  , Narayanganj Sadar , Wholesale    ,        231,     1767150,       8500,       5000,           923, B2B
+2024-02-08, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Retail       ,         12,       21600,       1800,       1100,           785, B2C
+2024-02-08, SKU-A02   , Premium Jamdani Saree  , Apparel    , Savar             , Online       ,         15,      180000,      12000,       8000,           259, B2C
+2024-02-08, SKU-E02   , Wireless Earbuds       , Electronics, Keraniganj        , Online       ,         13,       30875,       2500,       1500,           420, B2C
+2024-02-08, SKU-G02   , Mustard Oil (1L)       , Groceries  , Savar             , Retail       ,         52,       14560,        280,        200,           132, B2C
+2024-02-08, SKU-S02   , Gel Pen Set            , Stationery , Mohammadpur       , Retail       ,         17,        4038,        250,        120,           860, B2C
+2024-02-09, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Retail       ,         27,       38475,       1500,        900,           737, B2B
+2024-02-11, SKU-C02   , Herbal Shampoo         , Cosmetics  , Narayanganj Sadar , Retail       ,          4,        1800,        450,        250,           539, B2C
+2024-02-11, SKU-F03   , Bookshelf              , Furniture  , Keraniganj        , Retail       ,          6,       25200,       4200,       2500,           303, B2C
+2024-02-12, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Online       ,          2,        2400,       1200,        800,           328, B2B
+2024-02-12, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Wholesale    ,        204,       91800,        450,        250,           381, B2B
+2024-02-13, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Retail       ,         67,        8911,        140,        100,           473, B2C
+2024-02-13, SKU-A02   , Premium Jamdani Saree  , Apparel    , Sylhet Sadar      , Online       ,         19,      228000,      12000,       8000,           911, B2C
+2024-02-13, SKU-A01   , Cotton Panjabi         , Apparel    , Narayanganj Sadar , Wholesale    ,        244,      366000,       1500,        900,           602, B2B
+2024-02-17, SKU-G03   , Lentils (1kg)          , Groceries  , Gazipur Sadar     , Retail       ,         82,       11480,        140,        100,           660, B2C
+2024-02-17, SKU-C01   , Skincare Gift Set      , Cosmetics  , Narayanganj Sadar , Retail       ,         25,       55000,       2200,       1200,           567, B2B
+2024-02-17, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Mohammadpur       , Wholesale    ,        362,     1991000,       5500,       3500,           808, B2B
+2024-02-18, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Retail       ,         30,        4200,        140,        100,           162, B2C
+2024-02-18, SKU-A01   , Cotton Panjabi         , Apparel    , Savar             , Online       ,         24,       34200,       1500,        900,           611, B2C
+2024-02-18, SKU-A02   , Premium Jamdani Saree  , Apparel    , Keraniganj        , Retail       ,          7,       84000,      12000,       8000,            43, B2C
+2024-02-19, SKU-E01   , Smart Lamp             , Electronics, Mymensingh Sadar  , Online       ,         23,       27600,       1200,        800,           304, B2B
+2024-02-19, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Retail       ,         41,       18450,        450,        320,            25, B2C
+2024-02-20, SKU-E04   , Power Bank 10000mAh    , Electronics, Savar             , Retail       ,         25,       45000,       1800,       1100,           475, B2C
+2024-02-20, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Wholesale    ,        268,      482400,       1800,       1100,           767, B2B
+2024-02-22, SKU-F02   , Office Desk            , Furniture  , Mymensingh Sadar  , Online       ,          6,       51000,       8500,       5000,           279, B2C
+2024-02-23, SKU-G02   , Mustard Oil (1L)       , Groceries  , Savar             , Retail       ,         59,       16520,        280,        200,           892, B2B
+2024-02-26, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Keraniganj        , Online       ,         27,       16200,        600,        350,           581, B2C
+2024-02-26, SKU-G03   , Lentils (1kg)          , Groceries  , Gazipur Sadar     , Online       ,         52,        7280,        140,        100,           309, B2C
+2024-02-27, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Gazipur Sadar     , Wholesale    ,        437,     2283325,       5500,       3500,          1181, B2B
+2024-02-28, SKU-A04   , Basic T-Shirt          , Apparel    , Mymensingh Sadar  , Retail       ,          5,        2000,        400,        200,           683, B2C
+2024-03-02, SKU-E01   , Smart Lamp             , Electronics, Sylhet Sadar      , Wholesale    ,        229,      274800,       1200,        800,           676, B2B
+2024-03-03, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Mohammadpur       , Retail       ,          5,       27500,       5500,       3500,           890, B2C
+2024-03-04, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         36,        5040,        140,        100,           876, B2C
+2024-03-05, SKU-A04   , Basic T-Shirt          , Apparel    , Narayanganj Sadar , Online       ,          4,        1600,        400,        200,           155, B2C
+2024-03-06, SKU-G03   , Lentils (1kg)          , Groceries  , Nawabganj         , Wholesale    ,        466,       65240,        140,        100,           634, B2B
+2024-03-07, SKU-A01   , Cotton Panjabi         , Apparel    , Gazipur Sadar     , Wholesale    ,         65,       92625,       1500,        900,           371, B2B
+2024-03-07, SKU-C02   , Herbal Shampoo         , Cosmetics  , Gazipur Sadar     , Online       ,         11,        4950,        450,        250,           130, B2B
+2024-03-08, SKU-A03   , Denim Jeans            , Apparel    , Savar             , Wholesale    ,         61,       98820,       1800,       1000,           515, B2B
+2024-03-08, SKU-A04   , Basic T-Shirt          , Apparel    , Narayanganj Sadar , Online       ,         19,        7600,        400,        200,           450, B2C
+2024-03-09, SKU-A01   , Cotton Panjabi         , Apparel    , Gazipur Sadar     , Wholesale    ,        181,      257925,       1500,        900,           423, B2B
+2024-03-09, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Retail       ,         17,      204000,      12000,       8000,           979, B2C
+2024-03-09, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Online       ,          5,        2000,        400,        200,           735, B2C
+2024-03-10, SKU-E03   , Mechanical Keyboard    , Electronics, Narayanganj Sadar , Online       ,         13,       43225,       3500,       2200,            17, B2C
+2024-03-10, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Wholesale    ,        197,     2364000,      12000,       8000,           452, B2B
+2024-03-11, SKU-A03   , Denim Jeans            , Apparel    , Keraniganj        , Retail       ,         13,       23400,       1800,       1000,           221, B2C
+2024-03-11, SKU-G01   , Organic Rice (5kg)     , Groceries  , Gazipur Sadar     , Retail       ,         25,       11250,        450,        320,           608, B2C
+2024-03-12, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,         57,       15960,        280,        200,           295, B2C
+2024-03-12, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Wholesale    ,        420,     5040000,      12000,       8000,           793, B2B
+2024-03-12, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Online       ,         14,       16800,       1200,        800,           529, B2C
+2024-03-15, SKU-S02   , Gel Pen Set            , Stationery , Savar             , Wholesale    ,        470,      117500,        250,        120,          1054, B2B
+2024-03-17, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Mohammadpur       , Online       ,          5,        3000,        600,        350,           833, B2C
+2024-03-18, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,         82,       22960,        280,        200,           650, B2C
+2024-03-18, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Wholesale    ,        112,     1344000,      12000,       8000,           927, B2B
+2024-03-19, SKU-F03   , Bookshelf              , Furniture  , Mohammadpur       , Online       ,          3,       12600,       4200,       2500,           943, B2C
+2024-03-19, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Mymensingh Sadar  , Retail       ,          8,       44000,       5500,       3500,           257, B2C
+2024-03-20, SKU-A04   , Basic T-Shirt          , Apparel    , Keraniganj        , Retail       ,         30,       12000,        400,        200,            57, B2C
+2024-03-22, SKU-E03   , Mechanical Keyboard    , Electronics, Mymensingh Sadar  , Online       ,         11,       38500,       3500,       2200,           990, B2C
+2024-03-23, SKU-E04   , Power Bank 10000mAh    , Electronics, Gazipur Sadar     , Online       ,         10,       18000,       1800,       1100,           392, B2C
+2024-03-23, SKU-E02   , Wireless Earbuds       , Electronics, Gazipur Sadar     , Wholesale    ,        497,     1118250,       2500,       1500,          1394, B2B
+2024-03-24, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Online       ,         15,       27000,       1800,       1100,           803, B2C
+2024-03-27, SKU-E04   , Power Bank 10000mAh    , Electronics, Gazipur Sadar     , Retail       ,         23,       41400,       1800,       1100,           489, B2C
+2024-03-27, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Wholesale    ,        490,      220500,        450,        250,          1288, B2B
+2024-03-27, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Narayanganj Sadar , Online       ,          8,        4800,        600,        350,           541, B2C
+2024-03-29, SKU-G01   , Organic Rice (5kg)     , Groceries  , Gazipur Sadar     , Retail       ,         36,       14580,        450,        320,           879, B2C
+2024-03-30, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Retail       ,         92,       12880,        140,        100,           603, B2C
+2024-03-31, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Online       ,          1,        2250,       2500,       1500,           932, B2C
+2024-03-31, SKU-A04   , Basic T-Shirt          , Apparel    , Narayanganj Sadar , Wholesale    ,        144,       57600,        400,        200,           905, B2B
+2024-04-01, SKU-A01   , Cotton Panjabi         , Apparel    , Narayanganj Sadar , Retail       ,          4,        6000,       1500,        900,           347, B2C
+2024-04-01, SKU-A04   , Basic T-Shirt          , Apparel    , Gazipur Sadar     , Wholesale    ,        122,       46360,        400,        200,           751, B2B
+2024-04-01, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Retail       ,         19,      216600,      12000,       8000,           260, B2C
+2024-04-03, SKU-C01   , Skincare Gift Set      , Cosmetics  , Keraniganj        , Retail       ,          3,        6600,       2200,       1200,           796, B2C
+2024-04-04, SKU-G03   , Lentils (1kg)          , Groceries  , Mymensingh Sadar  , Wholesale    ,        129,       18060,        140,        100,           343, B2B
+2024-04-04, SKU-E03   , Mechanical Keyboard    , Electronics, Mohammadpur       , Online       ,          5,       16625,       3500,       2200,           847, B2C
+2024-04-05, SKU-E02   , Wireless Earbuds       , Electronics, Mymensingh Sadar  , Wholesale    ,        304,      722000,       2500,       1500,           994, B2B
+2024-04-06, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        221,       99450,        450,        320,           533, B2B
+2024-04-06, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Retail       ,         65,       29250,        450,        320,           713, B2C
+2024-04-06, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mymensingh Sadar  , Wholesale    ,         53,      636000,      12000,       8000,           512, B2B
+2024-04-07, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Retail       ,         85,       38250,        450,        320,           865, B2C
+2024-04-08, SKU-C01   , Skincare Gift Set      , Cosmetics  , Mohammadpur       , Wholesale    ,        196,      431200,       2200,       1200,           906, B2B
+2024-04-08, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Wholesale    ,        424,      169600,        400,        200,           896, B2B
+2024-04-08, SKU-E01   , Smart Lamp             , Electronics, Sylhet Sadar      , Retail       ,          8,        9600,       1200,        800,           119, B2C
+2024-04-09, SKU-G01   , Organic Rice (5kg)     , Groceries  , Gazipur Sadar     , Retail       ,         52,       23400,        450,        320,           576, B2C
+2024-04-10, SKU-F02   , Office Desk            , Furniture  , Narayanganj Sadar , Online       ,          4,       34000,       8500,       5000,           250, B2C
+2024-04-11, SKU-E02   , Wireless Earbuds       , Electronics, Nawabganj         , Online       ,         22,       55000,       2500,       1500,           893, B2C
+2024-04-11, SKU-F02   , Office Desk            , Furniture  , Narayanganj Sadar , Retail       ,          7,       56525,       8500,       5000,           117, B2C
+2024-04-14, SKU-C02   , Herbal Shampoo         , Cosmetics  , Savar             , Online       ,          8,        3600,        450,        250,           433, B2B
+2024-04-14, SKU-C02   , Herbal Shampoo         , Cosmetics  , Sylhet Sadar      , Retail       ,          6,        2700,        450,        250,           860, B2C
+2024-04-14, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Retail       ,         94,       12502,        140,        100,           801, B2C
+2024-04-15, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,         78,       21840,        280,        200,           517, B2C
+2024-04-16, SKU-E03   , Mechanical Keyboard    , Electronics, Mohammadpur       , Online       ,          1,        3500,       3500,       2200,           127, B2C
+2024-04-16, SKU-A03   , Denim Jeans            , Apparel    , Narayanganj Sadar , Online       ,         30,       54000,       1800,       1000,           813, B2B
+2024-04-17, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Retail       ,          7,       75600,      12000,       8000,           161, B2B
+2024-04-19, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Narayanganj Sadar , Wholesale    ,        244,      146400,        600,        350,           903, B2B
+2024-04-19, SKU-E03   , Mechanical Keyboard    , Electronics, Sylhet Sadar      , Online       ,         15,       52500,       3500,       2200,           766, B2C
+2024-04-20, SKU-G03   , Lentils (1kg)          , Groceries  , Sylhet Sadar      , Wholesale    ,        423,       56259,        140,        100,           535, B2B
+2024-04-20, SKU-F03   , Bookshelf              , Furniture  , Gazipur Sadar     , Retail       ,          9,       35910,       4200,       2500,           117, B2C
+2024-04-21, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Wholesale    ,        217,       28861,        140,        100,           557, B2B
+2024-04-21, SKU-C01   , Skincare Gift Set      , Cosmetics  , Narayanganj Sadar , Retail       ,          2,        4400,       2200,       1200,           549, B2C
+2024-04-23, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Online       ,         18,      216000,      12000,       8000,           917, B2C
+2024-04-23, SKU-A03   , Denim Jeans            , Apparel    , Narayanganj Sadar , Wholesale    ,        292,      525600,       1800,       1000,           554, B2B
+2024-04-24, SKU-A04   , Basic T-Shirt          , Apparel    , Savar             , Retail       ,         10,        4000,        400,        200,           138, B2C
+2024-04-24, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Retail       ,         85,       38250,        450,        320,            29, B2B
+2024-04-24, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Online       ,          1,        1620,       1800,       1100,           923, B2B
+2024-04-24, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Retail       ,         75,        9450,        140,        100,           212, B2B
+2024-04-26, SKU-A04   , Basic T-Shirt          , Apparel    , Narayanganj Sadar , Retail       ,         18,        7200,        400,        200,            42, B2C
+2024-04-27, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Retail       ,         97,       13580,        140,        100,           662, B2C
+2024-04-28, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Wholesale    ,        181,       25340,        140,        100,           467, B2B
+2024-04-28, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Online       ,         15,      180000,      12000,       8000,           593, B2C
+2024-05-01, SKU-A01   , Cotton Panjabi         , Apparel    , Savar             , Online       ,         23,       34500,       1500,        900,           866, B2C
+2024-05-01, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Online       ,         10,       23750,       2500,       1500,           449, B2C
+2024-05-03, SKU-G01   , Organic Rice (5kg)     , Groceries  , Keraniganj        , Wholesale    ,         92,       41400,        450,        320,           164, B2B
+2024-05-03, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Online       ,         30,       51300,       1800,       1000,            41, B2C
+2024-05-04, SKU-E03   , Mechanical Keyboard    , Electronics, Gazipur Sadar     , Retail       ,         27,       94500,       3500,       2200,           242, B2C
+2024-05-05, SKU-A04   , Basic T-Shirt          , Apparel    , Gazipur Sadar     , Retail       ,          6,        2400,        400,        200,           948, B2C
+2024-05-05, SKU-C02   , Herbal Shampoo         , Cosmetics  , Keraniganj        , Retail       ,         22,        9900,        450,        250,           105, B2C
+2024-05-06, SKU-A04   , Basic T-Shirt          , Apparel    , Mymensingh Sadar  , Online       ,         13,        5200,        400,        200,           557, B2C
+2024-05-07, SKU-C02   , Herbal Shampoo         , Cosmetics  , Narayanganj Sadar , Retail       ,         18,        8100,        450,        250,           856, B2C
+2024-05-08, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Wholesale    ,        444,       62160,        140,        100,          1039, B2B
+2024-05-08, SKU-E04   , Power Bank 10000mAh    , Electronics, Savar             , Online       ,         11,       19800,       1800,       1100,            65, B2C
+2024-05-09, SKU-E01   , Smart Lamp             , Electronics, Narayanganj Sadar , Online       ,         29,       34800,       1200,        800,           587, B2C
+2024-05-10, SKU-A02   , Premium Jamdani Saree  , Apparel    , Savar             , Online       ,         18,      216000,      12000,       8000,           718, B2C
+2024-05-11, SKU-G02   , Mustard Oil (1L)       , Groceries  , Savar             , Retail       ,         91,       25480,        280,        200,           192, B2C
+2024-05-11, SKU-F03   , Bookshelf              , Furniture  , Gazipur Sadar     , Retail       ,          9,       37800,       4200,       2500,           961, B2C
+2024-05-11, SKU-G02   , Mustard Oil (1L)       , Groceries  , Sylhet Sadar      , Retail       ,         96,       26880,        280,        200,           229, B2B
+2024-05-12, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Wholesale    ,        180,     2160000,      12000,       8000,           967, B2B
+2024-05-13, SKU-C01   , Skincare Gift Set      , Cosmetics  , Mohammadpur       , Retail       ,          9,       19800,       2200,       1200,           642, B2C
+2024-05-13, SKU-E04   , Power Bank 10000mAh    , Electronics, Narayanganj Sadar , Online       ,         20,       36000,       1800,       1100,            49, B2C
+2024-05-14, SKU-C02   , Herbal Shampoo         , Cosmetics  , Nawabganj         , Retail       ,         10,        4500,        450,        250,           959, B2B
+2024-05-14, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Mohammadpur       , Retail       ,          9,        5400,        600,        350,           512, B2C
+2024-05-16, SKU-E03   , Mechanical Keyboard    , Electronics, Gazipur Sadar     , Online       ,         12,       39900,       3500,       2200,           493, B2C
+2024-05-16, SKU-C01   , Skincare Gift Set      , Cosmetics  , Mymensingh Sadar  , Online       ,         14,       30800,       2200,       1200,           333, B2B
+2024-05-17, SKU-E02   , Wireless Earbuds       , Electronics, Sylhet Sadar      , Online       ,         14,       33250,       2500,       1500,           223, B2B
+2024-05-18, SKU-C01   , Skincare Gift Set      , Cosmetics  , Keraniganj        , Online       ,         21,       46200,       2200,       1200,            90, B2C
+2024-05-19, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mymensingh Sadar  , Retail       ,         17,      204000,      12000,       8000,           985, B2C
+2024-05-19, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Wholesale    ,        215,       30100,        140,        100,           935, B2B
+2024-05-22, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Wholesale    ,        110,       41800,        400,        200,           299, B2B
+2024-05-23, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Online       ,          3,       36000,      12000,       8000,           194, B2C
+2024-05-26, SKU-C01   , Skincare Gift Set      , Cosmetics  , Mohammadpur       , Wholesale    ,        467,     1027400,       2200,       1200,           650, B2B
+2024-05-26, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Retail       ,         39,       10920,        280,        200,           140, B2C
+2024-05-26, SKU-A02   , Premium Jamdani Saree  , Apparel    , Savar             , Online       ,         18,      194400,      12000,       8000,           904, B2C
+2024-05-27, SKU-E01   , Smart Lamp             , Electronics, Narayanganj Sadar , Retail       ,         16,       19200,       1200,        800,           851, B2C
+2024-05-28, SKU-E02   , Wireless Earbuds       , Electronics, Keraniganj        , Online       ,         28,       70000,       2500,       1500,           403, B2C
+2024-05-28, SKU-E01   , Smart Lamp             , Electronics, Keraniganj        , Online       ,         14,       15960,       1200,        800,           182, B2C
+2024-05-29, SKU-G03   , Lentils (1kg)          , Groceries  , Keraniganj        , Retail       ,         83,       11620,        140,        100,            55, B2C
+2024-05-30, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Wholesale    ,        221,       30940,        140,        100,           350, B2B
+2024-05-31, SKU-E03   , Mechanical Keyboard    , Electronics, Gazipur Sadar     , Retail       ,         29,       96425,       3500,       2200,           960, B2C
+2024-06-01, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Wholesale    ,        289,      433500,       1500,        900,           591, B2B
+2024-06-01, SKU-E03   , Mechanical Keyboard    , Electronics, Savar             , Retail       ,         27,       94500,       3500,       2200,           928, B2C
+2024-06-02, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         58,        7714,        140,        100,            10, B2C
+2024-06-02, SKU-S02   , Gel Pen Set            , Stationery , Mohammadpur       , Wholesale    ,        167,       41750,        250,        120,           681, B2B
+2024-06-04, SKU-E01   , Smart Lamp             , Electronics, Gazipur Sadar     , Online       ,         14,       16800,       1200,        800,           613, B2C
+2024-06-04, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Mohammadpur       , Online       ,          5,        3000,        600,        350,           384, B2C
+2024-06-05, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Mohammadpur       , Wholesale    ,        107,      588500,       5500,       3500,           204, B2B
+2024-06-05, SKU-A03   , Denim Jeans            , Apparel    , Sylhet Sadar      , Online       ,         19,       34200,       1800,       1000,            73, B2C
+2024-06-06, SKU-E02   , Wireless Earbuds       , Electronics, Mymensingh Sadar  , Online       ,         10,       25000,       2500,       1500,           323, B2C
+2024-06-06, SKU-G03   , Lentils (1kg)          , Groceries  , Gazipur Sadar     , Retail       ,         32,        4480,        140,        100,           667, B2C
+2024-06-07, SKU-G02   , Mustard Oil (1L)       , Groceries  , Nawabganj         , Retail       ,         11,        2926,        280,        200,           890, B2C
+2024-06-07, SKU-E03   , Mechanical Keyboard    , Electronics, Mohammadpur       , Online       ,          6,       21000,       3500,       2200,            73, B2C
+2024-06-07, SKU-F02   , Office Desk            , Furniture  , Mohammadpur       , Retail       ,          4,       34000,       8500,       5000,           459, B2C
+2024-06-07, SKU-G01   , Organic Rice (5kg)     , Groceries  , Keraniganj        , Wholesale    ,        239,      102172,        450,        320,           558, B2B
+2024-06-08, SKU-E04   , Power Bank 10000mAh    , Electronics, Savar             , Retail       ,         28,       50400,       1800,       1100,           247, B2C
+2024-06-08, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Retail       ,         55,        7700,        140,        100,           345, B2C
+2024-06-09, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Online       ,         18,       45000,       2500,       1500,           914, B2C
+2024-06-09, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Online       ,         22,        8800,        400,        200,           872, B2C
+2024-06-09, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Retail       ,         82,       11480,        140,        100,           474, B2C
+2024-06-10, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Wholesale    ,        429,      193050,        450,        320,           537, B2B
+2024-06-10, SKU-S02   , Gel Pen Set            , Stationery , Gazipur Sadar     , Retail       ,         12,        2850,        250,        120,           920, B2C
+2024-06-10, SKU-E01   , Smart Lamp             , Electronics, Narayanganj Sadar , Online       ,          5,        6000,       1200,        800,           325, B2C
+2024-06-11, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        121,       51728,        450,        320,           268, B2B
+2024-06-11, SKU-E04   , Power Bank 10000mAh    , Electronics, Savar             , Retail       ,         23,       39330,       1800,       1100,            26, B2B
+2024-06-11, SKU-C01   , Skincare Gift Set      , Cosmetics  , Gazipur Sadar     , Retail       ,         25,       55000,       2200,       1200,           175, B2B
+2024-06-11, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Wholesale    ,         68,       19040,        280,        200,           955, B2B
+2024-06-12, SKU-A04   , Basic T-Shirt          , Apparel    , Savar             , Online       ,          4,        1600,        400,        200,           416, B2C
+2024-06-12, SKU-E01   , Smart Lamp             , Electronics, Maulvi Bazar Sadar, Online       ,          3,        3420,       1200,        800,           329, B2C
+2024-06-12, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,          9,        1197,        140,        100,           419, B2C
+2024-06-16, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         62,        8680,        140,        100,            15, B2C
+2024-06-16, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Retail       ,         45,       20250,        450,        320,           566, B2C
+2024-06-21, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Online       ,         15,       18000,       1200,        800,           159, B2C
+2024-06-21, SKU-A01   , Cotton Panjabi         , Apparel    , Keraniganj        , Online       ,         22,       33000,       1500,        900,           484, B2C
+2024-06-23, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Online       ,          4,        4800,       1200,        800,           230, B2C
+2024-06-24, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Narayanganj Sadar , Online       ,          2,        1200,        600,        350,           292, B2C
+2024-06-26, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Mohammadpur       , Retail       ,          1,        5500,       5500,       3500,           751, B2C
+2024-06-28, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Wholesale    ,        104,       44460,        450,        320,           216, B2B
+2024-06-28, SKU-G01   , Organic Rice (5kg)     , Groceries  , Sylhet Sadar      , Retail       ,         88,       39600,        450,        320,           250, B2C
+2024-06-29, SKU-G03   , Lentils (1kg)          , Groceries  , Gazipur Sadar     , Wholesale    ,        116,       16240,        140,        100,           840, B2B
+2024-06-29, SKU-G02   , Mustard Oil (1L)       , Groceries  , Sylhet Sadar      , Wholesale    ,        212,       56392,        280,        200,           383, B2B
+2024-06-29, SKU-G01   , Organic Rice (5kg)     , Groceries  , Keraniganj        , Retail       ,         75,       33750,        450,        320,           801, B2C
+2024-06-29, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Retail       ,         15,        6750,        450,        320,           669, B2C
+2024-06-30, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Retail       ,         57,       25650,        450,        320,           699, B2C
+2024-07-01, SKU-G01   , Organic Rice (5kg)     , Groceries  , Nawabganj         , Retail       ,         42,       18900,        450,        320,           366, B2C
+2024-07-04, SKU-A02   , Premium Jamdani Saree  , Apparel    , Savar             , Wholesale    ,        240,     2880000,      12000,       8000,           709, B2B
+2024-07-05, SKU-A03   , Denim Jeans            , Apparel    , Narayanganj Sadar , Retail       ,         30,       54000,       1800,       1000,           802, B2C
+2024-07-06, SKU-C02   , Herbal Shampoo         , Cosmetics  , Narayanganj Sadar , Retail       ,         29,       13050,        450,        250,           333, B2C
+2024-07-06, SKU-E02   , Wireless Earbuds       , Electronics, Gazipur Sadar     , Online       ,          6,       15000,       2500,       1500,           580, B2C
+2024-07-06, SKU-E03   , Mechanical Keyboard    , Electronics, Gazipur Sadar     , Online       ,          3,        9450,       3500,       2200,           387, B2C
+2024-07-07, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Retail       ,          4,        1600,        400,        200,           612, B2B
+2024-07-07, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mymensingh Sadar  , Wholesale    ,        343,       86436,        280,        200,           519, B2B
+2024-07-08, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Retail       ,          2,       24000,      12000,       8000,           534, B2C
+2024-07-08, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Online       ,         15,       22500,       1500,        900,           479, B2C
+2024-07-10, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Mohammadpur       , Online       ,          7,       36575,       5500,       3500,           287, B2C
+2024-07-11, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Retail       ,         69,       31050,        450,        320,           459, B2C
+2024-07-11, SKU-C01   , Skincare Gift Set      , Cosmetics  , Mohammadpur       , Wholesale    ,        351,      772200,       2200,       1200,           406, B2B
+2024-07-12, SKU-G01   , Organic Rice (5kg)     , Groceries  , Gazipur Sadar     , Retail       ,         79,       35550,        450,        320,           929, B2C
+2024-07-13, SKU-F02   , Office Desk            , Furniture  , Savar             , Wholesale    ,         69,      586500,       8500,       5000,           965, B2B
+2024-07-13, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Retail       ,          5,        7500,       1500,        900,           188, B2B
+2024-07-13, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Retail       ,         15,        4200,        280,        200,            45, B2C
+2024-07-14, SKU-F03   , Bookshelf              , Furniture  , Savar             , Online       ,         10,       42000,       4200,       2500,            96, B2C
+2024-07-16, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Wholesale    ,         75,       33750,        450,        250,           201, B2B
+2024-07-17, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mymensingh Sadar  , Wholesale    ,        397,      178650,        450,        320,           988, B2B
+2024-07-18, SKU-C02   , Herbal Shampoo         , Cosmetics  , Narayanganj Sadar , Wholesale    ,         89,       40050,        450,        250,           996, B2B
+2024-07-18, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Savar             , Online       ,          6,        3600,        600,        350,           639, B2C
+2024-07-18, SKU-A04   , Basic T-Shirt          , Apparel    , Narayanganj Sadar , Online       ,         14,        5600,        400,        200,            99, B2C
+2024-07-18, SKU-F02   , Office Desk            , Furniture  , Mohammadpur       , Retail       ,          4,       34000,       8500,       5000,           981, B2C
+2024-07-18, SKU-E03   , Mechanical Keyboard    , Electronics, Sylhet Sadar      , Online       ,         30,      105000,       3500,       2200,            85, B2C
+2024-07-19, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,         71,       19880,        280,        200,           196, B2C
+2024-07-19, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        220,       99000,        450,        320,           553, B2B
+2024-07-20, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Retail       ,         84,       11760,        140,        100,           129, B2B
+2024-07-20, SKU-E01   , Smart Lamp             , Electronics, Narayanganj Sadar , Online       ,         15,       17100,       1200,        800,           214, B2C
+2024-07-20, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         15,        2100,        140,        100,           442, B2C
+2024-07-21, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Wholesale    ,        487,       68180,        140,        100,           776, B2B
+2024-07-21, SKU-F02   , Office Desk            , Furniture  , Narayanganj Sadar , Retail       ,          8,       61200,       8500,       5000,           499, B2C
+2024-07-21, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Retail       ,         10,        2800,        280,        200,           854, B2C
+2024-07-22, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,         37,        9842,        280,        200,           193, B2C
+2024-07-22, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Retail       ,          2,        3000,       1500,        900,           475, B2B
+2024-07-22, SKU-C01   , Skincare Gift Set      , Cosmetics  , Narayanganj Sadar , Retail       ,         29,       57420,       2200,       1200,           163, B2C
+2024-07-23, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Mohammadpur       , Retail       ,         19,       10260,        600,        350,           959, B2C
+2024-07-23, SKU-G02   , Mustard Oil (1L)       , Groceries  , Sylhet Sadar      , Retail       ,          5,        1400,        280,        200,           308, B2C
+2024-07-24, SKU-C01   , Skincare Gift Set      , Cosmetics  , Keraniganj        , Retail       ,          3,        6270,       2200,       1200,           342, B2C
+2024-07-25, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Mohammadpur       , Retail       ,          8,       44000,       5500,       3500,           520, B2C
+2024-07-25, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Retail       ,         24,      288000,      12000,       8000,           544, B2C
+2024-07-25, SKU-A01   , Cotton Panjabi         , Apparel    , Gazipur Sadar     , Wholesale    ,        152,      228000,       1500,        900,           853, B2B
+2024-07-26, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Retail       ,         63,       28350,        450,        320,            34, B2C
+2024-07-26, SKU-E01   , Smart Lamp             , Electronics, Nawabganj         , Online       ,         11,       13200,       1200,        800,           519, B2B
+2024-07-27, SKU-G03   , Lentils (1kg)          , Groceries  , Gazipur Sadar     , Wholesale    ,        317,       44380,        140,        100,           820, B2B
+2024-07-28, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Online       ,         27,      324000,      12000,       8000,           891, B2C
+2024-07-29, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Retail       ,         98,       44100,        450,        320,           888, B2C
+2024-07-29, SKU-E03   , Mechanical Keyboard    , Electronics, Mohammadpur       , Online       ,         20,       70000,       3500,       2200,           923, B2B
+2024-07-30, SKU-G02   , Mustard Oil (1L)       , Groceries  , Gazipur Sadar     , Wholesale    ,        305,       85400,        280,        200,           870, B2B
+2024-07-30, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Wholesale    ,        155,      279000,       1800,       1000,           526, B2B
+2024-07-31, SKU-G02   , Mustard Oil (1L)       , Groceries  , Gazipur Sadar     , Retail       ,         27,        7560,        280,        200,           564, B2B
+2024-07-31, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,         83,       23240,        280,        200,           922, B2C
+2024-08-01, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Retail       ,         86,       38700,        450,        320,           762, B2C
+2024-08-01, SKU-G02   , Mustard Oil (1L)       , Groceries  , Gazipur Sadar     , Retail       ,         87,       24360,        280,        200,           396, B2C
+2024-08-01, SKU-E02   , Wireless Earbuds       , Electronics, Narayanganj Sadar , Retail       ,         11,       27500,       2500,       1500,           362, B2C
+2024-08-03, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Narayanganj Sadar , Retail       ,          8,       39600,       5500,       3500,           366, B2C
+2024-08-04, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        255,      114750,        450,        320,           687, B2B
+2024-08-05, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Online       ,         10,       18000,       1800,       1000,           328, B2C
+2024-08-07, SKU-E02   , Wireless Earbuds       , Electronics, Savar             , Online       ,         10,       25000,       2500,       1500,           149, B2C
+2024-08-07, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         47,        6580,        140,        100,           875, B2C
+2024-08-11, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Retail       ,         80,       22400,        280,        200,           557, B2C
+2024-08-12, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Retail       ,         55,       24750,        450,        320,            11, B2C
+2024-08-12, SKU-A04   , Basic T-Shirt          , Apparel    , Savar             , Retail       ,          1,         400,        400,        200,           834, B2C
+2024-08-12, SKU-E04   , Power Bank 10000mAh    , Electronics, Gazipur Sadar     , Retail       ,         30,       54000,       1800,       1100,           710, B2C
+2024-08-12, SKU-F03   , Bookshelf              , Furniture  , Mohammadpur       , Wholesale    ,        229,      961800,       4200,       2500,           518, B2B
+2024-08-14, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Retail       ,          9,       13500,       1500,        900,           579, B2C
+2024-08-14, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Retail       ,         28,      336000,      12000,       8000,           371, B2C
+2024-08-14, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Online       ,         24,       28800,       1200,        800,           948, B2C
+2024-08-15, SKU-G03   , Lentils (1kg)          , Groceries  , Gazipur Sadar     , Wholesale    ,        153,       20349,        140,        100,           653, B2B
+2024-08-19, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Retail       ,         47,       13160,        280,        200,           916, B2C
+2024-08-21, SKU-E02   , Wireless Earbuds       , Electronics, Narayanganj Sadar , Online       ,         17,       42500,       2500,       1500,           275, B2C
+2024-08-21, SKU-G02   , Mustard Oil (1L)       , Groceries  , Savar             , Retail       ,         59,       15694,        280,        200,           851, B2C
+2024-08-23, SKU-E01   , Smart Lamp             , Electronics, Keraniganj        , Retail       ,         11,       13200,       1200,        800,           601, B2C
+2024-08-23, SKU-E03   , Mechanical Keyboard    , Electronics, Gazipur Sadar     , Retail       ,         10,       35000,       3500,       2200,           581, B2C
+2024-08-23, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Wholesale    ,        406,      609000,       1500,        900,           871, B2B
+2024-08-26, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Retail       ,         60,       27000,        450,        320,           386, B2C
+2024-08-26, SKU-C02   , Herbal Shampoo         , Cosmetics  , Savar             , Retail       ,          9,        4050,        450,        250,           637, B2C
+2024-08-26, SKU-A01   , Cotton Panjabi         , Apparel    , Narayanganj Sadar , Wholesale    ,        487,      730500,       1500,        900,          1080, B2B
+2024-08-26, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Online       ,         12,       14400,       1200,        800,           317, B2C
+2024-08-27, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Retail       ,         25,       45000,       1800,       1100,           913, B2C
+2024-08-27, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Retail       ,         45,       20250,        450,        320,           461, B2C
+2024-08-27, SKU-E04   , Power Bank 10000mAh    , Electronics, Savar             , Online       ,          1,        1710,       1800,       1100,           203, B2C
+2024-08-28, SKU-F03   , Bookshelf              , Furniture  , Narayanganj Sadar , Wholesale    ,        472,     1982400,       4200,       2500,          1243, B2B
+2024-08-28, SKU-C01   , Skincare Gift Set      , Cosmetics  , Mohammadpur       , Online       ,          1,        2090,       2200,       1200,           461, B2C
+2024-08-28, SKU-A01   , Cotton Panjabi         , Apparel    , Keraniganj        , Wholesale    ,        327,      490500,       1500,        900,           989, B2B
+2024-08-29, SKU-G03   , Lentils (1kg)          , Groceries  , Mymensingh Sadar  , Wholesale    ,         68,        9520,        140,        100,           395, B2B
+2024-08-29, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Keraniganj        , Retail       ,         10,        5700,        600,        350,           776, B2C
+2024-08-31, SKU-E03   , Mechanical Keyboard    , Electronics, Maulvi Bazar Sadar, Wholesale    ,        157,      549500,       3500,       2200,           603, B2B
+2024-08-31, SKU-A04   , Basic T-Shirt          , Apparel    , Narayanganj Sadar , Retail       ,          7,        2800,        400,        200,           796, B2B
+2024-09-01, SKU-A02   , Premium Jamdani Saree  , Apparel    , Narayanganj Sadar , Wholesale    ,        139,     1668000,      12000,       8000,           405, B2B
+2024-09-02, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Online       ,          2,        2400,       1200,        800,           135, B2C
+2024-09-02, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Savar             , Wholesale    ,        167,      100200,        600,        350,           200, B2B
+2024-09-03, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Wholesale    ,        493,     5916000,      12000,       8000,          1028, B2B
+2024-09-04, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Retail       ,         36,       16200,        450,        320,           553, B2C
+2024-09-05, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,          7,         980,        140,        100,           242, B2C
+2024-09-05, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Online       ,         11,       13200,       1200,        800,           242, B2C
+2024-09-06, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Retail       ,         63,        8820,        140,        100,           298, B2C
+2024-09-07, SKU-F03   , Bookshelf              , Furniture  , Narayanganj Sadar , Retail       ,          6,       25200,       4200,       2500,           908, B2C
+2024-09-07, SKU-F02   , Office Desk            , Furniture  , Narayanganj Sadar , Wholesale    ,        231,     1963500,       8500,       5000,           766, B2B
+2024-09-07, SKU-G01   , Organic Rice (5kg)     , Groceries  , Gazipur Sadar     , Online       ,         63,       28350,        450,        320,           463, B2C
+2024-09-08, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Retail       ,         95,       26600,        280,        200,           154, B2C
+2024-09-09, SKU-C02   , Herbal Shampoo         , Cosmetics  , Keraniganj        , Wholesale    ,         89,       40050,        450,        250,           147, B2B
+2024-09-09, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Online       ,          9,       10260,       1200,        800,           378, B2C
+2024-09-09, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         26,        3640,        140,        100,           201, B2C
+2024-09-10, SKU-G02   , Mustard Oil (1L)       , Groceries  , Keraniganj        , Retail       ,         12,        3360,        280,        200,           842, B2C
+2024-09-10, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Wholesale    ,        292,       77672,        280,        200,           561, B2B
+2024-09-11, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Retail       ,         15,        2100,        140,        100,           671, B2C
+2024-09-12, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Online       ,         22,      264000,      12000,       8000,           665, B2C
+2024-09-12, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Retail       ,         11,        3080,        280,        200,           562, B2C
+2024-09-12, SKU-E03   , Mechanical Keyboard    , Electronics, Savar             , Retail       ,         13,       45500,       3500,       2200,           547, B2C
+2024-09-14, SKU-E02   , Wireless Earbuds       , Electronics, Narayanganj Sadar , Retail       ,          2,        4750,       2500,       1500,           525, B2B
+2024-09-14, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Mohammadpur       , Retail       ,          1,        5500,       5500,       3500,           304, B2C
+2024-09-14, SKU-F03   , Bookshelf              , Furniture  , Mohammadpur       , Retail       ,          6,       25200,       4200,       2500,           310, B2C
+2024-09-15, SKU-G02   , Mustard Oil (1L)       , Groceries  , Gazipur Sadar     , Retail       ,         73,       20440,        280,        200,           399, B2B
+2024-09-16, SKU-A03   , Denim Jeans            , Apparel    , Sylhet Sadar      , Wholesale    ,        395,      711000,       1800,       1000,           829, B2B
+2024-09-17, SKU-G02   , Mustard Oil (1L)       , Groceries  , Gazipur Sadar     , Retail       ,         42,       11760,        280,        200,           775, B2C
+2024-09-18, SKU-G02   , Mustard Oil (1L)       , Groceries  , Savar             , Retail       ,         29,        7714,        280,        200,            88, B2B
+2024-09-19, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Nawabganj         , Wholesale    ,         95,       57000,        600,        350,           216, B2B
+2024-09-20, SKU-G03   , Lentils (1kg)          , Groceries  , Keraniganj        , Retail       ,         17,        2380,        140,        100,           538, B2C
+2024-09-21, SKU-G03   , Lentils (1kg)          , Groceries  , Gazipur Sadar     , Retail       ,         56,        7840,        140,        100,           259, B2C
+2024-09-21, SKU-A01   , Cotton Panjabi         , Apparel    , Narayanganj Sadar , Online       ,         22,       33000,       1500,        900,           542, B2C
+2024-09-21, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Narayanganj Sadar , Wholesale    ,        151,      830500,       5500,       3500,           546, B2B
+2024-09-21, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Retail       ,         15,        6750,        450,        320,           962, B2C
+2024-09-22, SKU-G01   , Organic Rice (5kg)     , Groceries  , Keraniganj        , Retail       ,         31,       13950,        450,        320,           526, B2C
+2024-09-22, SKU-G02   , Mustard Oil (1L)       , Groceries  , Savar             , Retail       ,         85,       22610,        280,        200,           761, B2C
+2024-09-23, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Retail       ,         15,        6750,        450,        320,           885, B2C
+2024-09-24, SKU-A04   , Basic T-Shirt          , Apparel    , Keraniganj        , Online       ,          8,        3200,        400,        200,           820, B2C
+2024-09-24, SKU-F02   , Office Desk            , Furniture  , Savar             , Retail       ,          3,       25500,       8500,       5000,           322, B2B
+2024-09-24, SKU-E01   , Smart Lamp             , Electronics, Savar             , Online       ,         29,       34800,       1200,        800,           608, B2C
+2024-09-24, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        264,      112860,        450,        320,           416, B2B
+2024-09-24, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Online       ,         17,       30600,       1800,       1100,           528, B2C
+2024-09-25, SKU-E01   , Smart Lamp             , Electronics, Gazipur Sadar     , Online       ,         10,       11400,       1200,        800,           159, B2C
+2024-09-26, SKU-G01   , Organic Rice (5kg)     , Groceries  , Keraniganj        , Wholesale    ,        163,       73350,        450,        320,           432, B2B
+2024-09-27, SKU-A02   , Premium Jamdani Saree  , Apparel    , Savar             , Online       ,          1,       12000,      12000,       8000,           886, B2C
+2024-09-27, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Online       ,          3,        4500,       1500,        900,           847, B2C
+2024-09-28, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         76,       10640,        140,        100,           762, B2C
+2024-09-30, SKU-G02   , Mustard Oil (1L)       , Groceries  , Savar             , Wholesale    ,        402,      106932,        280,        200,          1127, B2B
+2024-10-01, SKU-F02   , Office Desk            , Furniture  , Savar             , Retail       ,          7,       59500,       8500,       5000,           493, B2C
+2024-10-01, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Online       ,         29,       43500,       1500,        900,           537, B2C
+2024-10-01, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Wholesale    ,         99,       27720,        280,        200,           283, B2B
+2024-10-01, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,         34,        9044,        280,        200,           405, B2C
+2024-10-03, SKU-C02   , Herbal Shampoo         , Cosmetics  , Sylhet Sadar      , Wholesale    ,        177,       79650,        450,        250,           936, B2B
+2024-10-03, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Retail       ,         43,       19350,        450,        320,           776, B2B
+2024-10-04, SKU-G01   , Organic Rice (5kg)     , Groceries  , Gazipur Sadar     , Retail       ,         41,       18450,        450,        320,           876, B2C
+2024-10-04, SKU-A02   , Premium Jamdani Saree  , Apparel    , Narayanganj Sadar , Retail       ,         23,      276000,      12000,       8000,           193, B2C
+2024-10-04, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Wholesale    ,        434,       54684,        140,        100,          1102, B2B
+2024-10-04, SKU-F02   , Office Desk            , Furniture  , Savar             , Online       ,          7,       59500,       8500,       5000,           808, B2C
+2024-10-05, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Retail       ,         33,        4620,        140,        100,           476, B2C
+2024-10-05, SKU-G01   , Organic Rice (5kg)     , Groceries  , Nawabganj         , Retail       ,          6,        2700,        450,        320,           299, B2C
+2024-10-07, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Wholesale    ,        192,      230400,       1200,        800,           215, B2B
+2024-10-08, SKU-G01   , Organic Rice (5kg)     , Groceries  , Sylhet Sadar      , Wholesale    ,        126,       56700,        450,        320,           665, B2B
+2024-10-09, SKU-G03   , Lentils (1kg)          , Groceries  , Sylhet Sadar      , Retail       ,         36,        5040,        140,        100,           176, B2B
+2024-10-09, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         96,       13440,        140,        100,           911, B2C
+2024-10-09, SKU-A01   , Cotton Panjabi         , Apparel    , Gazipur Sadar     , Online       ,         14,       21000,       1500,        900,           729, B2C
+2024-10-10, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Wholesale    ,        431,       60340,        140,        100,           621, B2B
+2024-10-11, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Online       ,         26,       65000,       2500,       1500,           970, B2C
+2024-10-13, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Narayanganj Sadar , Retail       ,          2,       11000,       5500,       3500,           953, B2C
+2024-10-13, SKU-G02   , Mustard Oil (1L)       , Groceries  , Savar             , Wholesale    ,        241,       67480,        280,        200,           395, B2B
+2024-10-14, SKU-E03   , Mechanical Keyboard    , Electronics, Mohammadpur       , Online       ,         13,       45500,       3500,       2200,           673, B2B
+2024-10-14, SKU-E01   , Smart Lamp             , Electronics, Savar             , Wholesale    ,        239,      272460,       1200,        800,           685, B2B
+2024-10-14, SKU-S02   , Gel Pen Set            , Stationery , Keraniganj        , Wholesale    ,        165,       41250,        250,        120,           370, B2B
+2024-10-16, SKU-E01   , Smart Lamp             , Electronics, Gazipur Sadar     , Online       ,          8,        9600,       1200,        800,           380, B2C
+2024-10-16, SKU-F02   , Office Desk            , Furniture  , Narayanganj Sadar , Retail       ,          1,        8500,       8500,       5000,           590, B2C
+2024-10-16, SKU-E01   , Smart Lamp             , Electronics, Sylhet Sadar      , Online       ,          1,        1200,       1200,        800,           600, B2C
+2024-10-17, SKU-A01   , Cotton Panjabi         , Apparel    , Mymensingh Sadar  , Online       ,          6,        9000,       1500,        900,           667, B2C
+2024-10-17, SKU-E04   , Power Bank 10000mAh    , Electronics, Narayanganj Sadar , Online       ,         23,       41400,       1800,       1100,           790, B2C
+2024-10-17, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Wholesale    ,        430,       60200,        140,        100,          1155, B2B
+2024-10-17, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Wholesale    ,        303,       42420,        140,        100,           853, B2B
+2024-10-18, SKU-F03   , Bookshelf              , Furniture  , Savar             , Retail       ,          4,       15960,       4200,       2500,           361, B2B
+2024-10-18, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Online       ,         13,      156000,      12000,       8000,           466, B2C
+2024-10-18, SKU-F02   , Office Desk            , Furniture  , Gazipur Sadar     , Wholesale    ,        461,     3918500,       8500,       5000,           654, B2B
+2024-10-19, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Wholesale    ,        469,     5628000,      12000,       8000,           588, B2B
+2024-10-19, SKU-E01   , Smart Lamp             , Electronics, Gazipur Sadar     , Wholesale    ,        385,      462000,       1200,        800,          1084, B2B
+2024-10-22, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Online       ,          4,        1520,        400,        200,           410, B2C
+2024-10-23, SKU-A04   , Basic T-Shirt          , Apparel    , Sylhet Sadar      , Online       ,         28,       11200,        400,        200,           203, B2C
+2024-10-24, SKU-A02   , Premium Jamdani Saree  , Apparel    , Narayanganj Sadar , Online       ,         29,      348000,      12000,       8000,           705, B2C
+2024-10-25, SKU-G02   , Mustard Oil (1L)       , Groceries  , Keraniganj        , Retail       ,         86,       24080,        280,        200,           654, B2C
+2024-10-25, SKU-E03   , Mechanical Keyboard    , Electronics, Nawabganj         , Retail       ,         25,       87500,       3500,       2200,           371, B2C
+2024-10-25, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Online       ,         68,       30600,        450,        320,           112, B2C
+2024-10-26, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,         96,       26880,        280,        200,           731, B2C
+2024-10-26, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Wholesale    ,        224,       31360,        140,        100,           291, B2B
+2024-10-26, SKU-F03   , Bookshelf              , Furniture  , Keraniganj        , Retail       ,          2,        7980,       4200,       2500,           393, B2C
+2024-10-28, SKU-A01   , Cotton Panjabi         , Apparel    , Narayanganj Sadar , Wholesale    ,        267,      400500,       1500,        900,           340, B2B
+2024-10-29, SKU-C01   , Skincare Gift Set      , Cosmetics  , Keraniganj        , Wholesale    ,        146,      321200,       2200,       1200,           670, B2B
+2024-10-29, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Online       ,         15,       18000,       1200,        800,           402, B2C
+2024-10-29, SKU-E04   , Power Bank 10000mAh    , Electronics, Narayanganj Sadar , Online       ,         18,       32400,       1800,       1100,           664, B2C
+2024-10-29, SKU-E01   , Smart Lamp             , Electronics, Gazipur Sadar     , Retail       ,          9,       10800,       1200,        800,           614, B2C
+2024-10-29, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Online       ,          2,         800,        400,        200,           650, B2C
+2024-10-29, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Online       ,         95,       13300,        140,        100,           715, B2C
+2024-10-30, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Online       ,          7,       84000,      12000,       8000,           995, B2C
+2024-10-30, SKU-E03   , Mechanical Keyboard    , Electronics, Savar             , Online       ,         14,       49000,       3500,       2200,           922, B2C
+2024-11-01, SKU-E01   , Smart Lamp             , Electronics, Gazipur Sadar     , Retail       ,         22,       26400,       1200,        800,            90, B2C
+2024-11-01, SKU-E04   , Power Bank 10000mAh    , Electronics, Keraniganj        , Online       ,         18,       32400,       1800,       1100,           478, B2C
+2024-11-01, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Online       ,         22,       39600,       1800,       1100,           194, B2C
+2024-11-02, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,         91,       24206,        280,        200,           427, B2C
+2024-11-03, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Wholesale    ,        106,       29680,        280,        200,           529, B2B
+2024-11-04, SKU-G02   , Mustard Oil (1L)       , Groceries  , Savar             , Wholesale    ,        450,      126000,        280,        200,          1306, B2B
+2024-11-06, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Wholesale    ,        414,      496800,       1200,        800,           862, B2B
+2024-11-06, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Online       ,          5,        7500,       1500,        900,           639, B2C
+2024-11-06, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Wholesale    ,         52,      624000,      12000,       8000,            82, B2B
+2024-11-07, SKU-G01   , Organic Rice (5kg)     , Groceries  , Keraniganj        , Retail       ,         41,       18450,        450,        320,           381, B2C
+2024-11-11, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Wholesale    ,        258,     3096000,      12000,       8000,           923, B2B
+2024-11-11, SKU-E04   , Power Bank 10000mAh    , Electronics, Savar             , Wholesale    ,        190,      342000,       1800,       1100,           688, B2B
+2024-11-12, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Retail       ,         22,      237600,      12000,       8000,            99, B2C
+2024-11-12, SKU-A02   , Premium Jamdani Saree  , Apparel    , Narayanganj Sadar , Wholesale    ,        277,     3324000,      12000,       8000,           593, B2B
+2024-11-12, SKU-A03   , Denim Jeans            , Apparel    , Gazipur Sadar     , Wholesale    ,        152,      273600,       1800,       1000,           443, B2B
+2024-11-13, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Wholesale    ,        374,       52360,        140,        100,           549, B2B
+2024-11-14, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Online       ,         20,       34200,       1800,       1100,           768, B2C
+2024-11-14, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Online       ,         11,       19800,       1800,       1100,           275, B2C
+2024-11-16, SKU-G02   , Mustard Oil (1L)       , Groceries  , Sylhet Sadar      , Retail       ,         43,       12040,        280,        200,           762, B2C
+2024-11-16, SKU-A04   , Basic T-Shirt          , Apparel    , Gazipur Sadar     , Retail       ,         11,        4400,        400,        200,           902, B2C
+2024-11-17, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Retail       ,          5,        6000,       1200,        800,            51, B2C
+2024-11-18, SKU-A03   , Denim Jeans            , Apparel    , Nawabganj         , Wholesale    ,        120,      205200,       1800,       1000,           315, B2B
+2024-11-18, SKU-E02   , Wireless Earbuds       , Electronics, Narayanganj Sadar , Retail       ,         20,       47500,       2500,       1500,           365, B2B
+2024-11-18, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Wholesale    ,        288,       40320,        140,        100,           352, B2B
+2024-11-19, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Wholesale    ,        155,       43400,        280,        200,           259, B2B
+2024-11-20, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Wholesale    ,        199,     2388000,      12000,       8000,           672, B2B
+2024-11-21, SKU-G01   , Organic Rice (5kg)     , Groceries  , Gazipur Sadar     , Retail       ,         25,       11250,        450,        320,           376, B2C
+2024-11-22, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        300,      135000,        450,        320,           598, B2B
+2024-11-23, SKU-F02   , Office Desk            , Furniture  , Gazipur Sadar     , Retail       ,          1,        8075,       8500,       5000,            17, B2C
+2024-11-23, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Retail       ,         42,        5880,        140,        100,           994, B2C
+2024-11-23, SKU-G01   , Organic Rice (5kg)     , Groceries  , Keraniganj        , Wholesale    ,        307,      138150,        450,        320,           712, B2B
+2024-11-24, SKU-F03   , Bookshelf              , Furniture  , Mohammadpur       , Retail       ,          8,       33600,       4200,       2500,           987, B2C
+2024-11-24, SKU-E03   , Mechanical Keyboard    , Electronics, Mohammadpur       , Online       ,         28,       98000,       3500,       2200,           233, B2B
+2024-11-24, SKU-E04   , Power Bank 10000mAh    , Electronics, Nawabganj         , Retail       ,         27,       48600,       1800,       1100,           882, B2C
+2024-11-25, SKU-G01   , Organic Rice (5kg)     , Groceries  , Gazipur Sadar     , Retail       ,         81,       34628,        450,        320,            73, B2C
+2024-11-27, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Retail       ,         29,       13050,        450,        320,           949, B2B
+2024-11-27, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Online       ,          7,       11970,       1800,       1100,           624, B2C
+2024-11-28, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Wholesale    ,        103,     1174200,      12000,       8000,           251, B2B
+2024-11-29, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Online       ,         30,      360000,      12000,       8000,            89, B2C
+2024-11-29, SKU-A04   , Basic T-Shirt          , Apparel    , Savar             , Online       ,          3,        1140,        400,        200,            10, B2B
+2024-11-30, SKU-G02   , Mustard Oil (1L)       , Groceries  , Nawabganj         , Wholesale    ,        263,       73640,        280,        200,           603, B2B
+2024-12-02, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Retail       ,         10,       18000,       1800,       1100,           526, B2C
+2024-12-05, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Retail       ,         19,       34200,       1800,       1100,            80, B2C
+2024-12-06, SKU-E04   , Power Bank 10000mAh    , Electronics, Narayanganj Sadar , Online       ,         28,       50400,       1800,       1100,           996, B2B
+2024-12-06, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        321,      144450,        450,        320,           671, B2B
+2024-12-06, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Wholesale    ,        466,       61978,        140,        100,           710, B2B
+2024-12-07, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Wholesale    ,        117,       16380,        140,        100,           329, B2B
+2024-12-08, SKU-A01   , Cotton Panjabi         , Apparel    , Nawabganj         , Wholesale    ,        417,      625500,       1500,        900,           807, B2B
+2024-12-08, SKU-S02   , Gel Pen Set            , Stationery , Sylhet Sadar      , Online       ,         26,        6500,        250,        120,           963, B2C
+2024-12-09, SKU-E04   , Power Bank 10000mAh    , Electronics, Keraniganj        , Online       ,         11,       19800,       1800,       1100,           732, B2C
+2024-12-10, SKU-G02   , Mustard Oil (1L)       , Groceries  , Savar             , Retail       ,         37,       10360,        280,        200,           372, B2C
+2024-12-12, SKU-E01   , Smart Lamp             , Electronics, Gazipur Sadar     , Retail       ,         16,       19200,       1200,        800,            42, B2C
+2024-12-12, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,         13,        3640,        280,        200,            39, B2C
+2024-12-13, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Mohammadpur       , Wholesale    ,        342,      205200,        600,        350,           378, B2B
+2024-12-13, SKU-A01   , Cotton Panjabi         , Apparel    , Gazipur Sadar     , Wholesale    ,        140,      210000,       1500,        900,           398, B2B
+2024-12-14, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Wholesale    ,        435,      174000,        400,        200,           888, B2B
+2024-12-15, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Retail       ,         11,       26125,       2500,       1500,           142, B2C
+2024-12-17, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Retail       ,         84,       11760,        140,        100,           476, B2B
+2024-12-18, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Retail       ,         30,       13500,        450,        320,           339, B2C
+2024-12-18, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Wholesale    ,        180,       25200,        140,        100,           974, B2B
+2024-12-19, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Mohammadpur       , Retail       ,          4,        2400,        600,        350,           681, B2C
+2024-12-19, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Wholesale    ,        436,      122080,        280,        200,           538, B2B
+2024-12-19, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Wholesale    ,        147,       41160,        280,        200,           646, B2B
+2024-12-22, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Online       ,         40,       16200,        450,        320,           471, B2B
+2024-12-24, SKU-F03   , Bookshelf              , Furniture  , Mohammadpur       , Retail       ,         10,       42000,       4200,       2500,           408, B2C
+2024-12-24, SKU-G02   , Mustard Oil (1L)       , Groceries  , Savar             , Retail       ,          8,        2128,        280,        200,           291, B2C
+2024-12-24, SKU-G02   , Mustard Oil (1L)       , Groceries  , Keraniganj        , Wholesale    ,        494,      138320,        280,        200,          1070, B2B
+2024-12-24, SKU-A03   , Denim Jeans            , Apparel    , Mymensingh Sadar  , Wholesale    ,        466,      838800,       1800,       1000,           956, B2B
+2024-12-24, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Wholesale    ,        479,      191600,        400,        200,           906, B2B
+2024-12-25, SKU-E04   , Power Bank 10000mAh    , Electronics, Narayanganj Sadar , Online       ,         30,       48600,       1800,       1100,           138, B2C
+2024-12-25, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Online       ,         25,       62500,       2500,       1500,           922, B2C
+2024-12-26, SKU-E03   , Mechanical Keyboard    , Electronics, Mohammadpur       , Online       ,          7,       23275,       3500,       2200,           868, B2C
+2024-12-26, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Retail       ,         21,       52500,       2500,       1500,           976, B2C
+2024-12-27, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Online       ,         18,       21600,       1200,        800,           959, B2C
+2024-12-27, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,         45,       12600,        280,        200,           424, B2C
+2024-12-28, SKU-E01   , Smart Lamp             , Electronics, Gazipur Sadar     , Online       ,         25,       30000,       1200,        800,           642, B2C
+2024-12-28, SKU-E01   , Smart Lamp             , Electronics, Sylhet Sadar      , Online       ,          1,        1200,       1200,        800,           198, B2C
+2024-12-29, SKU-C02   , Herbal Shampoo         , Cosmetics  , Keraniganj        , Online       ,         12,        5130,        450,        250,           386, B2C
+2024-12-29, SKU-A01   , Cotton Panjabi         , Apparel    , Savar             , Retail       ,         18,       27000,       1500,        900,           519, B2C
+2024-12-31, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Wholesale    ,        129,       34314,        280,        200,           425, B2B
+2024-12-31, SKU-G02   , Mustard Oil (1L)       , Groceries  , Savar             , Retail       ,          6,        1680,        280,        200,           702, B2C
+2025-01-01, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        331,      148950,        450,        320,           559, B2B
+2025-01-01, SKU-C02   , Herbal Shampoo         , Cosmetics  , Narayanganj Sadar , Online       ,          1,         450,        450,        250,            10, B2C
+2025-01-01, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Wholesale    ,        216,       30240,        140,        100,           414, B2B
+2025-01-01, SKU-F03   , Bookshelf              , Furniture  , Narayanganj Sadar , Wholesale    ,        494,     2074800,       4200,       2500,          1291, B2B
+2025-01-03, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Retail       ,         66,       29700,        450,        320,           306, B2C
+2025-01-04, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Wholesale    ,        434,       60760,        140,        100,           971, B2B
+2025-01-05, SKU-A04   , Basic T-Shirt          , Apparel    , Savar             , Retail       ,         24,        9600,        400,        200,            14, B2C
+2025-01-05, SKU-E02   , Wireless Earbuds       , Electronics, Gazipur Sadar     , Retail       ,         17,       42500,       2500,       1500,           606, B2C
+2025-01-05, SKU-G03   , Lentils (1kg)          , Groceries  , Nawabganj         , Wholesale    ,        497,       69580,        140,        100,          1378, B2B
+2025-01-05, SKU-E01   , Smart Lamp             , Electronics, Savar             , Online       ,          3,        3600,       1200,        800,           483, B2C
+2025-01-06, SKU-A01   , Cotton Panjabi         , Apparel    , Savar             , Wholesale    ,        495,      742500,       1500,        900,          1404, B2B
+2025-01-07, SKU-G02   , Mustard Oil (1L)       , Groceries  , Gazipur Sadar     , Retail       ,         23,        6440,        280,        200,           164, B2C
+2025-01-07, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Retail       ,         14,        5600,        400,        200,            89, B2C
+2025-01-08, SKU-A04   , Basic T-Shirt          , Apparel    , Narayanganj Sadar , Retail       ,          7,        2800,        400,        200,           710, B2C
+2025-01-08, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Wholesale    ,        286,       80080,        280,        200,           400, B2B
+2025-01-10, SKU-A02   , Premium Jamdani Saree  , Apparel    , Narayanganj Sadar , Online       ,         19,      228000,      12000,       8000,           320, B2C
+2025-01-11, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Retail       ,         72,       20160,        280,        200,           454, B2C
+2025-01-11, SKU-C01   , Skincare Gift Set      , Cosmetics  , Sylhet Sadar      , Online       ,         29,       63800,       2200,       1200,           497, B2C
+2025-01-12, SKU-E04   , Power Bank 10000mAh    , Electronics, Savar             , Online       ,          8,       14400,       1800,       1100,           387, B2C
+2025-01-12, SKU-A02   , Premium Jamdani Saree  , Apparel    , Keraniganj        , Wholesale    ,        280,     3360000,      12000,       8000,           482, B2B
+2025-01-12, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Wholesale    ,        197,     2364000,      12000,       8000,           398, B2B
+2025-01-12, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Online       ,          5,        7500,       1500,        900,           672, B2C
+2025-01-13, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Online       ,         18,        8100,        450,        250,           527, B2B
+2025-01-13, SKU-E02   , Wireless Earbuds       , Electronics, Narayanganj Sadar , Online       ,         13,       32500,       2500,       1500,           714, B2C
+2025-01-13, SKU-E02   , Wireless Earbuds       , Electronics, Sylhet Sadar      , Wholesale    ,        263,      657500,       2500,       1500,           831, B2B
+2025-01-14, SKU-F02   , Office Desk            , Furniture  , Narayanganj Sadar , Wholesale    ,        299,     2541500,       8500,       5000,           657, B2B
+2025-01-14, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         44,        6160,        140,        100,           850, B2C
+2025-01-14, SKU-C02   , Herbal Shampoo         , Cosmetics  , Savar             , Online       ,          3,        1350,        450,        250,           652, B2C
+2025-01-15, SKU-A03   , Denim Jeans            , Apparel    , Narayanganj Sadar , Online       ,         26,       46800,       1800,       1000,           176, B2C
+2025-01-17, SKU-E01   , Smart Lamp             , Electronics, Sylhet Sadar      , Online       ,         19,       22800,       1200,        800,           933, B2C
+2025-01-21, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Wholesale    ,         76,      912000,      12000,       8000,           196, B2B
+2025-01-24, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Savar             , Wholesale    ,        393,     2161500,       5500,       3500,          1152, B2B
+2025-01-24, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Wholesale    ,        209,       58520,        280,        200,           349, B2B
+2025-01-24, SKU-E01   , Smart Lamp             , Electronics, Narayanganj Sadar , Online       ,         10,       12000,       1200,        800,            43, B2C
+2025-01-25, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Keraniganj        , Retail       ,          8,       44000,       5500,       3500,           804, B2C
+2025-01-25, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Online       ,         26,       46800,       1800,       1100,            26, B2C
+2025-01-26, SKU-G01   , Organic Rice (5kg)     , Groceries  , Keraniganj        , Retail       ,         94,       40185,        450,        320,           785, B2C
+2025-01-26, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Retail       ,         89,       11837,        140,        100,           210, B2C
+2025-01-27, SKU-A01   , Cotton Panjabi         , Apparel    , Gazipur Sadar     , Retail       ,          8,       12000,       1500,        900,           599, B2C
+2025-01-28, SKU-A03   , Denim Jeans            , Apparel    , Savar             , Wholesale    ,        471,      805410,       1800,       1000,           917, B2B
+2025-01-28, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Retail       ,         48,       21600,        450,        320,           675, B2C
+2025-01-29, SKU-G03   , Lentils (1kg)          , Groceries  , Keraniganj        , Wholesale    ,        123,       17220,        140,        100,           331, B2B
+2025-01-31, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Retail       ,         25,       11250,        450,        320,           782, B2C
+2025-01-31, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mymensingh Sadar  , Retail       ,          9,       97200,      12000,       8000,           304, B2C
+2025-01-31, SKU-A03   , Denim Jeans            , Apparel    , Nawabganj         , Online       ,         25,       45000,       1800,       1000,           991, B2C
+2025-02-01, SKU-G02   , Mustard Oil (1L)       , Groceries  , Gazipur Sadar     , Online       ,         35,        9800,        280,        200,           739, B2C
+2025-02-01, SKU-E02   , Wireless Earbuds       , Electronics, Narayanganj Sadar , Online       ,          5,       12500,       2500,       1500,            49, B2C
+2025-02-01, SKU-E02   , Wireless Earbuds       , Electronics, Savar             , Online       ,         10,       25000,       2500,       1500,           535, B2C
+2025-02-02, SKU-F02   , Office Desk            , Furniture  , Keraniganj        , Wholesale    ,        108,      872100,       8500,       5000,           272, B2B
+2025-02-02, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mymensingh Sadar  , Wholesale    ,        106,     1272000,      12000,       8000,           435, B2B
+2025-02-03, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Wholesale    ,        253,      432630,       1800,       1000,           942, B2B
+2025-02-04, SKU-E01   , Smart Lamp             , Electronics, Narayanganj Sadar , Retail       ,         18,       21600,       1200,        800,           913, B2C
+2025-02-05, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Online       ,         15,      180000,      12000,       8000,           372, B2C
+2025-02-05, SKU-E04   , Power Bank 10000mAh    , Electronics, Mymensingh Sadar  , Retail       ,          3,        5400,       1800,       1100,           268, B2C
+2025-02-06, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Wholesale    ,        377,      105560,        280,        200,           415, B2B
+2025-02-06, SKU-C01   , Skincare Gift Set      , Cosmetics  , Sylhet Sadar      , Online       ,         11,       24200,       2200,       1200,           508, B2C
+2025-02-06, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Wholesale    ,        275,      123750,        450,        320,           770, B2B
+2025-02-06, SKU-E03   , Mechanical Keyboard    , Electronics, Mohammadpur       , Online       ,         28,       98000,       3500,       2200,           492, B2C
+2025-02-08, SKU-E04   , Power Bank 10000mAh    , Electronics, Savar             , Online       ,          7,       12600,       1800,       1100,           320, B2C
+2025-02-08, SKU-C02   , Herbal Shampoo         , Cosmetics  , Savar             , Online       ,         27,       12150,        450,        250,           639, B2C
+2025-02-09, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Online       ,         13,       23400,       1800,       1000,           230, B2C
+2025-02-09, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Retail       ,         84,       11760,        140,        100,           754, B2C
+2025-02-10, SKU-C01   , Skincare Gift Set      , Cosmetics  , Gazipur Sadar     , Wholesale    ,        327,      719400,       2200,       1200,           964, B2B
+2025-02-11, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Sylhet Sadar      , Retail       ,          6,       33000,       5500,       3500,           576, B2C
+2025-02-11, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Wholesale    ,        408,      114240,        280,        200,           885, B2B
+2025-02-12, SKU-G02   , Mustard Oil (1L)       , Groceries  , Gazipur Sadar     , Retail       ,         83,       23240,        280,        200,           911, B2C
+2025-02-12, SKU-F03   , Bookshelf              , Furniture  , Narayanganj Sadar , Wholesale    ,        217,      911400,       4200,       2500,           329, B2B
+2025-02-13, SKU-C01   , Skincare Gift Set      , Cosmetics  , Savar             , Wholesale    ,        460,     1012000,       2200,       1200,           908, B2B
+2025-02-13, SKU-C01   , Skincare Gift Set      , Cosmetics  , Mohammadpur       , Wholesale    ,        186,      409200,       2200,       1200,           242, B2B
+2025-02-15, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Online       ,          9,       22500,       2500,       1500,           279, B2C
+2025-02-15, SKU-A02   , Premium Jamdani Saree  , Apparel    , Savar             , Retail       ,          3,       34200,      12000,       8000,           326, B2C
+2025-02-16, SKU-G02   , Mustard Oil (1L)       , Groceries  , Sylhet Sadar      , Retail       ,         46,       12880,        280,        200,           410, B2C
+2025-02-17, SKU-A02   , Premium Jamdani Saree  , Apparel    , Narayanganj Sadar , Retail       ,         19,      228000,      12000,       8000,           258, B2C
+2025-02-18, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Online       ,         78,       10374,        140,        100,            23, B2C
+2025-02-18, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mymensingh Sadar  , Retail       ,          4,        1800,        450,        250,           540, B2C
+2025-02-19, SKU-A04   , Basic T-Shirt          , Apparel    , Narayanganj Sadar , Online       ,          9,        3600,        400,        200,           933, B2C
+2025-02-19, SKU-G03   , Lentils (1kg)          , Groceries  , Sylhet Sadar      , Wholesale    ,        171,       21546,        140,        100,           268, B2B
+2025-02-20, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Online       ,         17,       38250,       2500,       1500,           627, B2C
+2025-02-21, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Online       ,         23,       27600,       1200,        800,            77, B2C
+2025-02-21, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        466,      199215,        450,        320,          1212, B2B
+2025-02-24, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Wholesale    ,        398,      111440,        280,        200,           756, B2B
+2025-02-24, SKU-C02   , Herbal Shampoo         , Cosmetics  , Narayanganj Sadar , Wholesale    ,        460,      207000,        450,        250,           617, B2B
+2025-02-25, SKU-A04   , Basic T-Shirt          , Apparel    , Maulvi Bazar Sadar, Retail       ,         21,        8400,        400,        200,           536, B2C
+2025-02-25, SKU-C01   , Skincare Gift Set      , Cosmetics  , Mohammadpur       , Wholesale    ,        228,      501600,       2200,       1200,           946, B2B
+2025-02-25, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Retail       ,         28,        3724,        140,        100,           928, B2C
+2025-02-25, SKU-S02   , Gel Pen Set            , Stationery , Savar             , Wholesale    ,        311,       73862,        250,        120,           724, B2B
+2025-02-26, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Mohammadpur       , Online       ,          9,       49500,       5500,       3500,           938, B2C
+2025-02-27, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Retail       ,         91,       40950,        450,        320,           895, B2C
+2025-02-28, SKU-C01   , Skincare Gift Set      , Cosmetics  , Narayanganj Sadar , Online       ,         27,       59400,       2200,       1200,           907, B2B
+2025-02-28, SKU-E02   , Wireless Earbuds       , Electronics, Mymensingh Sadar  , Online       ,          2,        4500,       2500,       1500,           913, B2C
+2025-03-03, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Retail       ,         36,        5040,        140,        100,           239, B2C
+2025-03-04, SKU-C02   , Herbal Shampoo         , Cosmetics  , Nawabganj         , Online       ,         19,        8122,        450,        250,           720, B2C
+2025-03-05, SKU-A02   , Premium Jamdani Saree  , Apparel    , Nawabganj         , Retail       ,         13,      156000,      12000,       8000,           560, B2C
+2025-03-06, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         16,        2240,        140,        100,           281, B2C
+2025-03-06, SKU-G01   , Organic Rice (5kg)     , Groceries  , Sylhet Sadar      , Retail       ,         36,       16200,        450,        320,           219, B2C
+2025-03-06, SKU-G01   , Organic Rice (5kg)     , Groceries  , Gazipur Sadar     , Retail       ,         83,       37350,        450,        320,           763, B2C
+2025-03-07, SKU-F03   , Bookshelf              , Furniture  , Mohammadpur       , Retail       ,         10,       42000,       4200,       2500,           528, B2C
+2025-03-07, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,         42,       11760,        280,        200,           720, B2C
+2025-03-07, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Wholesale    ,        167,      300600,       1800,       1000,           814, B2B
+2025-03-08, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Retail       ,         73,       10220,        140,        100,           417, B2C
+2025-03-09, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Wholesale    ,        435,      652500,       1500,        900,          1091, B2B
+2025-03-10, SKU-G02   , Mustard Oil (1L)       , Groceries  , Sylhet Sadar      , Wholesale    ,        372,      104160,        280,        200,           757, B2B
+2025-03-12, SKU-G03   , Lentils (1kg)          , Groceries  , Gazipur Sadar     , Retail       ,         88,       12320,        140,        100,           809, B2B
+2025-03-12, SKU-E04   , Power Bank 10000mAh    , Electronics, Narayanganj Sadar , Retail       ,         12,       21600,       1800,       1100,           519, B2C
+2025-03-14, SKU-C02   , Herbal Shampoo         , Cosmetics  , Savar             , Wholesale    ,        140,       63000,        450,        250,           564, B2B
+2025-03-14, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Wholesale    ,        237,      106650,        450,        320,           789, B2B
+2025-03-14, SKU-E02   , Wireless Earbuds       , Electronics, Gazipur Sadar     , Retail       ,          6,       15000,       2500,       1500,           261, B2C
+2025-03-14, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Gazipur Sadar     , Retail       ,          7,       38500,       5500,       3500,           245, B2B
+2025-03-14, SKU-A01   , Cotton Panjabi         , Apparel    , Sylhet Sadar      , Wholesale    ,        297,      445500,       1500,        900,           607, B2B
+2025-03-15, SKU-F02   , Office Desk            , Furniture  , Gazipur Sadar     , Retail       ,          8,       64600,       8500,       5000,           870, B2C
+2025-03-16, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        139,       62550,        450,        320,           819, B2B
+2025-03-16, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Retail       ,         47,       21150,        450,        320,           539, B2C
+2025-03-16, SKU-E01   , Smart Lamp             , Electronics, Narayanganj Sadar , Online       ,          4,        4800,       1200,        800,           615, B2C
+2025-03-16, SKU-G03   , Lentils (1kg)          , Groceries  , Keraniganj        , Wholesale    ,        339,       47460,        140,        100,           911, B2B
+2025-03-18, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Retail       ,         37,       14985,        450,        320,           649, B2C
+2025-03-19, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Retail       ,         36,       10080,        280,        200,           858, B2C
+2025-03-20, SKU-G01   , Organic Rice (5kg)     , Groceries  , Gazipur Sadar     , Retail       ,         88,       39600,        450,        320,           821, B2B
+2025-03-21, SKU-C01   , Skincare Gift Set      , Cosmetics  , Mohammadpur       , Retail       ,         28,       61600,       2200,       1200,           666, B2C
+2025-03-22, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Wholesale    ,         98,       44100,        450,        250,           648, B2B
+2025-03-24, SKU-E03   , Mechanical Keyboard    , Electronics, Keraniganj        , Online       ,         11,       36575,       3500,       2200,           934, B2C
+2025-03-24, SKU-G02   , Mustard Oil (1L)       , Groceries  , Keraniganj        , Retail       ,          6,        1680,        280,        200,           186, B2C
+2025-03-24, SKU-F02   , Office Desk            , Furniture  , Narayanganj Sadar , Online       ,          5,       42500,       8500,       5000,           238, B2C
+2025-03-25, SKU-E02   , Wireless Earbuds       , Electronics, Keraniganj        , Retail       ,         25,       62500,       2500,       1500,           847, B2C
+2025-03-25, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Retail       ,         88,       24640,        280,        200,           384, B2B
+2025-03-25, SKU-G03   , Lentils (1kg)          , Groceries  , Nawabganj         , Retail       ,         11,        1540,        140,        100,           241, B2C
+2025-03-25, SKU-G03   , Lentils (1kg)          , Groceries  , Keraniganj        , Retail       ,         74,       10360,        140,        100,           240, B2C
+2025-03-26, SKU-G01   , Organic Rice (5kg)     , Groceries  , Nawabganj         , Wholesale    ,        229,      103050,        450,        320,           332, B2B
+2025-03-28, SKU-C02   , Herbal Shampoo         , Cosmetics  , Nawabganj         , Wholesale    ,        388,      174600,        450,        250,           916, B2B
+2025-03-28, SKU-F03   , Bookshelf              , Furniture  , Narayanganj Sadar , Retail       ,          3,       12600,       4200,       2500,           388, B2C
+2025-03-28, SKU-C01   , Skincare Gift Set      , Cosmetics  , Mohammadpur       , Wholesale    ,        327,      719400,       2200,       1200,           586, B2B
+2025-03-31, SKU-G02   , Mustard Oil (1L)       , Groceries  , Savar             , Retail       ,         11,        2772,        280,        200,           322, B2C
+2025-04-01, SKU-E03   , Mechanical Keyboard    , Electronics, Savar             , Online       ,         13,       45500,       3500,       2200,           426, B2C
+2025-04-01, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Retail       ,          7,        2992,        450,        250,           876, B2C
+2025-04-01, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Retail       ,         21,        9450,        450,        250,           198, B2C
+2025-04-01, SKU-E04   , Power Bank 10000mAh    , Electronics, Savar             , Retail       ,         26,       46800,       1800,       1100,           323, B2C
+2025-04-01, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         99,       13860,        140,        100,           210, B2C
+2025-04-02, SKU-F03   , Bookshelf              , Furniture  , Mohammadpur       , Online       ,          3,       11970,       4200,       2500,           240, B2C
+2025-04-03, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Wholesale    ,        267,      114142,        450,        320,           743, B2B
+2025-04-04, SKU-A03   , Denim Jeans            , Apparel    , Narayanganj Sadar , Wholesale    ,        157,      282600,       1800,       1000,           401, B2B
+2025-04-04, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Retail       ,         59,       25222,        450,        320,           473, B2C
+2025-04-06, SKU-E01   , Smart Lamp             , Electronics, Sylhet Sadar      , Wholesale    ,        372,      446400,       1200,        800,           864, B2B
+2025-04-07, SKU-G02   , Mustard Oil (1L)       , Groceries  , Nawabganj         , Retail       ,         80,       22400,        280,        200,           428, B2C
+2025-04-07, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Savar             , Retail       ,          8,       41800,       5500,       3500,           679, B2C
+2025-04-08, SKU-E04   , Power Bank 10000mAh    , Electronics, Keraniganj        , Online       ,          5,        9000,       1800,       1100,           877, B2C
+2025-04-09, SKU-G01   , Organic Rice (5kg)     , Groceries  , Keraniganj        , Retail       ,          8,        3420,        450,        320,           758, B2C
+2025-04-10, SKU-F03   , Bookshelf              , Furniture  , Keraniganj        , Wholesale    ,        291,     1222200,       4200,       2500,           841, B2B
+2025-04-11, SKU-C02   , Herbal Shampoo         , Cosmetics  , Sylhet Sadar      , Online       ,         20,        9000,        450,        250,           243, B2C
+2025-04-11, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Retail       ,          5,        8550,       1800,       1000,            82, B2B
+2025-04-12, SKU-A04   , Basic T-Shirt          , Apparel    , Savar             , Retail       ,         14,        5600,        400,        200,           639, B2B
+2025-04-12, SKU-F02   , Office Desk            , Furniture  , Mymensingh Sadar  , Wholesale    ,        132,     1122000,       8500,       5000,           880, B2B
+2025-04-12, SKU-A02   , Premium Jamdani Saree  , Apparel    , Sylhet Sadar      , Retail       ,         23,      276000,      12000,       8000,           129, B2C
+2025-04-15, SKU-G01   , Organic Rice (5kg)     , Groceries  , Gazipur Sadar     , Wholesale    ,        137,       55485,        450,        320,           194, B2B
+2025-04-15, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Retail       ,          2,        3600,       1800,       1000,           603, B2C
+2025-04-15, SKU-A02   , Premium Jamdani Saree  , Apparel    , Narayanganj Sadar , Online       ,         25,      270000,      12000,       8000,           870, B2B
+2025-04-16, SKU-C01   , Skincare Gift Set      , Cosmetics  , Savar             , Retail       ,          8,       17600,       2200,       1200,           304, B2C
+2025-04-17, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Retail       ,         73,       32850,        450,        320,           851, B2C
+2025-04-17, SKU-A02   , Premium Jamdani Saree  , Apparel    , Narayanganj Sadar , Wholesale    ,         98,     1117200,      12000,       8000,           307, B2B
+2025-04-18, SKU-E03   , Mechanical Keyboard    , Electronics, Mohammadpur       , Online       ,          2,        7000,       3500,       2200,           278, B2B
+2025-04-18, SKU-C02   , Herbal Shampoo         , Cosmetics  , Keraniganj        , Retail       ,         12,        5400,        450,        250,           914, B2B
+2025-04-21, SKU-C01   , Skincare Gift Set      , Cosmetics  , Mohammadpur       , Wholesale    ,        128,      281600,       2200,       1200,           637, B2B
+2025-04-22, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,          6,        1680,        280,        200,           226, B2C
+2025-04-22, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Online       ,         21,        8400,        400,        200,            25, B2C
+2025-04-22, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Online       ,         88,       24640,        280,        200,            58, B2C
+2025-04-22, SKU-G03   , Lentils (1kg)          , Groceries  , Gazipur Sadar     , Retail       ,         72,       10080,        140,        100,           453, B2C
+2025-04-23, SKU-F03   , Bookshelf              , Furniture  , Mymensingh Sadar  , Wholesale    ,        473,     1986600,       4200,       2500,           656, B2B
+2025-04-25, SKU-E04   , Power Bank 10000mAh    , Electronics, Narayanganj Sadar , Online       ,          7,       12600,       1800,       1100,           225, B2C
+2025-04-28, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Retail       ,         71,       19880,        280,        200,           878, B2C
+2025-04-28, SKU-A03   , Denim Jeans            , Apparel    , Narayanganj Sadar , Online       ,         22,       39600,       1800,       1000,           546, B2C
+2025-04-28, SKU-A03   , Denim Jeans            , Apparel    , Savar             , Online       ,         25,       45000,       1800,       1000,           855, B2C
+2025-04-29, SKU-E04   , Power Bank 10000mAh    , Electronics, Gazipur Sadar     , Online       ,          4,        6840,       1800,       1100,           174, B2C
+2025-04-30, SKU-F03   , Bookshelf              , Furniture  , Mohammadpur       , Online       ,          9,       37800,       4200,       2500,            36, B2B
+2025-04-30, SKU-A02   , Premium Jamdani Saree  , Apparel    , Nawabganj         , Wholesale    ,        485,     5820000,      12000,       8000,           770, B2B
+2025-05-01, SKU-S02   , Gel Pen Set            , Stationery , Savar             , Wholesale    ,        188,       47000,        250,        120,           936, B2B
+2025-05-01, SKU-E01   , Smart Lamp             , Electronics, Narayanganj Sadar , Online       ,          5,        6000,       1200,        800,           563, B2C
+2025-05-02, SKU-A04   , Basic T-Shirt          , Apparel    , Keraniganj        , Retail       ,          9,        3600,        400,        200,           982, B2C
+2025-05-03, SKU-S02   , Gel Pen Set            , Stationery , Narayanganj Sadar , Online       ,         15,        3750,        250,        120,           261, B2C
+2025-05-03, SKU-G02   , Mustard Oil (1L)       , Groceries  , Keraniganj        , Retail       ,         19,        5320,        280,        200,           937, B2C
+2025-05-03, SKU-E03   , Mechanical Keyboard    , Electronics, Mohammadpur       , Online       ,         20,       70000,       3500,       2200,           654, B2B
+2025-05-03, SKU-G03   , Lentils (1kg)          , Groceries  , Keraniganj        , Retail       ,         42,        5880,        140,        100,           420, B2C
+2025-05-04, SKU-S02   , Gel Pen Set            , Stationery , Savar             , Online       ,         21,        5250,        250,        120,           787, B2C
+2025-05-05, SKU-C02   , Herbal Shampoo         , Cosmetics  , Savar             , Wholesale    ,         93,       41850,        450,        250,           839, B2B
+2025-05-07, SKU-A03   , Denim Jeans            , Apparel    , Nawabganj         , Online       ,         13,       23400,       1800,       1000,           328, B2C
+2025-05-07, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Online       ,          3,        1282,        450,        250,            70, B2C
+2025-05-07, SKU-E04   , Power Bank 10000mAh    , Electronics, Narayanganj Sadar , Retail       ,         17,       30600,       1800,       1100,           890, B2B
+2025-05-08, SKU-E03   , Mechanical Keyboard    , Electronics, Savar             , Online       ,         19,       66500,       3500,       2200,           139, B2C
+2025-05-08, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        467,      210150,        450,        320,          1110, B2B
+2025-05-09, SKU-E03   , Mechanical Keyboard    , Electronics, Nawabganj         , Online       ,          5,       17500,       3500,       2200,           383, B2C
+2025-05-09, SKU-A02   , Premium Jamdani Saree  , Apparel    , Narayanganj Sadar , Online       ,          5,       60000,      12000,       8000,           989, B2B
+2025-05-10, SKU-A04   , Basic T-Shirt          , Apparel    , Gazipur Sadar     , Wholesale    ,         94,       33840,        400,        200,           259, B2B
+2025-05-11, SKU-E01   , Smart Lamp             , Electronics, Savar             , Retail       ,         23,       27600,       1200,        800,           809, B2C
+2025-05-13, SKU-E04   , Power Bank 10000mAh    , Electronics, Maulvi Bazar Sadar, Retail       ,          6,       10800,       1800,       1100,           616, B2C
+2025-05-13, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Online       ,          4,        4800,       1200,        800,           876, B2C
+2025-05-15, SKU-A02   , Premium Jamdani Saree  , Apparel    , Keraniganj        , Wholesale    ,        141,     1692000,      12000,       8000,           673, B2B
+2025-05-15, SKU-F02   , Office Desk            , Furniture  , Savar             , Retail       ,         10,       85000,       8500,       5000,           526, B2C
+2025-05-15, SKU-A01   , Cotton Panjabi         , Apparel    , Keraniganj        , Wholesale    ,        202,      303000,       1500,        900,           502, B2B
+2025-05-16, SKU-E01   , Smart Lamp             , Electronics, Keraniganj        , Online       ,         24,       27360,       1200,        800,           413, B2C
+2025-05-16, SKU-F02   , Office Desk            , Furniture  , Mymensingh Sadar  , Retail       ,          2,       17000,       8500,       5000,           425, B2C
+2025-05-16, SKU-F02   , Office Desk            , Furniture  , Savar             , Online       ,          2,       17000,       8500,       5000,           871, B2C
+2025-05-17, SKU-E04   , Power Bank 10000mAh    , Electronics, Maulvi Bazar Sadar, Online       ,         15,       27000,       1800,       1100,           319, B2C
+2025-05-19, SKU-F03   , Bookshelf              , Furniture  , Sylhet Sadar      , Wholesale    ,        294,     1234800,       4200,       2500,           767, B2B
+2025-05-20, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Online       ,         80,       22400,        280,        200,           285, B2C
+2025-05-20, SKU-E03   , Mechanical Keyboard    , Electronics, Narayanganj Sadar , Retail       ,         29,      101500,       3500,       2200,           311, B2C
+2025-05-21, SKU-S02   , Gel Pen Set            , Stationery , Keraniganj        , Online       ,         22,        5500,        250,        120,           125, B2C
+2025-05-24, SKU-E01   , Smart Lamp             , Electronics, Narayanganj Sadar , Wholesale    ,        487,      555180,       1200,        800,           579, B2B
+2025-05-25, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Retail       ,         30,      360000,      12000,       8000,           631, B2C
+2025-05-26, SKU-A01   , Cotton Panjabi         , Apparel    , Savar             , Wholesale    ,        159,      238500,       1500,        900,           369, B2B
+2025-05-26, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Retail       ,         57,       25650,        450,        320,           453, B2C
+2025-05-26, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Wholesale    ,        289,      115600,        400,        200,           857, B2B
+2025-05-27, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Retail       ,         26,       46800,       1800,       1100,           391, B2C
+2025-05-27, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Gazipur Sadar     , Wholesale    ,        445,     2447500,       5500,       3500,          1203, B2B
+2025-05-28, SKU-E04   , Power Bank 10000mAh    , Electronics, Narayanganj Sadar , Online       ,         29,       52200,       1800,       1100,           302, B2C
+2025-05-29, SKU-A01   , Cotton Panjabi         , Apparel    , Maulvi Bazar Sadar, Wholesale    ,        439,      658500,       1500,        900,           913, B2B
+2025-05-30, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Retail       ,         54,       23085,        450,        320,           358, B2C
+2025-05-30, SKU-S02   , Gel Pen Set            , Stationery , Mohammadpur       , Wholesale    ,        130,       32500,        250,        120,           795, B2B
+2025-05-30, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Retail       ,         74,       33300,        450,        320,           747, B2C
+2025-05-31, SKU-G03   , Lentils (1kg)          , Groceries  , Gazipur Sadar     , Wholesale    ,        352,       49280,        140,        100,           511, B2B
+2025-05-31, SKU-C01   , Skincare Gift Set      , Cosmetics  , Gazipur Sadar     , Retail       ,          7,       14630,       2200,       1200,           555, B2C
+2025-06-01, SKU-C01   , Skincare Gift Set      , Cosmetics  , Narayanganj Sadar , Retail       ,         25,       55000,       2200,       1200,           183, B2C
+2025-06-01, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        299,      134550,        450,        320,           890, B2B
+2025-06-02, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Wholesale    ,         71,        9940,        140,        100,           341, B2B
+2025-06-03, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Savar             , Wholesale    ,         89,      465025,       5500,       3500,           198, B2B
+2025-06-03, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Wholesale    ,        172,      294120,       1800,       1000,           765, B2B
+2025-06-04, SKU-A01   , Cotton Panjabi         , Apparel    , Savar             , Wholesale    ,        160,      228000,       1500,        900,           387, B2B
+2025-06-05, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Online       ,         17,       20400,       1200,        800,           779, B2C
+2025-06-05, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         53,        7420,        140,        100,           883, B2C
+2025-06-07, SKU-G03   , Lentils (1kg)          , Groceries  , Nawabganj         , Retail       ,         56,        7840,        140,        100,           686, B2C
+2025-06-07, SKU-A03   , Denim Jeans            , Apparel    , Narayanganj Sadar , Retail       ,         14,       25200,       1800,       1000,            22, B2C
+2025-06-07, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Gazipur Sadar     , Wholesale    ,        218,      130800,        600,        350,           477, B2B
+2025-06-07, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Wholesale    ,        498,      139440,        280,        200,           940, B2B
+2025-06-08, SKU-A01   , Cotton Panjabi         , Apparel    , Narayanganj Sadar , Wholesale    ,        457,      651225,       1500,        900,           648, B2B
+2025-06-08, SKU-G01   , Organic Rice (5kg)     , Groceries  , Gazipur Sadar     , Online       ,         31,       13950,        450,        320,           186, B2C
+2025-06-09, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Online       ,          9,       12825,       1500,        900,           882, B2B
+2025-06-09, SKU-C02   , Herbal Shampoo         , Cosmetics  , Savar             , Online       ,          2,         855,        450,        250,           544, B2C
+2025-06-09, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Online       ,         10,      120000,      12000,       8000,           770, B2C
+2025-06-12, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Wholesale    ,         70,       19600,        280,        200,           254, B2B
+2025-06-13, SKU-A01   , Cotton Panjabi         , Apparel    , Savar             , Online       ,         12,       18000,       1500,        900,           125, B2C
+2025-06-15, SKU-G02   , Mustard Oil (1L)       , Groceries  , Gazipur Sadar     , Wholesale    ,        445,      124600,        280,        200,          1038, B2B
+2025-06-18, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         63,        8379,        140,        100,           744, B2C
+2025-06-19, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Retail       ,         12,        5400,        450,        250,           616, B2C
+2025-06-19, SKU-F03   , Bookshelf              , Furniture  , Mohammadpur       , Online       ,          9,       37800,       4200,       2500,           394, B2C
+2025-06-20, SKU-E03   , Mechanical Keyboard    , Electronics, Savar             , Online       ,          4,       14000,       3500,       2200,           859, B2C
+2025-06-21, SKU-E04   , Power Bank 10000mAh    , Electronics, Mymensingh Sadar  , Online       ,          7,       12600,       1800,       1100,           967, B2C
+2025-06-24, SKU-E03   , Mechanical Keyboard    , Electronics, Gazipur Sadar     , Online       ,          9,       29925,       3500,       2200,           758, B2C
+2025-06-26, SKU-G02   , Mustard Oil (1L)       , Groceries  , Nawabganj         , Retail       ,         39,       10920,        280,        200,           911, B2C
+2025-06-27, SKU-A04   , Basic T-Shirt          , Apparel    , Savar             , Retail       ,         24,        9600,        400,        200,           389, B2C
+2025-06-27, SKU-F02   , Office Desk            , Furniture  , Mohammadpur       , Retail       ,          9,       76500,       8500,       5000,           783, B2C
+2025-06-29, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Wholesale    ,        244,       97600,        400,        200,           405, B2B
+2025-06-30, SKU-C02   , Herbal Shampoo         , Cosmetics  , Keraniganj        , Wholesale    ,        498,      224100,        450,        250,          1047, B2B
+2025-06-30, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Mymensingh Sadar  , Wholesale    ,        273,      163800,        600,        350,           529, B2B
+2025-06-30, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Wholesale    ,        490,      882000,       1800,       1000,          1337, B2B
+2025-07-01, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Sylhet Sadar      , Retail       ,         10,        6000,        600,        350,           692, B2C
+2025-07-01, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Online       ,          1,        2500,       2500,       1500,           694, B2C
+2025-07-04, SKU-G02   , Mustard Oil (1L)       , Groceries  , Gazipur Sadar     , Wholesale    ,        131,       34846,        280,        200,           882, B2B
+2025-07-05, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Savar             , Wholesale    ,        315,     1732500,       5500,       3500,           824, B2B
+2025-07-05, SKU-G03   , Lentils (1kg)          , Groceries  , Nawabganj         , Wholesale    ,        474,       66360,        140,        100,           730, B2B
+2025-07-05, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Online       ,         24,       60000,       2500,       1500,           700, B2C
+2025-07-05, SKU-G01   , Organic Rice (5kg)     , Groceries  , Gazipur Sadar     , Wholesale    ,        295,      132750,        450,        320,           876, B2B
+2025-07-05, SKU-A02   , Premium Jamdani Saree  , Apparel    , Narayanganj Sadar , Online       ,         26,      312000,      12000,       8000,           837, B2C
+2025-07-06, SKU-A03   , Denim Jeans            , Apparel    , Savar             , Wholesale    ,        149,      268200,       1800,       1000,           682, B2B
+2025-07-07, SKU-F02   , Office Desk            , Furniture  , Gazipur Sadar     , Retail       ,          3,       24225,       8500,       5000,           484, B2C
+2025-07-07, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Wholesale    ,         89,       40050,        450,        250,           595, B2B
+2025-07-07, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         98,       13720,        140,        100,            37, B2B
+2025-07-11, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mymensingh Sadar  , Wholesale    ,        412,      185400,        450,        320,           594, B2B
+2025-07-13, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Online       ,         23,       41400,       1800,       1100,           831, B2C
+2025-07-14, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,         88,       24640,        280,        200,           903, B2C
+2025-07-14, SKU-E02   , Wireless Earbuds       , Electronics, Nawabganj         , Retail       ,         26,       65000,       2500,       1500,           528, B2C
+2025-07-15, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Wholesale    ,        425,     5100000,      12000,       8000,           996, B2B
+2025-07-16, SKU-C01   , Skincare Gift Set      , Cosmetics  , Mohammadpur       , Wholesale    ,        307,      675400,       2200,       1200,           393, B2B
+2025-07-16, SKU-E04   , Power Bank 10000mAh    , Electronics, Gazipur Sadar     , Online       ,         24,       43200,       1800,       1100,            20, B2C
+2025-07-17, SKU-E03   , Mechanical Keyboard    , Electronics, Gazipur Sadar     , Online       ,         29,      101500,       3500,       2200,           957, B2C
+2025-07-18, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Retail       ,         56,       25200,        450,        320,           109, B2C
+2025-07-18, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         17,        2380,        140,        100,           131, B2C
+2025-07-18, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Retail       ,         11,       19800,       1800,       1000,           504, B2C
+2025-07-19, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        114,       51300,        450,        320,           945, B2B
+2025-07-20, SKU-A01   , Cotton Panjabi         , Apparel    , Sylhet Sadar      , Retail       ,          3,        4500,       1500,        900,           801, B2C
+2025-07-20, SKU-C01   , Skincare Gift Set      , Cosmetics  , Mohammadpur       , Retail       ,         26,       54340,       2200,       1200,           763, B2C
+2025-07-21, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Retail       ,         50,       22500,        450,        320,           673, B2C
+2025-07-24, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Mohammadpur       , Retail       ,          4,       20900,       5500,       3500,           799, B2C
+2025-07-25, SKU-A04   , Basic T-Shirt          , Apparel    , Sylhet Sadar      , Wholesale    ,        491,      196400,        400,        200,          1086, B2B
+2025-07-25, SKU-G01   , Organic Rice (5kg)     , Groceries  , Gazipur Sadar     , Retail       ,         91,       40950,        450,        320,           550, B2C
+2025-07-28, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Online       ,         26,        9360,        400,        200,           784, B2B
+2025-07-29, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Wholesale    ,        448,       62720,        140,        100,          1205, B2B
+2025-07-30, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Retail       ,         70,       31500,        450,        320,           884, B2C
+2025-07-30, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Narayanganj Sadar , Online       ,          5,       27500,       5500,       3500,           560, B2C
+2025-07-30, SKU-E02   , Wireless Earbuds       , Electronics, Gazipur Sadar     , Online       ,         19,       47500,       2500,       1500,           390, B2C
+2025-07-31, SKU-E03   , Mechanical Keyboard    , Electronics, Savar             , Online       ,          5,       17500,       3500,       2200,           288, B2C
+2025-07-31, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Wholesale    ,        383,      153200,        400,        200,           943, B2B
+2025-08-01, SKU-C01   , Skincare Gift Set      , Cosmetics  , Narayanganj Sadar , Online       ,         30,       66000,       2200,       1200,           349, B2C
+2025-08-02, SKU-F03   , Bookshelf              , Furniture  , Gazipur Sadar     , Retail       ,          1,        4200,       4200,       2500,           870, B2C
+2025-08-03, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Mohammadpur       , Retail       ,          9,       49500,       5500,       3500,           773, B2C
+2025-08-03, SKU-A03   , Denim Jeans            , Apparel    , Savar             , Online       ,          2,        3600,       1800,       1000,            30, B2C
+2025-08-03, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Online       ,         27,       67500,       2500,       1500,           863, B2C
+2025-08-03, SKU-A04   , Basic T-Shirt          , Apparel    , Narayanganj Sadar , Online       ,         10,        4000,        400,        200,           849, B2C
+2025-08-05, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Mohammadpur       , Wholesale    ,         78,       46800,        600,        350,           747, B2B
+2025-08-06, SKU-G01   , Organic Rice (5kg)     , Groceries  , Gazipur Sadar     , Retail       ,         66,       29700,        450,        320,           962, B2C
+2025-08-09, SKU-G03   , Lentils (1kg)          , Groceries  , Mymensingh Sadar  , Wholesale    ,        345,       48300,        140,        100,           942, B2B
+2025-08-09, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Wholesale    ,        111,       15540,        140,        100,           698, B2B
+2025-08-10, SKU-A04   , Basic T-Shirt          , Apparel    , Sylhet Sadar      , Wholesale    ,        473,      189200,        400,        200,           779, B2B
+2025-08-11, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Narayanganj Sadar , Retail       ,          8,       41800,       5500,       3500,           779, B2C
+2025-08-12, SKU-A01   , Cotton Panjabi         , Apparel    , Narayanganj Sadar , Wholesale    ,        292,      438000,       1500,        900,           740, B2B
+2025-08-12, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Mymensingh Sadar  , Retail       ,         27,       16200,        600,        350,           931, B2C
+2025-08-12, SKU-S02   , Gel Pen Set            , Stationery , Mohammadpur       , Retail       ,          9,        2250,        250,        120,           719, B2C
+2025-08-13, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Retail       ,         34,        9520,        280,        200,           346, B2C
+2025-08-13, SKU-G01   , Organic Rice (5kg)     , Groceries  , Narayanganj Sadar , Wholesale    ,         69,       27945,        450,        320,           554, B2B
+2025-08-15, SKU-F02   , Office Desk            , Furniture  , Mohammadpur       , Online       ,         10,       85000,       8500,       5000,           904, B2C
+2025-08-16, SKU-E04   , Power Bank 10000mAh    , Electronics, Savar             , Online       ,         23,       41400,       1800,       1100,           518, B2C
+2025-08-17, SKU-F03   , Bookshelf              , Furniture  , Gazipur Sadar     , Online       ,          7,       27930,       4200,       2500,           848, B2C
+2025-08-18, SKU-C01   , Skincare Gift Set      , Cosmetics  , Mohammadpur       , Retail       ,         16,       33440,       2200,       1200,           896, B2C
+2025-08-19, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Online       ,          3,        1350,        450,        250,            42, B2C
+2025-08-19, SKU-E03   , Mechanical Keyboard    , Electronics, Keraniganj        , Online       ,         28,       98000,       3500,       2200,           425, B2C
+2025-08-19, SKU-C01   , Skincare Gift Set      , Cosmetics  , Savar             , Wholesale    ,        327,      719400,       2200,       1200,           954, B2B
+2025-08-19, SKU-S02   , Gel Pen Set            , Stationery , Narayanganj Sadar , Online       ,         19,        4512,        250,        120,           480, B2C
+2025-08-20, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Wholesale    ,        100,      150000,       1500,        900,           453, B2B
+2025-08-21, SKU-A01   , Cotton Panjabi         , Apparel    , Sylhet Sadar      , Wholesale    ,         80,      120000,       1500,        900,           784, B2B
+2025-08-22, SKU-F02   , Office Desk            , Furniture  , Mohammadpur       , Retail       ,          6,       51000,       8500,       5000,           804, B2C
+2025-08-25, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mymensingh Sadar  , Wholesale    ,        396,      169290,        450,        320,           999, B2B
+2025-08-26, SKU-G03   , Lentils (1kg)          , Groceries  , Gazipur Sadar     , Wholesale    ,        357,       44982,        140,        100,           978, B2B
+2025-08-26, SKU-G03   , Lentils (1kg)          , Groceries  , Maulvi Bazar Sadar, Retail       ,         95,       13300,        140,        100,            28, B2C
+2025-08-27, SKU-G02   , Mustard Oil (1L)       , Groceries  , Maulvi Bazar Sadar, Wholesale    ,        424,      112784,        280,        200,           705, B2B
+2025-08-27, SKU-A03   , Denim Jeans            , Apparel    , Narayanganj Sadar , Retail       ,         18,       32400,       1800,       1000,           403, B2C
+2025-08-28, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Online       ,          3,       36000,      12000,       8000,           836, B2C
+2025-08-29, SKU-E03   , Mechanical Keyboard    , Electronics, Keraniganj        , Online       ,         19,       66500,       3500,       2200,           126, B2C
+2025-08-31, SKU-A02   , Premium Jamdani Saree  , Apparel    , Nawabganj         , Wholesale    ,        160,     1920000,      12000,       8000,           373, B2B
+2025-08-31, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Online       ,         29,      348000,      12000,       8000,           873, B2C
+2025-08-31, SKU-F02   , Office Desk            , Furniture  , Gazipur Sadar     , Wholesale    ,        280,     2380000,       8500,       5000,           849, B2B
+2025-09-03, SKU-A04   , Basic T-Shirt          , Apparel    , Sylhet Sadar      , Wholesale    ,        326,      130400,        400,        200,           850, B2B
+2025-09-04, SKU-A04   , Basic T-Shirt          , Apparel    , Gazipur Sadar     , Wholesale    ,        430,      172000,        400,        200,           547, B2B
+2025-09-04, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Wholesale    ,        304,       42560,        140,        100,           611, B2B
+2025-09-05, SKU-C01   , Skincare Gift Set      , Cosmetics  , Nawabganj         , Wholesale    ,        314,      690800,       2200,       1200,           642, B2B
+2025-09-05, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Online       ,          5,        2025,        450,        250,           389, B2C
+2025-09-06, SKU-E03   , Mechanical Keyboard    , Electronics, Gazipur Sadar     , Online       ,          1,        3325,       3500,       2200,           724, B2C
+2025-09-07, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Retail       ,         67,       30150,        450,        320,           119, B2C
+2025-09-07, SKU-G02   , Mustard Oil (1L)       , Groceries  , Keraniganj        , Retail       ,         77,       21560,        280,        200,           878, B2C
+2025-09-07, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Narayanganj Sadar , Wholesale    ,        134,      737000,       5500,       3500,           453, B2B
+2025-09-08, SKU-A01   , Cotton Panjabi         , Apparel    , Savar             , Retail       ,         11,       14850,       1500,        900,           781, B2B
+2025-09-09, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Wholesale    ,         60,      108000,       1800,       1000,           304, B2B
+2025-09-10, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Wholesale    ,        173,       48440,        280,        200,           532, B2B
+2025-09-10, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Retail       ,         24,        9600,        400,        200,           597, B2C
+2025-09-14, SKU-C01   , Skincare Gift Set      , Cosmetics  , Narayanganj Sadar , Wholesale    ,        282,      620400,       2200,       1200,           493, B2B
+2025-09-14, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Wholesale    ,         78,       10374,        140,        100,           833, B2B
+2025-09-15, SKU-E04   , Power Bank 10000mAh    , Electronics, Gazipur Sadar     , Online       ,          6,       10260,       1800,       1100,           507, B2C
+2025-09-16, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Mohammadpur       , Retail       ,          5,       27500,       5500,       3500,           952, B2C
+2025-09-17, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Wholesale    ,        371,      166950,        450,        320,           403, B2B
+2025-09-18, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Online       ,         28,      336000,      12000,       8000,           424, B2C
+2025-09-18, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Wholesale    ,        208,       93600,        450,        250,           390, B2B
+2025-09-19, SKU-C02   , Herbal Shampoo         , Cosmetics  , Narayanganj Sadar , Wholesale    ,        398,      179100,        450,        250,          1066, B2B
+2025-09-19, SKU-E04   , Power Bank 10000mAh    , Electronics, Narayanganj Sadar , Online       ,         27,       48600,       1800,       1100,           674, B2C
+2025-09-19, SKU-A04   , Basic T-Shirt          , Apparel    , Nawabganj         , Wholesale    ,        260,       93600,        400,        200,           690, B2B
+2025-09-19, SKU-G02   , Mustard Oil (1L)       , Groceries  , Nawabganj         , Wholesale    ,        415,      110390,        280,        200,           701, B2B
+2025-09-23, SKU-C02   , Herbal Shampoo         , Cosmetics  , Keraniganj        , Wholesale    ,        321,      144450,        450,        250,           849, B2B
+2025-09-23, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mymensingh Sadar  , Wholesale    ,        381,      106680,        280,        200,           406, B2B
+2025-09-24, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Retail       ,         34,        4760,        140,        100,           965, B2C
+2025-09-24, SKU-G01   , Organic Rice (5kg)     , Groceries  , Savar             , Retail       ,         69,       31050,        450,        320,           303, B2C
+2025-09-24, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        106,       47700,        450,        320,           943, B2B
+2025-09-24, SKU-A01   , Cotton Panjabi         , Apparel    , Gazipur Sadar     , Wholesale    ,        169,      253500,       1500,        900,           760, B2B
+2025-09-25, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Wholesale    ,        485,     5820000,      12000,       8000,          1199, B2B
+2025-09-25, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Online       ,         17,       42500,       2500,       1500,           576, B2C
+2025-09-25, SKU-E04   , Power Bank 10000mAh    , Electronics, Narayanganj Sadar , Retail       ,          9,       16200,       1800,       1100,           174, B2C
+2025-09-26, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Online       ,         22,       55000,       2500,       1500,           505, B2C
+2025-09-26, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Retail       ,         59,        7847,        140,        100,           651, B2C
+2025-09-27, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Wholesale    ,        346,      622800,       1800,       1000,           872, B2B
+2025-09-27, SKU-A04   , Basic T-Shirt          , Apparel    , Gazipur Sadar     , Wholesale    ,        450,      180000,        400,        200,           887, B2B
+2025-09-27, SKU-A03   , Denim Jeans            , Apparel    , Savar             , Retail       ,          4,        7200,       1800,       1000,            23, B2C
+2025-09-29, SKU-E04   , Power Bank 10000mAh    , Electronics, Mohammadpur       , Retail       ,         22,       39600,       1800,       1100,           253, B2C
+2025-10-01, SKU-F02   , Office Desk            , Furniture  , Sylhet Sadar      , Retail       ,          9,       68850,       8500,       5000,           893, B2C
+2025-10-02, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Retail       ,         11,       27500,       2500,       1500,           496, B2C
+2025-10-02, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         85,       10710,        140,        100,           930, B2B
+2025-10-03, SKU-A01   , Cotton Panjabi         , Apparel    , Narayanganj Sadar , Retail       ,         15,       21375,       1500,        900,           990, B2C
+2025-10-03, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Online       ,         28,       11200,        400,        200,           410, B2B
+2025-10-04, SKU-E03   , Mechanical Keyboard    , Electronics, Narayanganj Sadar , Online       ,          3,       10500,       3500,       2200,           988, B2C
+2025-10-04, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Retail       ,         69,        9660,        140,        100,           340, B2C
+2025-10-05, SKU-F02   , Office Desk            , Furniture  , Savar             , Retail       ,          6,       51000,       8500,       5000,           270, B2C
+2025-10-06, SKU-E03   , Mechanical Keyboard    , Electronics, Mohammadpur       , Retail       ,         15,       52500,       3500,       2200,           528, B2C
+2025-10-07, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Wholesale    ,        429,      120120,        280,        200,           605, B2B
+2025-10-07, SKU-G02   , Mustard Oil (1L)       , Groceries  , Keraniganj        , Wholesale    ,         98,       27440,        280,        200,           747, B2B
+2025-10-08, SKU-E03   , Mechanical Keyboard    , Electronics, Mohammadpur       , Retail       ,          5,       16625,       3500,       2200,           439, B2C
+2025-10-08, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Retail       ,         54,       24300,        450,        320,           897, B2C
+2025-10-09, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Online       ,         25,      300000,      12000,       8000,           665, B2C
+2025-10-10, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Gazipur Sadar     , Online       ,         23,       13800,        600,        350,           374, B2C
+2025-10-11, SKU-C01   , Skincare Gift Set      , Cosmetics  , Maulvi Bazar Sadar, Wholesale    ,         64,      133760,       2200,       1200,           933, B2B
+2025-10-11, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Retail       ,         29,       52200,       1800,       1000,           412, B2C
+2025-10-11, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Wholesale    ,        246,      110700,        450,        250,           853, B2B
+2025-10-12, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Retail       ,         80,       36000,        450,        320,            70, B2C
+2025-10-13, SKU-C01   , Skincare Gift Set      , Cosmetics  , Gazipur Sadar     , Wholesale    ,        439,      965800,       2200,       1200,           853, B2B
+2025-10-13, SKU-A01   , Cotton Panjabi         , Apparel    , Narayanganj Sadar , Retail       ,         25,       33750,       1500,        900,           128, B2C
+2025-10-13, SKU-G02   , Mustard Oil (1L)       , Groceries  , Gazipur Sadar     , Retail       ,          7,        1960,        280,        200,           999, B2C
+2025-10-14, SKU-C02   , Herbal Shampoo         , Cosmetics  , Gazipur Sadar     , Retail       ,         14,        6300,        450,        250,           374, B2C
+2025-10-14, SKU-S02   , Gel Pen Set            , Stationery , Narayanganj Sadar , Wholesale    ,        284,       71000,        250,        120,           930, B2B
+2025-10-15, SKU-E01   , Smart Lamp             , Electronics, Narayanganj Sadar , Online       ,          6,        7200,       1200,        800,           536, B2C
+2025-10-16, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Wholesale    ,        225,      337500,       1500,        900,           553, B2B
+2025-10-16, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,         79,       22120,        280,        200,           430, B2C
+2025-10-16, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Online       ,         20,       50000,       2500,       1500,            92, B2C
+2025-10-16, SKU-S02   , Gel Pen Set            , Stationery , Gazipur Sadar     , Wholesale    ,        239,       53775,        250,        120,           504, B2B
+2025-10-18, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Online       ,         20,      240000,      12000,       8000,           601, B2C
+2025-10-19, SKU-G03   , Lentils (1kg)          , Groceries  , Keraniganj        , Wholesale    ,        432,       60480,        140,        100,           975, B2B
+2025-10-19, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Retail       ,         92,       12880,        140,        100,           242, B2C
+2025-10-20, SKU-A04   , Basic T-Shirt          , Apparel    , Savar             , Online       ,         23,        9200,        400,        200,           444, B2C
+2025-10-21, SKU-G01   , Organic Rice (5kg)     , Groceries  , Keraniganj        , Wholesale    ,        374,      168300,        450,        320,          1069, B2B
+2025-10-21, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Wholesale    ,        162,      291600,       1800,       1000,           240, B2B
+2025-10-23, SKU-E02   , Wireless Earbuds       , Electronics, Nawabganj         , Retail       ,          3,        7500,       2500,       1500,           815, B2C
+2025-10-24, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Wholesale    ,        236,      106200,        450,        250,           485, B2B
+2025-10-24, SKU-G01   , Organic Rice (5kg)     , Groceries  , Maulvi Bazar Sadar, Wholesale    ,        418,      178695,        450,        320,           772, B2B
+2025-10-24, SKU-C01   , Skincare Gift Set      , Cosmetics  , Narayanganj Sadar , Retail       ,         25,       55000,       2200,       1200,           986, B2C
+2025-10-24, SKU-G01   , Organic Rice (5kg)     , Groceries  , Keraniganj        , Wholesale    ,         51,       22950,        450,        320,           237, B2B
+2025-10-24, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Online       ,          8,       14400,       1800,       1000,           863, B2C
+2025-10-25, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Retail       ,         10,        1400,        140,        100,           716, B2C
+2025-10-26, SKU-A03   , Denim Jeans            , Apparel    , Gazipur Sadar     , Retail       ,          9,       16200,       1800,       1000,           739, B2C
+2025-10-26, SKU-G03   , Lentils (1kg)          , Groceries  , Nawabganj         , Retail       ,         43,        6020,        140,        100,           888, B2C
+2025-10-27, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Retail       ,         34,        9520,        280,        200,           318, B2C
+2025-10-27, SKU-S02   , Gel Pen Set            , Stationery , Keraniganj        , Wholesale    ,         71,       17750,        250,        120,           774, B2B
+2025-10-28, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Online       ,          9,       12825,       1500,        900,           488, B2C
+2025-10-28, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Wholesale    ,        198,       55440,        280,        200,           258, B2B
+2025-10-29, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Wholesale    ,        389,     4668000,      12000,       8000,           592, B2B
+2025-10-29, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Wholesale    ,        206,       57680,        280,        200,           570, B2B
+2025-11-01, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Narayanganj Sadar , Online       ,         15,        9000,        600,        350,           441, B2B
+2025-11-01, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Retail       ,         30,        4200,        140,        100,           726, B2C
+2025-11-02, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Retail       ,          6,         798,        140,        100,           575, B2C
+2025-11-03, SKU-E01   , Smart Lamp             , Electronics, Savar             , Online       ,         24,       28800,       1200,        800,           109, B2C
+2025-11-03, SKU-A03   , Denim Jeans            , Apparel    , Narayanganj Sadar , Online       ,         20,       36000,       1800,       1000,           630, B2C
+2025-11-03, SKU-E03   , Mechanical Keyboard    , Electronics, Mohammadpur       , Wholesale    ,        297,     1039500,       3500,       2200,           454, B2B
+2025-11-04, SKU-E02   , Wireless Earbuds       , Electronics, Mohammadpur       , Online       ,         30,       75000,       2500,       1500,           284, B2C
+2025-11-04, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Wholesale    ,        260,      117000,        450,        250,           477, B2B
+2025-11-04, SKU-E02   , Wireless Earbuds       , Electronics, Savar             , Online       ,         16,       38000,       2500,       1500,            94, B2C
+2025-11-06, SKU-S02   , Gel Pen Set            , Stationery , Narayanganj Sadar , Wholesale    ,        364,       91000,        250,        120,           385, B2B
+2025-11-09, SKU-A01   , Cotton Panjabi         , Apparel    , Maulvi Bazar Sadar, Wholesale    ,        113,      169500,       1500,        900,           673, B2B
+2025-11-09, SKU-A01   , Cotton Panjabi         , Apparel    , Narayanganj Sadar , Online       ,          8,       12000,       1500,        900,           677, B2C
+2025-11-10, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Retail       ,         47,       21150,        450,        320,           177, B2B
+2025-11-12, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Retail       ,          4,       48000,      12000,       8000,           483, B2C
+2025-11-13, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Retail       ,         43,       12040,        280,        200,           193, B2C
+2025-11-13, SKU-A01   , Cotton Panjabi         , Apparel    , Savar             , Wholesale    ,        117,      175500,       1500,        900,           789, B2B
+2025-11-14, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Wholesale    ,        385,       53900,        140,        100,          1118, B2B
+2025-11-14, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Wholesale    ,        443,      124040,        280,        200,           740, B2B
+2025-11-14, SKU-F03   , Bookshelf              , Furniture  , Keraniganj        , Online       ,          5,       21000,       4200,       2500,           185, B2C
+2025-11-15, SKU-G02   , Mustard Oil (1L)       , Groceries  , Narayanganj Sadar , Wholesale    ,        346,       96880,        280,        200,           840, B2B
+2025-11-15, SKU-G03   , Lentils (1kg)          , Groceries  , Mohammadpur       , Wholesale    ,        196,       26068,        140,        100,           792, B2B
+2025-11-15, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Online       ,         24,      288000,      12000,       8000,           544, B2C
+2025-11-16, SKU-C01   , Skincare Gift Set      , Cosmetics  , Maulvi Bazar Sadar, Online       ,         27,       59400,       2200,       1200,           182, B2C
+2025-11-16, SKU-F02   , Office Desk            , Furniture  , Mohammadpur       , Wholesale    ,        353,     3000500,       8500,       5000,           888, B2B
+2025-11-16, SKU-G01   , Organic Rice (5kg)     , Groceries  , Sylhet Sadar      , Retail       ,         15,        6750,        450,        320,           793, B2C
+2025-11-17, SKU-A02   , Premium Jamdani Saree  , Apparel    , Sylhet Sadar      , Wholesale    ,        182,     2184000,      12000,       8000,           443, B2B
+2025-11-20, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mohammadpur       , Wholesale    ,        294,      132300,        450,        320,           977, B2B
+2025-11-20, SKU-G03   , Lentils (1kg)          , Groceries  , Savar             , Retail       ,         45,        6300,        140,        100,           396, B2C
+2025-11-20, SKU-E02   , Wireless Earbuds       , Electronics, Gazipur Sadar     , Online       ,         20,       50000,       2500,       1500,           553, B2C
+2025-11-20, SKU-G02   , Mustard Oil (1L)       , Groceries  , Gazipur Sadar     , Retail       ,         86,       24080,        280,        200,           572, B2C
+2025-11-23, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Online       ,         10,      114000,      12000,       8000,           584, B2C
+2025-11-26, SKU-A02   , Premium Jamdani Saree  , Apparel    , Mohammadpur       , Retail       ,          2,       24000,      12000,       8000,           114, B2B
+2025-11-27, SKU-C01   , Skincare Gift Set      , Cosmetics  , Sylhet Sadar      , Wholesale    ,        413,      908600,       2200,       1200,           978, B2B
+2025-11-28, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,         67,       18760,        280,        200,            49, B2C
+2025-11-28, SKU-F03   , Bookshelf              , Furniture  , Nawabganj         , Retail       ,          5,       21000,       4200,       2500,           528, B2C
+2025-11-29, SKU-A03   , Denim Jeans            , Apparel    , Savar             , Retail       ,          3,        5400,       1800,       1000,            13, B2C
+2025-11-29, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Savar             , Retail       ,         22,       13200,        600,        350,           360, B2C
+2025-11-29, SKU-E04   , Power Bank 10000mAh    , Electronics, Narayanganj Sadar , Online       ,         27,       48600,       1800,       1100,            78, B2C
+2025-11-30, SKU-S02   , Gel Pen Set            , Stationery , Savar             , Wholesale    ,        179,       44750,        250,        120,           451, B2B
+2025-12-01, SKU-C01   , Skincare Gift Set      , Cosmetics  , Mohammadpur       , Online       ,         24,       52800,       2200,       1200,           838, B2C
+2025-12-03, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Gazipur Sadar     , Retail       ,          3,       16500,       5500,       3500,           554, B2C
+2025-12-03, SKU-A02   , Premium Jamdani Saree  , Apparel    , Gazipur Sadar     , Retail       ,         19,      228000,      12000,       8000,           671, B2C
+2025-12-03, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mymensingh Sadar  , Retail       ,         34,        9044,        280,        200,           566, B2C
+2025-12-05, SKU-E03   , Mechanical Keyboard    , Electronics, Narayanganj Sadar , Online       ,          1,        3500,       3500,       2200,           289, B2C
+2025-12-05, SKU-A02   , Premium Jamdani Saree  , Apparel    , Sylhet Sadar      , Online       ,         17,      204000,      12000,       8000,           153, B2C
+2025-12-05, SKU-F03   , Bookshelf              , Furniture  , Mohammadpur       , Online       ,          7,       29400,       4200,       2500,            45, B2C
+2025-12-05, SKU-G03   , Lentils (1kg)          , Groceries  , Gazipur Sadar     , Retail       ,         21,        2940,        140,        100,           941, B2C
+2025-12-06, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         49,        6860,        140,        100,           653, B2C
+2025-12-07, SKU-E03   , Mechanical Keyboard    , Electronics, Gazipur Sadar     , Online       ,          4,       14000,       3500,       2200,           632, B2C
+2025-12-08, SKU-A03   , Denim Jeans            , Apparel    , Narayanganj Sadar , Online       ,          4,        7200,       1800,       1000,           198, B2C
+2025-12-09, SKU-G02   , Mustard Oil (1L)       , Groceries  , Mohammadpur       , Retail       ,         20,        5600,        280,        200,           381, B2C
+2025-12-09, SKU-G02   , Mustard Oil (1L)       , Groceries  , Savar             , Retail       ,         75,       19950,        280,        200,           318, B2C
+2025-12-10, SKU-G03   , Lentils (1kg)          , Groceries  , Keraniganj        , Retail       ,         91,       12740,        140,        100,           448, B2C
+2025-12-10, SKU-F02   , Office Desk            , Furniture  , Narayanganj Sadar , Retail       ,          8,       68000,       8500,       5000,           626, B2C
+2025-12-11, SKU-C01   , Skincare Gift Set      , Cosmetics  , Narayanganj Sadar , Wholesale    ,        481,     1005290,       2200,       1200,          1085, B2B
+2025-12-11, SKU-A01   , Cotton Panjabi         , Apparel    , Savar             , Online       ,         11,       16500,       1500,        900,           692, B2C
+2025-12-11, SKU-C02   , Herbal Shampoo         , Cosmetics  , Savar             , Retail       ,         12,        5400,        450,        250,           627, B2C
+2025-12-12, SKU-E03   , Mechanical Keyboard    , Electronics, Maulvi Bazar Sadar, Online       ,         15,       52500,       3500,       2200,           352, B2C
+2025-12-15, SKU-F01   , Ergonomic Desk Chair   , Furniture  , Savar             , Retail       ,          2,       11000,       5500,       3500,           612, B2B
+2025-12-16, SKU-G03   , Lentils (1kg)          , Groceries  , Narayanganj Sadar , Retail       ,         23,        3059,        140,        100,           513, B2C
+2025-12-17, SKU-S01   , Notebook Bundle (5 pcs), Stationery , Mohammadpur       , Online       ,         21,       12600,        600,        350,            96, B2C
+2025-12-17, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mymensingh Sadar  , Wholesale    ,        198,       89100,        450,        320,           847, B2B
+2025-12-18, SKU-A03   , Denim Jeans            , Apparel    , Narayanganj Sadar , Online       ,          9,       14580,       1800,       1000,            76, B2B
+2025-12-20, SKU-A01   , Cotton Panjabi         , Apparel    , Savar             , Retail       ,          7,        9975,       1500,        900,            13, B2C
+2025-12-20, SKU-A04   , Basic T-Shirt          , Apparel    , Mohammadpur       , Online       ,         20,        8000,        400,        200,           304, B2C
+2025-12-21, SKU-C02   , Herbal Shampoo         , Cosmetics  , Mohammadpur       , Online       ,         29,       13050,        450,        250,           592, B2C
+2025-12-22, SKU-A01   , Cotton Panjabi         , Apparel    , Gazipur Sadar     , Wholesale    ,        370,      527250,       1500,        900,          1094, B2B
+2025-12-23, SKU-A03   , Denim Jeans            , Apparel    , Keraniganj        , Retail       ,          9,       16200,       1800,       1000,           477, B2C
+2025-12-25, SKU-A03   , Denim Jeans            , Apparel    , Gazipur Sadar     , Wholesale    ,        155,      279000,       1800,       1000,           621, B2B
+2025-12-26, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Online       ,          5,        6000,       1200,        800,           136, B2C
+2025-12-26, SKU-A04   , Basic T-Shirt          , Apparel    , Narayanganj Sadar , Online       ,         25,       10000,        400,        200,           902, B2C
+2025-12-27, SKU-F02   , Office Desk            , Furniture  , Narayanganj Sadar , Online       ,          4,       34000,       8500,       5000,           501, B2B
+2025-12-29, SKU-A01   , Cotton Panjabi         , Apparel    , Mohammadpur       , Wholesale    ,        208,      296400,       1500,        900,           513, B2B
+2025-12-29, SKU-G01   , Organic Rice (5kg)     , Groceries  , Mymensingh Sadar  , Retail       ,         17,        7650,        450,        320,           913, B2C
+2025-12-30, SKU-A03   , Denim Jeans            , Apparel    , Mohammadpur       , Retail       ,          7,       12600,       1800,       1000,           593, B2C
+2025-12-30, SKU-G01   , Organic Rice (5kg)     , Groceries  , Gazipur Sadar     , Retail       ,         20,        8550,        450,        320,           135, B2C
+2025-12-31, SKU-G02   , Mustard Oil (1L)       , Groceries  , Keraniganj        , Wholesale    ,        346,       96880,        280,        200,           975, B2B
+2025-12-31, SKU-E01   , Smart Lamp             , Electronics, Mohammadpur       , Online       ,         28,       33600,       1200,        800,           684, B2C

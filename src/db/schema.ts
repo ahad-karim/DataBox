@@ -71,6 +71,7 @@ export const marketForecasts = pgTable(
   'market_forecasts',
   {
     id: uuid('id').defaultRandom().primaryKey(),
+    userId: uuid('user_id').references(() => users.id),
     country: text('country').notNull(),
     region: text('region').notNull(),
     geom: geometry('geom', { type: 'point', mode: 'tuple', srid: 4326 }),

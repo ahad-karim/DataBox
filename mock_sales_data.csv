@@ -1,0 +1,9 @@
+Date,Product_Name,Category,Location,Sales_Channel,Units_Sold,Revenue_BDT,Cost_Price,Current_Stock,Customer_Segment
+2026-06-01,Aarong Milk 1L,Dairy,Dhaka,Retail,100,12000,9000,450,Consumer
+2026-06-02,Pran Mango Juice 250ml,Beverages,Chattogram,Wholesale,300,9000,6750,1200,Retailer
+2026-06-02,RFL Plastic Chair,Furniture,Sylhet,Direct,20,13000,9000,80,Corporate
+2026-06-03,Radhuni Chilli Powder 200g,Grocery,Khulna,Retail,150,12000,9000,600,Consumer
+2026-06-03,Ispahani Mirzapore Tea 500g,Food,Rajshahi,Online,120,30000,22800,300,Consumer
+2026-06-04,Fresh Soybean Oil 5L,Grocery,Barishal,Retail,50,40000,35000,100,Consumer
+2026-06-04,Walton Blender,Electronics,Mymensingh,Online,15,45000,30000,40,Household
+2026-06-05,Square Toiletries,Personal Care,Rangpur,Wholesale,200,20000,15000,800,Retailer
