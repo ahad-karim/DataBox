@@ -100,10 +100,18 @@ export const dataPipelineEvents = pgTable('data_pipeline_events', {
 export const rawData = pgTable('raw_data', {
   id: uuid('id').defaultRandom().primaryKey(),
   userId: uuid('user_id').references(() => users.id),
-  source: text('source'),
-  category: text('category'),
-  value: numeric('value', { precision: 12, scale: 2 }),
-  metadata: jsonb('metadata'),
-  recordDate: date('record_date'),
+  date: date('date').notNull(),
+  productId: text('product_id'),
+  productName: text('product_name').notNull(),
+  category: text('category').notNull(),
+  location: text('location').notNull(),
+  salesChannel: text('sales_channel').notNull(),
+  unitsSold: integer('units_sold').notNull(),
+  revenueBdt: numeric('revenue_bdt', { precision: 12, scale: 2 }).notNull(),
+  unitPrice: numeric('unit_price', { precision: 12, scale: 2 }).notNull(),
+  costPrice: numeric('cost_price', { precision: 12, scale: 2 }).notNull(),
+  currentStock: integer('current_stock').notNull(),
+  customerSegment: text('customer_segment'),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
 });
+

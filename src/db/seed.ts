@@ -7,12 +7,23 @@ import {
   performanceMetrics,
   regionalRevenue,
   marketForecasts,
+  rawData,
 } from './schema';
 import * as bcrypt from 'bcryptjs';
-import { sql } from 'drizzle-orm';
 
 async function seed() {
   console.log('Starting seed...');
+
+  // 0. Clean database for idempotency
+  console.log('Cleaning existing database rows...');
+  await db.delete(kpiSnapshots);
+  await db.delete(demandTimeseries);
+  await db.delete(channelPerformance);
+  await db.delete(performanceMetrics);
+  await db.delete(regionalRevenue);
+  await db.delete(marketForecasts);
+  await db.delete(rawData);
+  await db.delete(users);
 
   // 1. Create User
   const passwordHash = await bcrypt.hash('demo1234', 10);
@@ -34,105 +45,126 @@ async function seed() {
   const userId = demoUser.id;
   console.log('Created demo user:', userId);
 
-  // 2. KPI Snapshots
+  // 2. Raw SME Sales Data
+  const sampleSales = [
+    { date: '2026-05-01', productName: 'Aarong Milk 1L', category: 'Dairy', location: 'Dhaka', salesChannel: 'Retail', unitsSold: 120, revenueBdt: '14400.00', unitPrice: '120.00', costPrice: '90.00', currentStock: 450, productId: 'PRD-MILK', customerSegment: 'Consumer' },
+    { date: '2026-05-02', productName: 'Pran Mango Juice 250ml', category: 'Beverages', location: 'Chattogram', salesChannel: 'Wholesale', unitsSold: 500, revenueBdt: '15000.00', unitPrice: '30.00', costPrice: '22.50', currentStock: 1200, productId: 'PRD-JUICE', customerSegment: 'Retailer' },
+    { date: '2026-05-03', productName: 'RFL Plastic Chair', category: 'Furniture', location: 'Sylhet', salesChannel: 'Direct', unitsSold: 45, revenueBdt: '29250.00', unitPrice: '650.00', costPrice: '450.00', currentStock: 80, productId: 'PRD-CHAIR', customerSegment: 'Corporate' },
+    { date: '2026-05-04', productName: 'Radhuni Chilli Powder 200g', category: 'Grocery', location: 'Khulna', salesChannel: 'Retail', unitsSold: 250, revenueBdt: '20000.00', unitPrice: '80.00', costPrice: '60.00', currentStock: 600, productId: 'PRD-CHILLI', customerSegment: 'Consumer' },
+    { date: '2026-05-05', productName: 'Ispahani Mirzapore Tea 500g', category: 'Food', location: 'Dhaka', salesChannel: 'Online', unitsSold: 180, revenueBdt: '45000.00', unitPrice: '250.00', costPrice: '190.00', currentStock: 300, productId: 'PRD-TEA', customerSegment: 'Consumer' },
+    { date: '2026-05-08', productName: 'Aarong Milk 1L', category: 'Dairy', location: 'Dhaka', salesChannel: 'Retail', unitsSold: 150, revenueBdt: '18000.00', unitPrice: '120.00', costPrice: '90.00', currentStock: 300, productId: 'PRD-MILK', customerSegment: 'Consumer' },
+    { date: '2026-05-09', productName: 'Pran Mango Juice 250ml', category: 'Beverages', location: 'Chattogram', salesChannel: 'Online', unitsSold: 350, revenueBdt: '10500.00', unitPrice: '30.00', costPrice: '22.50', currentStock: 850, productId: 'PRD-JUICE', customerSegment: 'Consumer' },
+    { date: '2026-05-15', productName: 'RFL Plastic Chair', category: 'Furniture', location: 'Rajshahi', salesChannel: 'Wholesale', unitsSold: 60, revenueBdt: '39000.00', unitPrice: '650.00', costPrice: '450.00', currentStock: 120, productId: 'PRD-CHAIR', customerSegment: 'Small Business' },
+    { date: '2026-05-22', productName: 'Radhuni Chilli Powder 200g', category: 'Grocery', location: 'Barishal', salesChannel: 'Direct', unitsSold: 190, revenueBdt: '15200.00', unitPrice: '80.00', costPrice: '60.00', currentStock: 410, productId: 'PRD-CHILLI', customerSegment: 'Consumer' },
+    { date: '2026-05-29', productName: 'Ispahani Mirzapore Tea 500g', category: 'Food', location: 'Sylhet', salesChannel: 'Retail', unitsSold: 220, revenueBdt: '55000.00', unitPrice: '250.00', costPrice: '190.00', currentStock: 180, productId: 'PRD-TEA', customerSegment: 'Consumer' },
+  ];
+
+  await db.insert(rawData).values(
+    sampleSales.map(s => ({
+      userId,
+      ...s
+    }))
+  );
+  console.log('Inserted Raw SME Sales Data');
+
+  // Calculate Aggregates dynamically from Raw Sales
+  const totalRevenueVal = sampleSales.reduce((sum, item) => sum + parseFloat(item.revenueBdt), 0);
+  const activeProductsVal = new Set(sampleSales.map(item => item.productId)).size;
+  const activeUsersVal = sampleSales.reduce((sum, item) => sum + item.unitsSold, 0);
+
+  // 3. KPI Snapshots
   await db.insert(kpiSnapshots).values({
     userId,
     snapshotDate: new Date().toISOString().split('T')[0]!,
-    totalRevenue: '284521.00',
-    activeProducts: 1847,
+    totalRevenue: totalRevenueVal.toFixed(2),
+    activeProducts: activeProductsVal,
     forecastAccuracy: '94.20',
-    activeUsers: 12489,
+    activeUsers: activeUsersVal,
   });
-  console.log('Inserted KPI Snapshot');
+  console.log('Inserted Calculated KPI Snapshot');
 
-  // 3. Demand Timeseries (90 days)
+  // 4. Demand Timeseries (90 days, scaled to match raw sales demand)
+  const dailySalesTotals: Record<string, number> = {};
+  sampleSales.forEach(s => {
+    dailySalesTotals[s.date] = (dailySalesTotals[s.date] || 0) + s.unitsSold;
+  });
+
   const timeseriesData = [];
   const today = new Date();
   for (let i = 0; i < 90; i++) {
     const d = new Date(today);
     d.setDate(d.getDate() - i);
     const dateStr = d.toISOString().split('T')[0]!;
+    
+    // Use actual units sold if we have raw sales data for that day, otherwise scale randomly
+    const actualDemandVal = dailySalesTotals[dateStr] !== undefined
+      ? dailySalesTotals[dateStr]
+      : Math.floor(Math.random() * 150 + 50);
+
+    const forecastDemandVal = actualDemandVal * (0.9 + Math.random() * 0.2);
+
     timeseriesData.push({
       userId,
       recordDate: dateStr,
-      actualDemand: (Math.random() * 1000 + 3000).toFixed(2),
-      forecastDemand: (Math.random() * 1000 + 3000).toFixed(2),
+      actualDemand: actualDemandVal.toFixed(2),
+      forecastDemand: forecastDemandVal.toFixed(2),
     });
   }
   await db.insert(demandTimeseries).values(timeseriesData);
-  console.log('Inserted 90 days of Demand Timeseries');
+  console.log('Inserted 90 days of calculated Demand Timeseries');
 
-  // 4. Channel Performance (last 3 months)
-  const channels = ['Online', 'Retail', 'Wholesale', 'Direct'];
-  const channelData = [];
-  for (let i = 0; i < 3; i++) {
-    const d = new Date();
-    d.setDate(1);
-    d.setMonth(d.getMonth() - i);
-    const period = d.toISOString().split('T')[0]!;
-    let total = 0;
-    const vals = channels.map((c) => {
-      const v = Math.random() * 50000 + 10000;
-      total += v;
-      return { channel: c, val: v };
-    });
-    for (const c of vals) {
-      channelData.push({
-        userId,
-        period,
-        channel: c.channel,
-        revenue: c.val.toFixed(2),
-        percentage: ((c.val / total) * 100).toFixed(2),
-      });
-    }
-  }
+  // 5. Channel Performance (Calculated from Raw Sales)
+  const channelTotals: Record<string, number> = {};
+  sampleSales.forEach(s => {
+    channelTotals[s.salesChannel] = (channelTotals[s.salesChannel] || 0) + parseFloat(s.revenueBdt);
+  });
+  const totalChannelRevenue = Object.values(channelTotals).reduce((a, b) => a + b, 0) || 1;
+  
+  const channelData = Object.entries(channelTotals).map(([channel, rev]) => ({
+    userId,
+    period: '2026-05-01',
+    channel,
+    revenue: rev.toFixed(2),
+    percentage: ((rev / totalChannelRevenue) * 100).toFixed(2),
+  }));
   await db.insert(channelPerformance).values(channelData);
-  console.log('Inserted Channel Performance');
+  console.log('Inserted Calculated Channel Performance');
 
-  // 5. Performance Metrics
+  // 6. Performance Metrics (Realistic baseline)
   const dimensions = ['Sales', 'Marketing', 'Support', 'Logistics', 'Finance'];
-  const metricsData = [];
-  for (const period of ['current', 'previous']) {
-    for (const dim of dimensions) {
-      metricsData.push({
-        userId,
-        period,
-        dimension: dim,
-        value: (Math.random() * 30 + 70).toFixed(2),
-      });
-    }
-  }
+  const metricsData = [
+    { userId, period: 'current', dimension: 'Sales', value: '88.50' },
+    { userId, period: 'current', dimension: 'Marketing', value: '74.00' },
+    { userId, period: 'current', dimension: 'Support', value: '91.20' },
+    { userId, period: 'current', dimension: 'Logistics', value: '82.50' },
+    { userId, period: 'current', dimension: 'Finance', value: '95.00' },
+    { userId, period: 'previous', dimension: 'Sales', value: '82.00' },
+    { userId, period: 'previous', dimension: 'Marketing', value: '78.50' },
+    { userId, period: 'previous', dimension: 'Support', value: '85.00' },
+    { userId, period: 'previous', dimension: 'Logistics', value: '80.00' },
+    { userId, period: 'previous', dimension: 'Finance', value: '91.00' },
+  ];
   await db.insert(performanceMetrics).values(metricsData);
-  console.log('Inserted Performance Metrics');
+  console.log('Inserted Calculated Performance Metrics');
 
-  // 6. Regional Revenue (last 3 months)
-  const regions = ['North', 'South', 'East', 'West'];
-  const regionalData = [];
-  for (let i = 0; i < 3; i++) {
-    const d = new Date();
-    d.setDate(1);
-    d.setMonth(d.getMonth() - i);
-    const period = d.toISOString().split('T')[0]!;
-    let total = 0;
-    const vals = regions.map((r) => {
-      const v = Math.random() * 40000 + 20000;
-      total += v;
-      return { region: r, val: v };
-    });
-    for (const r of vals) {
-      regionalData.push({
-        userId,
-        period,
-        region: r.region,
-        revenue: r.val.toFixed(2),
-        percentage: ((r.val / total) * 100).toFixed(2),
-      });
-    }
-  }
+  // 7. Regional Revenue (Calculated from Raw Sales)
+  const regionalTotals: Record<string, number> = {};
+  sampleSales.forEach(s => {
+    regionalTotals[s.location] = (regionalTotals[s.location] || 0) + parseFloat(s.revenueBdt);
+  });
+  const totalRegionalRevenue = Object.values(regionalTotals).reduce((a, b) => a + b, 0) || 1;
+
+  const regionalData = Object.entries(regionalTotals).map(([region, rev]) => ({
+    userId,
+    period: '2026-05-01',
+    region,
+    revenue: rev.toFixed(2),
+    percentage: ((rev / totalRegionalRevenue) * 100).toFixed(2),
+  }));
   await db.insert(regionalRevenue).values(regionalData);
-  console.log('Inserted Regional Revenue');
+  console.log('Inserted Calculated Regional Revenue');
 
-  // 7. Market Forecasts (29 Markets)
+  // 8. Market Forecasts (29 Markets)
   const rawMarkets = [
     { country: 'China', region: 'Asia Pacific', lat: 35.86, lon: 104.19 },
     { country: 'United States', region: 'North America', lat: 37.09, lon: -95.71 },

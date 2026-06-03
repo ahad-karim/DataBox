@@ -2,7 +2,7 @@ import { Hono } from 'hono';
 import { zValidator } from '@hono/zod-validator';
 import { aiInsightsSchema, demandForecastGenerateSchema } from '../validators/schemas';
 import { authMiddleware } from '../middleware/auth';
-import { generateInsights, generateDemandForecast } from '../services/gemini';
+import { generateInsights, generateDemandForecast } from '../services/groq';
 import { db } from '../db';
 import { demandTimeseries } from '../db/schema';
 import { eq, desc } from 'drizzle-orm';

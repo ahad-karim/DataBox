@@ -64,11 +64,18 @@ CREATE TABLE "performance_metrics" (
 CREATE TABLE "raw_data" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"user_id" uuid,
-	"source" text,
-	"category" text,
-	"value" numeric(12, 2),
-	"metadata" jsonb,
-	"record_date" date,
+	"date" date NOT NULL,
+	"product_id" text,
+	"product_name" text NOT NULL,
+	"category" text NOT NULL,
+	"location" text NOT NULL,
+	"sales_channel" text NOT NULL,
+	"units_sold" integer NOT NULL,
+	"revenue_bdt" numeric(12, 2) NOT NULL,
+	"unit_price" numeric(12, 2) NOT NULL,
+	"cost_price" numeric(12, 2) NOT NULL,
+	"current_stock" integer NOT NULL,
+	"customer_segment" text,
 	"created_at" timestamp with time zone DEFAULT now()
 );
 --> statement-breakpoint

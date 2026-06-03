@@ -14,13 +14,19 @@ const makeFormData = (csvContent: string, type: string) => {
   return form;
 };
 
+// Standard valid CSV containing all required columns
+const validCSV = [
+  'Date,Product_Name,Category,Location,Sales_Channel,Units_Sold,Revenue_BDT,Cost_Price,Current_Stock',
+  '2026-05-01,Aarong Milk 1L,Dairy,Dhaka,Retail,120,14400.00,90.00,450',
+  '2026-05-02,Pran Mango Juice 250ml,Beverages,Chattogram,Wholesale,500,15000.00,22.50,1200'
+].join('\n');
+
 describe('POST /data/upload', () => {
   it('uploads a valid sales CSV and returns rowsInserted', async () => {
-    const csv = `date,source,category,value\n2025-01-01,Shopify,Orders,1200\n2025-01-02,Shopify,Orders,950`;
     const res = await app.request('/api/v1/data/upload', {
       method: 'POST',
       headers: authHeader(token),
-      body: makeFormData(csv, 'sales'),
+      body: makeFormData(validCSV, 'sales'),
     });
     expect(res.status).toBe(200);
     const body = (await res.json()) as any;
@@ -28,11 +34,10 @@ describe('POST /data/upload', () => {
   });
 
   it('uploads a valid demand CSV', async () => {
-    const csv = `date,actual_demand,forecast_demand\n2025-01-01,4200,4050\n2025-01-02,4350,4300`;
     const res = await app.request('/api/v1/data/upload', {
       method: 'POST',
       headers: authHeader(token),
-      body: makeFormData(csv, 'demand'),
+      body: makeFormData(validCSV, 'demand'),
     });
     expect(res.status).toBe(200);
     const body = (await res.json()) as any;
@@ -40,7 +45,12 @@ describe('POST /data/upload', () => {
   });
 
   it('skips invalid rows and reports them', async () => {
-    const csv = `date,source,category,value\n2025-01-01,Shopify,Orders,1200\nnot-a-date,Shopify,Orders,950`;
+    const csv = [
+      'Date,Product_Name,Category,Location,Sales_Channel,Units_Sold,Revenue_BDT,Cost_Price,Current_Stock',
+      '2026-05-01,Aarong Milk 1L,Dairy,Dhaka,Retail,120,14400.00,90.00,450',
+      'not-a-date,Aarong Milk 1L,Dairy,Dhaka,Retail,120,14400.00,90.00,450'
+    ].join('\n');
+
     const res = await app.request('/api/v1/data/upload', {
       method: 'POST',
       headers: authHeader(token),
@@ -53,26 +63,25 @@ describe('POST /data/upload', () => {
   });
 
   it('returns 400 for unknown type', async () => {
-    const csv = `date,value\n2025-01-01,100`;
     const res = await app.request('/api/v1/data/upload', {
       method: 'POST',
       headers: authHeader(token),
-      body: makeFormData(csv, 'unknown_type'),
+      body: makeFormData(validCSV, 'unknown_type'),
     });
     expect(res.status).toBe(400);
   });
 
   it('returns 401 without auth', async () => {
-    const csv = `date,source,category,value\n2025-01-01,Shopify,Orders,1200`;
     const res = await app.request('/api/v1/data/upload', {
       method: 'POST',
-      body: makeFormData(csv, 'sales'),
+      body: makeFormData(validCSV, 'sales'),
     });
     expect(res.status).toBe(401);
   });
 
   it('returns 413 for file over 5MB', async () => {
-    const bigCSV = 'date,source,category,value\n' + '2025-01-01,Shopify,Orders,100\n'.repeat(300000);
+    const bigCSV = 'Date,Product_Name,Category,Location,Sales_Channel,Units_Sold,Revenue_BDT,Cost_Price,Current_Stock\n' + 
+      '2026-05-01,Aarong Milk 1L,Dairy,Dhaka,Retail,120,14400.00,90.00,450\n'.repeat(100000);
     const res = await app.request('/api/v1/data/upload', {
       method: 'POST',
       headers: authHeader(token),

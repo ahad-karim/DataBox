@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
 import { db } from '../db';
-import { rawData, demandTimeseries } from '../db/schema';
+import { rawData } from '../db/schema';
 import { authMiddleware } from '../middleware/auth';
 import { parseCSV, isValidDate, isFiniteNumber } from '../services/csvParser';
 
@@ -10,54 +10,99 @@ uploadRoutes.use('*', authMiddleware);
 
 uploadRoutes.post('/', async (c) => {
   const userId = c.get('userId');
-  const body = await c.req.parseBody();
+  const contentType = c.req.header('Content-Type') || '';
 
-  const file = body['file'];
-  const type = body['type'];
+  let parsedRows: any[] = [];
+  let fileType = 'json';
+  let type = c.req.query('type') || '';
 
-  if (!file || typeof file === 'string') {
-    return c.json({ error: 'Missing or invalid file', code: 'MISSING_FILE', details: {} }, 400);
-  }
+  if (contentType.includes('multipart/form-data')) {
+    fileType = 'csv';
+    const body = await c.req.parseBody();
+    const file = body['file'];
+    if (typeof body['type'] === 'string') {
+      type = body['type'];
+    }
 
-  if (file.size > 5 * 1024 * 1024) {
-    return c.json({ error: 'File too large. Maximum size is 5MB.', code: 'FILE_TOO_LARGE' }, 413);
-  }
+    const validTypes = ['sales', 'inventory', 'demand', 'expenses'];
+    if (!type || !validTypes.includes(type)) {
+      return c.json({ error: 'Invalid or missing type parameter', code: 'INVALID_TYPE', details: {} }, 400);
+    }
 
-  const validTypes = ['sales', 'inventory', 'demand', 'expenses'];
-  if (!type || typeof type !== 'string' || !validTypes.includes(type)) {
-    return c.json({ error: 'Invalid or missing type parameter', code: 'INVALID_TYPE', details: {} }, 400);
-  }
+    if (!file || typeof file === 'string') {
+      return c.json({ error: 'Missing or invalid file', code: 'MISSING_FILE', details: {} }, 400);
+    }
 
-  const fileText = await file.text();
-  const { data, errors } = parseCSV(fileText);
+    if (file.size > 5 * 1024 * 1024) {
+      return c.json({ error: 'File too large. Maximum size is 5MB.', code: 'FILE_TOO_LARGE' }, 413);
+    }
 
-  // If papaparse has structural errors on the file level
-  if (errors.length > 0) {
-    return c.json({
-      error: 'Invalid CSV format',
-      code: 'CSV_PARSE_ERROR',
-      details: { line: errors[0]?.row, reason: errors[0]?.message }
-    }, 400);
+    const fileText = await file.text();
+    const { data, errors } = parseCSV(fileText);
+
+    if (errors.length > 0) {
+      return c.json({
+        error: 'Invalid CSV format',
+        code: 'CSV_PARSE_ERROR',
+        details: { line: errors[0]?.row, reason: errors[0]?.message }
+      }, 400);
+    }
+    parsedRows = data;
+  } else if (contentType.includes('application/json')) {
+    try {
+      const jsonBody = await c.req.json();
+      if (jsonBody && typeof jsonBody === 'object' && !Array.isArray(jsonBody) && typeof jsonBody.type === 'string') {
+        type = jsonBody.type;
+      }
+      const validTypes = ['sales', 'inventory', 'demand', 'expenses'];
+      if (!type || !validTypes.includes(type)) {
+        return c.json({ error: 'Invalid or missing type parameter', code: 'INVALID_TYPE', details: {} }, 400);
+      }
+      parsedRows = Array.isArray(jsonBody) ? jsonBody : (jsonBody.data || []);
+    } catch (err) {
+      return c.json({ error: 'Invalid JSON body', code: 'INVALID_JSON', details: {} }, 400);
+    }
+  } else {
+    return c.json({ error: 'Unsupported Content-Type', code: 'UNSUPPORTED_CONTENT_TYPE', details: {} }, 400);
   }
 
   let rowsInserted = 0;
   let rowsSkipped = 0;
   const skippedReasons: string[] = [];
-
   const rawDataInserts: any[] = [];
-  const demandInserts: any[] = [];
 
-  for (let i = 0; i < data.length; i++) {
-    const row = data[i];
+  for (let i = 0; i < parsedRows.length; i++) {
+    const row = parsedRows[i];
     if (!row) continue;
-    const rowNum = i + 1; // 1-based data row number
+    const rowNum = i + 1;
 
-    // Extract common fields (flexible header naming)
-    const dateVal = row['date']?.trim();
+    // Helper to resolve case-insensitive / underscore variations in keys
+    const getVal = (possibleKeys: string[]): string | undefined => {
+      for (const key of possibleKeys) {
+        if (row[key] !== undefined && row[key] !== null) {
+          return String(row[key]).trim();
+        }
+      }
+      return undefined;
+    };
 
-    if (!dateVal) {
+    const dateVal = getVal(['Date', 'date']);
+    const productName = getVal(['Product_Name', 'product_name', 'product', 'Product_name']);
+    const category = getVal(['Category', 'category']);
+    const location = getVal(['Location', 'location', 'region', 'Region']);
+    const salesChannel = getVal(['Sales_Channel', 'sales_channel', 'channel', 'Sales_channel']);
+    const unitsSold = getVal(['Units_Sold', 'units_sold', 'units', 'Units_sold']);
+    const revenueBdt = getVal(['Revenue_BDT', 'revenue_bdt', 'revenue', 'Revenue_bdt']);
+    const costPrice = getVal(['Cost_Price', 'cost_price', 'cost', 'Cost_price']);
+    const currentStock = getVal(['Current_Stock', 'current_stock', 'stock', 'Current_stock']);
+    
+    // Optional / inferrable fields
+    const productId = getVal(['Product_ID', 'product_id', 'id', 'Product_id']);
+    const customerSegment = getVal(['Customer_Segment', 'customer_segment', 'segment', 'Customer_segment']) || 'General';
+
+    if (!dateVal || !productName || !category || !location || !salesChannel || !unitsSold || !revenueBdt || !costPrice || !currentStock) {
       rowsSkipped++;
-      skippedReasons.push(`Row ${rowNum}: missing date`);
+      skippedReasons.push(`Row ${rowNum}: missing required fields (Date, Product_Name, Category, Location, Sales_Channel, Units_Sold, Revenue_BDT, Cost_Price, or Current_Stock)`);
       continue;
     }
 
@@ -67,136 +112,54 @@ uploadRoutes.post('/', async (c) => {
       continue;
     }
 
-    if (type === 'sales') {
-      const source = row['source']?.trim();
-      const category = row['category']?.trim();
-      const value = row['value']?.trim();
-
-      if (!source || !category || !value) {
-        rowsSkipped++;
-        skippedReasons.push(`Row ${rowNum}: missing required fields (source, category, or value)`);
-        continue;
-      }
-
-      if (!isFiniteNumber(value)) {
-        rowsSkipped++;
-        skippedReasons.push(`Row ${rowNum}: invalid value`);
-        continue;
-      }
-
-      rawDataInserts.push({
-        userId,
-        recordDate: dateVal,
-        source,
-        category,
-        value: Number(value).toFixed(2),
-      });
-      rowsInserted++;
-    } else if (type === 'demand') {
-      const actualDemand = row['actual_demand']?.trim();
-      const forecastDemand = row['forecast_demand']?.trim();
-
-      if (!actualDemand) {
-        rowsSkipped++;
-        skippedReasons.push(`Row ${rowNum}: missing actual_demand`);
-        continue;
-      }
-
-      if (!isFiniteNumber(actualDemand)) {
-        rowsSkipped++;
-        skippedReasons.push(`Row ${rowNum}: invalid actual_demand`);
-        continue;
-      }
-
-      let forecastNum: string | null = null;
-      if (forecastDemand !== undefined && forecastDemand !== null && forecastDemand !== '') {
-        if (!isFiniteNumber(forecastDemand)) {
-          rowsSkipped++;
-          skippedReasons.push(`Row ${rowNum}: invalid forecast_demand`);
-          continue;
-        }
-        forecastNum = Number(forecastDemand).toFixed(2);
-      }
-
-      demandInserts.push({
-        userId,
-        recordDate: dateVal,
-        actualDemand: Number(actualDemand).toFixed(2),
-        forecastDemand: forecastNum,
-      });
-      rowsInserted++;
-    } else if (type === 'inventory') {
-      const source = row['source']?.trim();
-      const product = row['product']?.trim();
-      const quantity = row['quantity']?.trim();
-      const value = row['value']?.trim();
-
-      if (!source || !product || !quantity || !value) {
-        rowsSkipped++;
-        skippedReasons.push(`Row ${rowNum}: missing required fields (source, product, quantity, or value)`);
-        continue;
-      }
-
-      if (!isFiniteNumber(quantity) || !isFiniteNumber(value)) {
-        rowsSkipped++;
-        skippedReasons.push(`Row ${rowNum}: invalid quantity or value`);
-        continue;
-      }
-
-      rawDataInserts.push({
-        userId,
-        recordDate: dateVal,
-        source,
-        category: 'Inventory',
-        value: Number(value).toFixed(2),
-        metadata: {
-          product,
-          quantity: Number(quantity),
-        },
-      });
-      rowsInserted++;
-    } else if (type === 'expenses') {
-      const source = row['source']?.trim();
-      const description = row['description']?.trim();
-      const amount = row['amount']?.trim();
-
-      if (!source || !description || !amount) {
-        rowsSkipped++;
-        skippedReasons.push(`Row ${rowNum}: missing required fields (source, description, or amount)`);
-        continue;
-      }
-
-      if (!isFiniteNumber(amount)) {
-        rowsSkipped++;
-        skippedReasons.push(`Row ${rowNum}: invalid amount`);
-        continue;
-      }
-
-      rawDataInserts.push({
-        userId,
-        recordDate: dateVal,
-        source,
-        category: 'Expenses',
-        value: Number(amount).toFixed(2),
-        metadata: {
-          description,
-        },
-      });
-      rowsInserted++;
+    if (!isFiniteNumber(unitsSold) || !isFiniteNumber(revenueBdt) || !isFiniteNumber(costPrice) || !isFiniteNumber(currentStock)) {
+      rowsSkipped++;
+      skippedReasons.push(`Row ${rowNum}: invalid numeric values`);
+      continue;
     }
+
+    const units = Math.round(Number(unitsSold));
+    const rev = Number(revenueBdt);
+    const cost = Number(costPrice);
+    const stock = Math.round(Number(currentStock));
+
+    // Calculate unit price dynamically if not provided or 0
+    let unitP = getVal(['Unit_Price', 'unit_price', 'price', 'Unit_price']);
+    let calculatedUnitPrice = 0;
+    if (unitP && isFiniteNumber(unitP)) {
+      calculatedUnitPrice = Number(unitP);
+    } else {
+      calculatedUnitPrice = units > 0 ? (rev / units) : rev;
+    }
+
+    // Auto-generate product ID if missing
+    const finalProductId = productId || `PRD-${productName.replace(/[^a-zA-Z0-9]/g, '').substring(0, 5).toUpperCase()}`;
+
+    rawDataInserts.push({
+      userId,
+      date: dateVal,
+      productId: finalProductId,
+      productName,
+      category,
+      location,
+      salesChannel,
+      unitsSold: units,
+      revenueBdt: rev.toFixed(2),
+      unitPrice: calculatedUnitPrice.toFixed(2),
+      costPrice: cost.toFixed(2),
+      currentStock: stock,
+      customerSegment,
+    });
+    rowsInserted++;
   }
 
-  // Perform bulk inserts
   if (rawDataInserts.length > 0) {
     await db.insert(rawData).values(rawDataInserts);
-  }
-  if (demandInserts.length > 0) {
-    await db.insert(demandTimeseries).values(demandInserts);
   }
 
   return c.json({
     message: 'Upload successful',
-    type,
+    type: fileType,
     rowsInserted,
     rowsSkipped,
     skippedReasons,

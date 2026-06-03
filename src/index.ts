@@ -13,8 +13,14 @@ import uploadRoutes from './routes/upload';
 const app = new Hono();
 
 app.use('*', cors({
-  origin: process.env.CORS_ORIGIN ?? 'https://ai-buildfest.netlify.app',
-  allowMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+  origin: (origin) => {
+    if (!origin) return '*';
+    if (origin.startsWith('http://localhost:') || origin.startsWith('http://127.0.0.1:') || origin === process.env.CORS_ORIGIN) {
+      return origin;
+    }
+    return process.env.CORS_ORIGIN ?? 'https://ai-buildfest.netlify.app';
+  },
+  allowMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowHeaders: ['Content-Type', 'Authorization'],
 }));
 

@@ -161,14 +161,55 @@ const mockDb = {
   execute: async (_sql: unknown) => ({ rows: [] as unknown[] }),
 };
 
+console.log('--- TEST SETUP LOADED ---');
+
 // ─── register module mocks ────────────────────────────────────────────────────
 
-// The routes import as '../db' (relative to src/routes/); Bun resolves both
-// specifiers to the same absolute path so one mock.module call covers all.
-mock.module('../src/db', () => ({ db: mockDb }));
-mock.module('../src/db/index', () => ({ db: mockDb }));
+function mockModuleUniversal(specifier: string, factory: () => unknown) {
+  console.log('Universal Mock called for:', specifier);
+  // 1. Mock direct specifier
+  mock.module(specifier, factory);
 
-mock.module('../src/services/gemini', () => ({
+  try {
+    // 2. Resolve absolute URL
+    const resolvedUrl = import.meta.resolve(specifier);
+    console.log(`Mocking resolved URL: ${resolvedUrl}`);
+    mock.module(resolvedUrl, factory);
+
+    // 3. Plain path
+    const plainPath = resolvedUrl.replace('file:///', '');
+    console.log(`Mocking plain path: ${plainPath}`);
+    mock.module(plainPath, factory);
+
+    // 4. Windows path
+    const winPath = plainPath.replace(/\//g, '\\');
+    console.log(`Mocking win path: ${winPath}`);
+    mock.module(winPath, factory);
+
+    // 5. Casing variations for drive letters (d: vs D:)
+    const driveMatch = resolvedUrl.match(/^file:\/\/\/([a-zA-Z]):/);
+    if (driveMatch && driveMatch[1]) {
+      const drive = driveMatch[1];
+      const altDrive = drive === drive.toLowerCase() ? drive.toUpperCase() : drive.toLowerCase();
+      const altUrl = resolvedUrl.replace(`file:///${drive}:`, `file:///${altDrive}:`);
+      console.log(`Mocking alt URL: ${altUrl}`);
+      mock.module(altUrl, factory);
+      
+      const altPlainPath = altUrl.replace('file:///', '');
+      console.log(`Mocking alt plain path: ${altPlainPath}`);
+      mock.module(altPlainPath, factory);
+      console.log(`Mocking alt win path: ${altPlainPath.replace(/\//g, '\\')}`);
+      mock.module(altPlainPath.replace(/\//g, '\\'), factory);
+    }
+  } catch (err) {
+    console.error('Failed to resolve and mock path for:', specifier, err);
+  }
+}
+
+// Apply universal mocks
+mockModuleUniversal('../src/db', () => ({ db: mockDb }));
+mockModuleUniversal('../src/db/index', () => ({ db: mockDb }));
+mockModuleUniversal('../src/services/groq', () => ({
   generateInsights: async () => ['Insight 1', 'Insight 2', 'Insight 3'],
   generateDemandForecast: async () => [
     { date: '2025-02-01', forecastDemand: 4600, confidence: 0.91 },
