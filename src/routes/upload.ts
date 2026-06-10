@@ -12,7 +12,8 @@ import {
   channelPerformance,
   performanceMetrics,
   marketForecasts,
-  datasets
+  datasets,
+  dataPipelineEvents
 } from '../db/schema';
 import { authMiddleware } from '../middleware/auth';
 import { parseCSV, isValidDate, isFiniteNumber } from '../services/csvParser';
@@ -233,6 +234,19 @@ uploadRoutes.post('/', async (c) => {
     } catch (err) {
       console.error('Failed to update downstream tables during upload:', err);
     }
+  }
+
+  try {
+    await db.insert(dataPipelineEvents).values({
+      userId,
+      eventType: 'Data Upload',
+      source: fileName,
+      status: rowsInserted > 0 ? 'success' : 'error',
+      rowsAffected: rowsInserted,
+      message: `Inserted ${rowsInserted} rows, skipped ${rowsSkipped}`,
+    });
+  } catch (err) {
+    console.error('Failed to log pipeline event:', err);
   }
 
   return c.json({ message: 'Upload successful', type: fileType, rowsInserted, rowsSkipped, skippedReasons, datasetId }, 200);
