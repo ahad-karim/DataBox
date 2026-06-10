@@ -32,6 +32,36 @@ async function queryGroq(systemMessage: string, userMessage: string): Promise<an
   return JSON.parse(text);
 }
 
+async function queryGroqText(systemMessage: string, userMessage: string): Promise<string> {
+  if (!apiKey) {
+    throw new Error('GROQ_API_KEY is not set');
+  }
+
+  const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'llama-3.1-8b-instant',
+      messages: [
+        { role: 'system', content: systemMessage },
+        { role: 'user', content: userMessage },
+      ],
+      temperature: 0.2,
+    }),
+  });
+
+  if (!response.ok) {
+    const errorBody = await response.text().catch(() => '');
+    throw new Error(`Groq API returned error status ${response.status}: ${errorBody}`);
+  }
+
+  const result = await response.json() as any;
+  return result.choices?.[0]?.message?.content || '';
+}
+
 export async function generateDemandForecast(historicalData: any[], horizonDays: number): Promise<any[]> {
   const systemMessage = 'You are a demand forecasting assistant. You must output ONLY a valid JSON object matching the requested schema.';
   const userMessage = `
@@ -60,30 +90,47 @@ Example output:
   return parsed.forecast;
 }
 
-export async function generateInsights(context: string, data: object): Promise<string[]> {
-  const systemMessage = 'You are a business intelligence assistant. You must output ONLY a valid JSON object matching the requested schema.';
+export async function generateInsights(context: string, data: object): Promise<string> {
+  const systemMessage = `
+<Role>
+You are an expert Retail Data Analyst specializing in inventory and market trends.
+</Role>
+
+<Task>
+Analyze the provided data and extract 3-5 concise, actionable business insights.
+</Task>
+
+<Constraints>
+- Do NOT return JSON. Return the response in formatted Markdown.
+- Group the insights into clear categories using Markdown headings (e.g., ### Stockout chance).
+- Under each heading, use a numbered list for specific items or insights.
+- Keep each point to a short, punchy phrase or sentence.
+- Provide ONLY the formatted headings and lists. Do not include any introductory greetings, explanations, or concluding remarks.
+</Constraints>
+
+<Example_Output>
+### Stockout chance
+1. Pran mango juice
+2. Radhuni masala
+
+### Should expand to
+1. Natore
+2. Madaripur Sadar
+
+### Products performing bad
+1. ACI aerocol
+2. Black mosquito coil
+3. LACME cerum
+</Example_Output>
+`;
   const userMessage = `
-Analyse the following ${context} data and return 3-5 concise, actionable business insights.
-Each insight MUST be a short, punchy sentence (bullet point format) rather than a long paragraph.
-You must return a JSON object with a single "insights" key containing an array of strings.
-
-Data:
+<Data>
 ${JSON.stringify(data)}
-
-Example output:
-{
-  "insights": [
-    "Insight 1 goes here",
-    "Insight 2 goes here"
-  ]
-}
+</Data>
   `;
 
-  const parsed = await queryGroq(systemMessage, userMessage);
-  if (!parsed || !Array.isArray(parsed.insights)) {
-    throw new Error('Groq returned an invalid insights format');
-  }
-  return parsed.insights;
+  const resultText = await queryGroqText(systemMessage, userMessage);
+  return resultText;
 }
 
 const DIVISION_MAPPING: Record<string, string[]> = {
