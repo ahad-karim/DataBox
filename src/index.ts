@@ -57,4 +57,12 @@ app.onError((err, c) => {
   return c.json({ error: err.message, code: 'INTERNAL_ERROR', details: {} }, 500);
 });
 
-export default app;
+// Start server explicitly for Render (picks up PORT env var)
+const port = parseInt(process.env.PORT ?? '3001', 10);
+console.log(`DataBox API starting on port ${port}`);
+
+export default {
+  port,
+  fetch: app.fetch,
+};
+
