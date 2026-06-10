@@ -150,6 +150,8 @@ class InsertBuilder {
     try { resolve(this.execute()); }
     catch (e) { reject(e); }
   }
+}
+
 class DeleteBuilder {
   private tableRows: Record<string, unknown>[] = [];
 

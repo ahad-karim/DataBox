@@ -98,21 +98,49 @@ export const dataPipelineEvents = pgTable('data_pipeline_events', {
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
 });
 
-export const rawData = pgTable('raw_data', {
+export const products = pgTable('products', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id),
+  name: text('name').notNull(),
+  category: text('category').notNull(),
+  unitPrice: numeric('unit_price', { precision: 12, scale: 2 }).notNull(),
+  costPrice: numeric('cost_price', { precision: 12, scale: 2 }).notNull(),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+});
+
+export const locations = pgTable('locations', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id),
+  name: text('name').notNull(),
+  region: text('region'),
+  geom: geometry('geom', { type: 'point', mode: 'tuple', srid: 4326 }),
+});
+
+export const salesChannels = pgTable('sales_channels', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id),
+  name: text('name').notNull(),
+});
+
+export const salesFacts = pgTable('sales_facts', {
   id: uuid('id').defaultRandom().primaryKey(),
   userId: uuid('user_id').references(() => users.id),
   date: date('date').notNull(),
-  productId: text('product_id'),
-  productName: text('product_name').notNull(),
-  category: text('category').notNull(),
-  location: text('location').notNull(),
-  salesChannel: text('sales_channel').notNull(),
+  productId: uuid('product_id').references(() => products.id),
+  locationId: uuid('location_id').references(() => locations.id),
+  channelId: uuid('channel_id').references(() => salesChannels.id),
   unitsSold: integer('units_sold').notNull(),
   revenueBdt: numeric('revenue_bdt', { precision: 12, scale: 2 }).notNull(),
-  unitPrice: numeric('unit_price', { precision: 12, scale: 2 }).notNull(),
-  costPrice: numeric('cost_price', { precision: 12, scale: 2 }).notNull(),
-  currentStock: integer('current_stock').notNull(),
   customerSegment: text('customer_segment'),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
 });
 
+export const inventoryFacts = pgTable('inventory_facts', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id),
+  date: date('date').notNull(),
+  productId: uuid('product_id').references(() => products.id),
+  locationId: uuid('location_id').references(() => locations.id),
+  currentStock: integer('current_stock').notNull(),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+});

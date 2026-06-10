@@ -1,0 +1,501 @@
+Date,Product_Name,Category,Location,Sales_Channel,Units_Sold,Revenue_BDT,Cost_Price,Current_Stock,Customer_Segment
+2025-06-10,Ispahani Mirzapore Tea 500g,Food,Chattogram,Wholesale,81,20250,14580,243,Retailer
+2025-06-11,Square Toiletries,Personal Care,Barishal,Online,79,7900,4740,51,Retailer
+2025-06-11,Beximco Paracetamol,Medicine,Rangpur,Direct,25,500,250,334,Household
+2025-06-12,Bata Formal Shoes,Footwear,Rangpur,Retail,64,160000,76800,260,Consumer
+2025-06-13,Radhuni Chilli Powder 200g,Grocery,Rangpur,Retail,35,2800,1750,216,Corporate
+2025-06-13,Beximco Paracetamol,Medicine,Khulna,Retail,79,1580,790,403,Consumer
+2025-06-14,Ispahani Mirzapore Tea 500g,Food,Dhaka,Direct,67,16750,12060,337,Consumer
+2025-06-17,Square Toiletries,Personal Care,Comilla,Direct,87,8700,5220,127,Retailer
+2025-06-18,Walton Blender,Electronics,Khulna,Online,50,150000,100000,402,Corporate
+2025-06-19,Pran Mango Juice 250ml,Beverages,Comilla,Online,65,1950,1300,177,Household
+2025-06-19,Pran Mango Juice 250ml,Beverages,Chattogram,Retail,70,2100,1400,22,Consumer
+2025-06-20,Ispahani Mirzapore Tea 500g,Food,Khulna,Retail,69,17250,12420,137,Household
+2025-06-21,Pran Mango Juice 250ml,Beverages,Gazipur,Direct,45,1350,900,286,Household
+2025-06-23,Radhuni Chilli Powder 200g,Grocery,Dhaka,Wholesale,46,3680,2300,175,Corporate
+2025-06-26,Square Toiletries,Personal Care,Khulna,Direct,50,5000,3000,37,Consumer
+2025-06-26,Square Toiletries,Personal Care,Khulna,Retail,64,6400,3840,204,Corporate
+2025-06-26,Aarong Milk 1L,Dairy,Sylhet,Retail,93,8370,6975,200,Consumer
+2025-06-26,Aarong Milk 1L,Dairy,Comilla,Online,57,5130,4275,369,Household
+2025-06-26,Bata Formal Shoes,Footwear,Khulna,Retail,30,75000,36000,146,Corporate
+2025-06-26,Beximco Paracetamol,Medicine,Rajshahi,Online,20,400,200,352,Corporate
+2025-06-27,Aarong Milk 1L,Dairy,Khulna,Retail,23,2070,1725,152,Retailer
+2025-06-27,Bata Formal Shoes,Footwear,Dhaka,Online,84,210000,100800,299,Corporate
+2025-06-28,Fresh Soybean Oil 5L,Grocery,Comilla,Retail,64,51200,44800,202,Household
+2025-06-28,Walton Blender,Electronics,Mymensingh,Direct,49,147000,98000,354,Retailer
+2025-06-29,Radhuni Chilli Powder 200g,Grocery,Sylhet,Online,13,1040,650,440,Corporate
+2025-06-30,Beximco Paracetamol,Medicine,Mymensingh,Wholesale,67,1340,670,241,Consumer
+2025-07-04,Ispahani Mirzapore Tea 500g,Food,Barishal,Online,85,21250,15300,72,Corporate
+2025-07-05,Aarong Milk 1L,Dairy,Khulna,Retail,51,4590,3825,206,Consumer
+2025-07-05,Ispahani Mirzapore Tea 500g,Food,Sylhet,Direct,17,4250,3060,64,Household
+2025-07-06,Pran Mango Juice 250ml,Beverages,Mymensingh,Direct,42,1260,840,411,Household
+2025-07-06,Aarong Milk 1L,Dairy,Khulna,Direct,81,7290,6075,431,Retailer
+2025-07-06,Beximco Paracetamol,Medicine,Sylhet,Wholesale,15,300,150,24,Corporate
+2025-07-09,Pran Mango Juice 250ml,Beverages,Rangpur,Online,21,630,420,43,Household
+2025-07-09,Radhuni Chilli Powder 200g,Grocery,Khulna,Direct,64,5120,3200,205,Corporate
+2025-07-09,Beximco Paracetamol,Medicine,Sylhet,Direct,50,1000,500,29,Consumer
+2025-07-09,Radhuni Chilli Powder 200g,Grocery,Gazipur,Retail,95,7600,4750,303,Corporate
+2025-07-09,Square Toiletries,Personal Care,Comilla,Retail,89,8900,5340,423,Retailer
+2025-07-10,Walton Blender,Electronics,Sylhet,Online,45,135000,90000,309,Corporate
+2025-07-11,Walton Blender,Electronics,Chattogram,Direct,75,225000,150000,39,Corporate
+2025-07-12,Ispahani Mirzapore Tea 500g,Food,Sylhet,Retail,15,3750,2700,269,Retailer
+2025-07-12,Bata Formal Shoes,Footwear,Comilla,Online,99,247500,118800,418,Household
+2025-07-13,Beximco Paracetamol,Medicine,Rangpur,Wholesale,15,300,150,113,Retailer
+2025-07-13,Radhuni Chilli Powder 200g,Grocery,Chattogram,Direct,57,4560,2850,120,Household
+2025-07-16,Pran Mango Juice 250ml,Beverages,Gazipur,Online,5,150,100,70,Corporate
+2025-07-18,Aarong Milk 1L,Dairy,Chattogram,Direct,14,1260,1050,74,Household
+2025-07-19,Fresh Soybean Oil 5L,Grocery,Dhaka,Direct,21,16800,14700,29,Household
+2025-07-20,RFL Plastic Chair,Furniture,Barishal,Retail,99,64350,39600,319,Retailer
+2025-07-20,RFL Plastic Chair,Furniture,Chattogram,Direct,94,61100,37600,52,Consumer
+2025-07-20,RFL Plastic Chair,Furniture,Gazipur,Wholesale,67,43550,26800,470,Household
+2025-07-22,Square Toiletries,Personal Care,Mymensingh,Retail,70,7000,4200,410,Corporate
+2025-07-22,Square Toiletries,Personal Care,Rangpur,Wholesale,85,8500,5100,354,Household
+2025-07-23,Beximco Paracetamol,Medicine,Chattogram,Online,97,1940,970,467,Corporate
+2025-07-24,Fresh Soybean Oil 5L,Grocery,Chattogram,Retail,13,10400,9100,166,Retailer
+2025-07-24,Pran Mango Juice 250ml,Beverages,Rangpur,Online,34,1020,680,430,Household
+2025-07-25,Aarong Milk 1L,Dairy,Gazipur,Online,61,5490,4575,288,Consumer
+2025-07-29,Fresh Soybean Oil 5L,Grocery,Rajshahi,Retail,37,29600,25900,47,Consumer
+2025-07-29,Radhuni Chilli Powder 200g,Grocery,Chattogram,Online,68,5440,3400,19,Corporate
+2025-07-29,Walton Blender,Electronics,Chattogram,Wholesale,48,144000,96000,40,Retailer
+2025-07-29,Square Toiletries,Personal Care,Chattogram,Wholesale,39,3900,2340,483,Retailer
+2025-07-30,Ispahani Mirzapore Tea 500g,Food,Khulna,Online,13,3250,2340,39,Household
+2025-07-31,Pran Mango Juice 250ml,Beverages,Rajshahi,Online,96,2880,1920,67,Consumer
+2025-07-31,Walton Blender,Electronics,Chattogram,Retail,99,297000,198000,408,Household
+2025-07-31,Aarong Milk 1L,Dairy,Comilla,Retail,90,8100,6750,290,Corporate
+2025-08-01,Square Toiletries,Personal Care,Mymensingh,Retail,71,7100,4260,259,Retailer
+2025-08-02,Bata Formal Shoes,Footwear,Comilla,Online,15,37500,18000,448,Retailer
+2025-08-03,Aarong Milk 1L,Dairy,Rajshahi,Direct,61,5490,4575,437,Consumer
+2025-08-03,Beximco Paracetamol,Medicine,Rajshahi,Online,50,1000,500,204,Retailer
+2025-08-04,Ispahani Mirzapore Tea 500g,Food,Gazipur,Wholesale,33,8250,5940,317,Consumer
+2025-08-04,Aarong Milk 1L,Dairy,Khulna,Direct,34,3060,2550,400,Corporate
+2025-08-05,Ispahani Mirzapore Tea 500g,Food,Barishal,Direct,61,15250,10980,121,Corporate
+2025-08-07,RFL Plastic Chair,Furniture,Dhaka,Direct,27,17550,10800,119,Consumer
+2025-08-07,Bata Formal Shoes,Footwear,Comilla,Wholesale,30,75000,36000,368,Household
+2025-08-10,Pran Mango Juice 250ml,Beverages,Barishal,Wholesale,5,150,100,280,Retailer
+2025-08-11,Square Toiletries,Personal Care,Gazipur,Wholesale,59,5900,3540,208,Retailer
+2025-08-12,RFL Plastic Chair,Furniture,Chattogram,Retail,14,9100,5600,311,Retailer
+2025-08-12,Beximco Paracetamol,Medicine,Rangpur,Retail,93,1860,930,349,Retailer
+2025-08-13,Square Toiletries,Personal Care,Comilla,Online,44,4400,2640,371,Consumer
+2025-08-14,Walton Blender,Electronics,Dhaka,Online,29,87000,58000,313,Retailer
+2025-08-14,Bata Formal Shoes,Footwear,Dhaka,Online,2,5000,2400,261,Retailer
+2025-08-15,Square Toiletries,Personal Care,Gazipur,Retail,84,8400,5040,313,Consumer
+2025-08-15,Walton Blender,Electronics,Sylhet,Online,92,276000,184000,211,Retailer
+2025-08-16,Fresh Soybean Oil 5L,Grocery,Gazipur,Wholesale,41,32800,28700,42,Corporate
+2025-08-17,Square Toiletries,Personal Care,Comilla,Wholesale,66,6600,3960,346,Consumer
+2025-08-17,Fresh Soybean Oil 5L,Grocery,Khulna,Direct,23,18400,16100,155,Household
+2025-08-17,Fresh Soybean Oil 5L,Grocery,Chattogram,Wholesale,15,12000,10500,295,Household
+2025-08-18,Pran Mango Juice 250ml,Beverages,Rajshahi,Online,42,1260,840,83,Consumer
+2025-08-18,Square Toiletries,Personal Care,Comilla,Wholesale,92,9200,5520,37,Retailer
+2025-08-19,Radhuni Chilli Powder 200g,Grocery,Mymensingh,Retail,74,5920,3700,316,Household
+2025-08-21,Ispahani Mirzapore Tea 500g,Food,Khulna,Retail,62,15500,11160,149,Household
+2025-08-21,Walton Blender,Electronics,Mymensingh,Wholesale,91,273000,182000,308,Retailer
+2025-08-22,RFL Plastic Chair,Furniture,Rajshahi,Wholesale,19,12350,7600,170,Consumer
+2025-08-22,Walton Blender,Electronics,Chattogram,Retail,61,183000,122000,340,Consumer
+2025-08-23,RFL Plastic Chair,Furniture,Barishal,Wholesale,11,7150,4400,323,Corporate
+2025-08-25,RFL Plastic Chair,Furniture,Sylhet,Online,71,46150,28400,292,Household
+2025-08-26,Fresh Soybean Oil 5L,Grocery,Gazipur,Direct,66,52800,46200,456,Retailer
+2025-08-27,Bata Formal Shoes,Footwear,Mymensingh,Direct,25,62500,30000,361,Household
+2025-08-27,Bata Formal Shoes,Footwear,Gazipur,Online,8,20000,9600,368,Retailer
+2025-08-27,Radhuni Chilli Powder 200g,Grocery,Gazipur,Wholesale,46,3680,2300,488,Retailer
+2025-08-27,Walton Blender,Electronics,Sylhet,Retail,73,219000,146000,249,Retailer
+2025-08-27,Bata Formal Shoes,Footwear,Rajshahi,Wholesale,33,82500,39600,112,Corporate
+2025-08-28,RFL Plastic Chair,Furniture,Rajshahi,Direct,34,22100,13600,229,Household
+2025-08-30,Radhuni Chilli Powder 200g,Grocery,Comilla,Retail,94,7520,4700,211,Retailer
+2025-08-30,Fresh Soybean Oil 5L,Grocery,Comilla,Retail,14,11200,9800,280,Household
+2025-08-31,RFL Plastic Chair,Furniture,Chattogram,Direct,62,40300,24800,322,Consumer
+2025-08-31,Beximco Paracetamol,Medicine,Dhaka,Wholesale,40,800,400,83,Household
+2025-08-31,Aarong Milk 1L,Dairy,Dhaka,Wholesale,67,6030,5025,362,Corporate
+2025-09-02,Fresh Soybean Oil 5L,Grocery,Sylhet,Wholesale,59,47200,41300,310,Retailer
+2025-09-03,Bata Formal Shoes,Footwear,Khulna,Retail,61,152500,73200,161,Retailer
+2025-09-03,Square Toiletries,Personal Care,Khulna,Retail,39,3900,2340,180,Consumer
+2025-09-05,Radhuni Chilli Powder 200g,Grocery,Sylhet,Direct,34,2720,1700,461,Household
+2025-09-06,Bata Formal Shoes,Footwear,Khulna,Wholesale,25,62500,30000,286,Consumer
+2025-09-07,Square Toiletries,Personal Care,Rangpur,Retail,90,9000,5400,381,Corporate
+2025-09-07,Fresh Soybean Oil 5L,Grocery,Mymensingh,Retail,76,60800,53200,155,Retailer
+2025-09-08,Walton Blender,Electronics,Rangpur,Wholesale,17,51000,34000,300,Corporate
+2025-09-09,Fresh Soybean Oil 5L,Grocery,Mymensingh,Retail,79,63200,55300,153,Retailer
+2025-09-10,Beximco Paracetamol,Medicine,Rangpur,Wholesale,27,540,270,236,Household
+2025-09-10,Ispahani Mirzapore Tea 500g,Food,Mymensingh,Wholesale,94,23500,16920,484,Retailer
+2025-09-10,Aarong Milk 1L,Dairy,Khulna,Retail,49,4410,3675,343,Retailer
+2025-09-10,Square Toiletries,Personal Care,Khulna,Wholesale,89,8900,5340,321,Corporate
+2025-09-10,Fresh Soybean Oil 5L,Grocery,Dhaka,Direct,62,49600,43400,221,Corporate
+2025-09-10,Square Toiletries,Personal Care,Dhaka,Direct,15,1500,900,390,Consumer
+2025-09-13,Walton Blender,Electronics,Gazipur,Retail,86,258000,172000,45,Corporate
+2025-09-13,RFL Plastic Chair,Furniture,Mymensingh,Retail,64,41600,25600,20,Consumer
+2025-09-14,Ispahani Mirzapore Tea 500g,Food,Rangpur,Retail,80,20000,14400,277,Retailer
+2025-09-15,Pran Mango Juice 250ml,Beverages,Comilla,Online,89,2670,1780,145,Consumer
+2025-09-15,Pran Mango Juice 250ml,Beverages,Mymensingh,Wholesale,23,690,460,287,Corporate
+2025-09-16,Radhuni Chilli Powder 200g,Grocery,Gazipur,Retail,4,320,200,295,Retailer
+2025-09-16,Pran Mango Juice 250ml,Beverages,Khulna,Retail,87,2610,1740,64,Corporate
+2025-09-16,Walton Blender,Electronics,Dhaka,Direct,62,186000,124000,12,Retailer
+2025-09-17,Ispahani Mirzapore Tea 500g,Food,Chattogram,Retail,80,20000,14400,128,Household
+2025-09-17,Pran Mango Juice 250ml,Beverages,Khulna,Retail,84,2520,1680,130,Corporate
+2025-09-17,Walton Blender,Electronics,Chattogram,Direct,55,165000,110000,220,Retailer
+2025-09-17,Bata Formal Shoes,Footwear,Khulna,Direct,86,215000,103200,313,Retailer
+2025-09-19,Beximco Paracetamol,Medicine,Rangpur,Direct,71,1420,710,328,Consumer
+2025-09-23,Bata Formal Shoes,Footwear,Chattogram,Online,21,52500,25200,202,Consumer
+2025-09-23,Fresh Soybean Oil 5L,Grocery,Dhaka,Direct,83,66400,58100,141,Retailer
+2025-09-24,Fresh Soybean Oil 5L,Grocery,Comilla,Wholesale,27,21600,18900,487,Household
+2025-09-24,Ispahani Mirzapore Tea 500g,Food,Chattogram,Wholesale,64,16000,11520,360,Corporate
+2025-09-24,RFL Plastic Chair,Furniture,Dhaka,Direct,68,44200,27200,194,Retailer
+2025-09-24,Bata Formal Shoes,Footwear,Gazipur,Retail,50,125000,60000,161,Consumer
+2025-09-26,Fresh Soybean Oil 5L,Grocery,Khulna,Retail,26,20800,18200,434,Consumer
+2025-09-27,Beximco Paracetamol,Medicine,Khulna,Retail,24,480,240,57,Consumer
+2025-09-27,Aarong Milk 1L,Dairy,Rajshahi,Online,50,4500,3750,349,Consumer
+2025-09-28,Fresh Soybean Oil 5L,Grocery,Mymensingh,Retail,57,45600,39900,464,Corporate
+2025-09-29,RFL Plastic Chair,Furniture,Sylhet,Wholesale,26,16900,10400,479,Consumer
+2025-09-29,Pran Mango Juice 250ml,Beverages,Khulna,Direct,28,840,560,384,Corporate
+2025-09-29,Bata Formal Shoes,Footwear,Khulna,Retail,29,72500,34800,191,Corporate
+2025-09-30,RFL Plastic Chair,Furniture,Gazipur,Direct,77,50050,30800,409,Retailer
+2025-09-30,Fresh Soybean Oil 5L,Grocery,Chattogram,Retail,38,30400,26600,57,Corporate
+2025-09-30,Bata Formal Shoes,Footwear,Comilla,Retail,24,60000,28800,398,Household
+2025-10-01,Aarong Milk 1L,Dairy,Gazipur,Retail,13,1170,975,274,Consumer
+2025-10-03,Pran Mango Juice 250ml,Beverages,Khulna,Online,74,2220,1480,28,Corporate
+2025-10-04,Fresh Soybean Oil 5L,Grocery,Dhaka,Online,84,67200,58800,13,Household
+2025-10-04,Fresh Soybean Oil 5L,Grocery,Gazipur,Wholesale,8,6400,5600,168,Retailer
+2025-10-04,Walton Blender,Electronics,Rajshahi,Wholesale,91,273000,182000,243,Retailer
+2025-10-05,Pran Mango Juice 250ml,Beverages,Comilla,Wholesale,20,600,400,404,Corporate
+2025-10-05,Bata Formal Shoes,Footwear,Barishal,Wholesale,9,22500,10800,467,Consumer
+2025-10-06,Pran Mango Juice 250ml,Beverages,Rangpur,Retail,29,870,580,222,Household
+2025-10-06,Aarong Milk 1L,Dairy,Sylhet,Direct,49,4410,3675,347,Retailer
+2025-10-06,Aarong Milk 1L,Dairy,Rangpur,Wholesale,59,5310,4425,61,Consumer
+2025-10-09,Fresh Soybean Oil 5L,Grocery,Khulna,Wholesale,78,62400,54600,290,Retailer
+2025-10-11,RFL Plastic Chair,Furniture,Rajshahi,Online,87,56550,34800,78,Retailer
+2025-10-11,Walton Blender,Electronics,Khulna,Direct,18,54000,36000,137,Retailer
+2025-10-12,Fresh Soybean Oil 5L,Grocery,Barishal,Direct,12,9600,8400,387,Consumer
+2025-10-12,Walton Blender,Electronics,Comilla,Online,73,219000,146000,128,Retailer
+2025-10-12,Beximco Paracetamol,Medicine,Barishal,Retail,38,760,380,426,Corporate
+2025-10-12,Aarong Milk 1L,Dairy,Rajshahi,Direct,77,6930,5775,176,Household
+2025-10-12,Pran Mango Juice 250ml,Beverages,Rajshahi,Online,70,2100,1400,90,Household
+2025-10-13,Walton Blender,Electronics,Comilla,Wholesale,43,129000,86000,230,Consumer
+2025-10-16,Ispahani Mirzapore Tea 500g,Food,Mymensingh,Direct,94,23500,16920,88,Consumer
+2025-10-16,RFL Plastic Chair,Furniture,Rajshahi,Wholesale,6,3900,2400,262,Retailer
+2025-10-16,Walton Blender,Electronics,Rajshahi,Retail,68,204000,136000,293,Household
+2025-10-17,Pran Mango Juice 250ml,Beverages,Barishal,Online,14,420,280,26,Consumer
+2025-10-17,Fresh Soybean Oil 5L,Grocery,Khulna,Wholesale,23,18400,16100,209,Corporate
+2025-10-18,Beximco Paracetamol,Medicine,Mymensingh,Wholesale,86,1720,860,161,Corporate
+2025-10-18,Fresh Soybean Oil 5L,Grocery,Comilla,Direct,41,32800,28700,107,Retailer
+2025-10-19,Radhuni Chilli Powder 200g,Grocery,Sylhet,Wholesale,16,1280,800,187,Consumer
+2025-10-19,Beximco Paracetamol,Medicine,Khulna,Online,21,420,210,272,Corporate
+2025-10-19,Radhuni Chilli Powder 200g,Grocery,Rangpur,Wholesale,86,6880,4300,157,Retailer
+2025-10-20,Fresh Soybean Oil 5L,Grocery,Barishal,Wholesale,49,39200,34300,405,Consumer
+2025-10-20,Walton Blender,Electronics,Barishal,Online,48,144000,96000,386,Consumer
+2025-10-21,Radhuni Chilli Powder 200g,Grocery,Mymensingh,Online,46,3680,2300,88,Corporate
+2025-10-22,Fresh Soybean Oil 5L,Grocery,Gazipur,Direct,98,78400,68600,278,Consumer
+2025-10-22,Beximco Paracetamol,Medicine,Chattogram,Retail,83,1660,830,95,Consumer
+2025-10-24,Beximco Paracetamol,Medicine,Mymensingh,Wholesale,62,1240,620,262,Consumer
+2025-10-25,Beximco Paracetamol,Medicine,Rajshahi,Direct,53,1060,530,111,Corporate
+2025-10-26,Radhuni Chilli Powder 200g,Grocery,Dhaka,Online,98,7840,4900,31,Retailer
+2025-10-26,Pran Mango Juice 250ml,Beverages,Chattogram,Wholesale,60,1800,1200,474,Consumer
+2025-10-26,Radhuni Chilli Powder 200g,Grocery,Sylhet,Wholesale,85,6800,4250,26,Household
+2025-10-27,Radhuni Chilli Powder 200g,Grocery,Comilla,Online,78,6240,3900,163,Household
+2025-10-28,Aarong Milk 1L,Dairy,Mymensingh,Online,91,8190,6825,377,Household
+2025-10-29,Beximco Paracetamol,Medicine,Rajshahi,Retail,97,1940,970,471,Consumer
+2025-10-30,Radhuni Chilli Powder 200g,Grocery,Comilla,Online,24,1920,1200,127,Corporate
+2025-10-31,Walton Blender,Electronics,Chattogram,Direct,4,12000,8000,164,Corporate
+2025-10-31,Walton Blender,Electronics,Barishal,Direct,62,186000,124000,246,Corporate
+2025-10-31,Fresh Soybean Oil 5L,Grocery,Chattogram,Direct,88,70400,61600,348,Household
+2025-10-31,Pran Mango Juice 250ml,Beverages,Sylhet,Retail,84,2520,1680,465,Consumer
+2025-11-06,Fresh Soybean Oil 5L,Grocery,Sylhet,Retail,61,48800,42700,57,Retailer
+2025-11-06,Square Toiletries,Personal Care,Gazipur,Wholesale,61,6100,3660,484,Consumer
+2025-11-07,Radhuni Chilli Powder 200g,Grocery,Chattogram,Online,9,720,450,188,Consumer
+2025-11-08,Pran Mango Juice 250ml,Beverages,Sylhet,Wholesale,42,1260,840,374,Household
+2025-11-08,Walton Blender,Electronics,Rajshahi,Retail,31,93000,62000,23,Household
+2025-11-09,Square Toiletries,Personal Care,Sylhet,Retail,23,2300,1380,45,Corporate
+2025-11-10,Aarong Milk 1L,Dairy,Gazipur,Online,20,1800,1500,421,Retailer
+2025-11-10,Square Toiletries,Personal Care,Gazipur,Retail,92,9200,5520,496,Consumer
+2025-11-11,Walton Blender,Electronics,Rangpur,Direct,93,279000,186000,43,Household
+2025-11-11,Fresh Soybean Oil 5L,Grocery,Rajshahi,Retail,58,46400,40600,174,Retailer
+2025-11-12,Fresh Soybean Oil 5L,Grocery,Chattogram,Retail,37,29600,25900,237,Consumer
+2025-11-12,RFL Plastic Chair,Furniture,Khulna,Direct,1,650,400,70,Retailer
+2025-11-13,RFL Plastic Chair,Furniture,Sylhet,Retail,82,53300,32800,389,Retailer
+2025-11-13,Walton Blender,Electronics,Mymensingh,Direct,14,42000,28000,70,Corporate
+2025-11-14,Aarong Milk 1L,Dairy,Chattogram,Wholesale,23,2070,1725,40,Consumer
+2025-11-17,Fresh Soybean Oil 5L,Grocery,Comilla,Online,36,28800,25200,58,Corporate
+2025-11-17,Bata Formal Shoes,Footwear,Rangpur,Online,33,82500,39600,196,Consumer
+2025-11-18,Beximco Paracetamol,Medicine,Barishal,Wholesale,4,80,40,85,Household
+2025-11-18,Walton Blender,Electronics,Comilla,Online,8,24000,16000,221,Corporate
+2025-11-19,Bata Formal Shoes,Footwear,Khulna,Retail,90,225000,108000,147,Consumer
+2025-11-20,Walton Blender,Electronics,Mymensingh,Wholesale,5,15000,10000,145,Household
+2025-11-21,Aarong Milk 1L,Dairy,Mymensingh,Retail,54,4860,4050,163,Household
+2025-11-21,Walton Blender,Electronics,Barishal,Wholesale,30,90000,60000,490,Corporate
+2025-11-21,Walton Blender,Electronics,Gazipur,Retail,64,192000,128000,220,Corporate
+2025-11-22,Aarong Milk 1L,Dairy,Mymensingh,Retail,64,5760,4800,429,Corporate
+2025-11-22,Radhuni Chilli Powder 200g,Grocery,Gazipur,Online,87,6960,4350,43,Household
+2025-11-22,Radhuni Chilli Powder 200g,Grocery,Sylhet,Direct,25,2000,1250,10,Corporate
+2025-11-22,Radhuni Chilli Powder 200g,Grocery,Mymensingh,Direct,57,4560,2850,456,Household
+2025-11-22,Bata Formal Shoes,Footwear,Comilla,Retail,46,115000,55200,127,Corporate
+2025-11-23,Beximco Paracetamol,Medicine,Rangpur,Wholesale,41,820,410,413,Corporate
+2025-11-23,RFL Plastic Chair,Furniture,Gazipur,Direct,97,63050,38800,108,Corporate
+2025-11-26,Bata Formal Shoes,Footwear,Gazipur,Retail,50,125000,60000,110,Household
+2025-11-27,Square Toiletries,Personal Care,Khulna,Online,73,7300,4380,403,Consumer
+2025-11-28,Fresh Soybean Oil 5L,Grocery,Sylhet,Retail,52,41600,36400,403,Corporate
+2025-11-28,Walton Blender,Electronics,Khulna,Retail,51,153000,102000,98,Consumer
+2025-11-30,Radhuni Chilli Powder 200g,Grocery,Dhaka,Online,29,2320,1450,200,Consumer
+2025-11-30,Bata Formal Shoes,Footwear,Barishal,Online,89,222500,106800,376,Consumer
+2025-12-01,Square Toiletries,Personal Care,Mymensingh,Retail,11,1100,660,475,Household
+2025-12-01,Aarong Milk 1L,Dairy,Gazipur,Direct,91,8190,6825,244,Retailer
+2025-12-02,Bata Formal Shoes,Footwear,Sylhet,Wholesale,17,42500,20400,402,Household
+2025-12-02,Walton Blender,Electronics,Barishal,Wholesale,72,216000,144000,352,Consumer
+2025-12-02,Aarong Milk 1L,Dairy,Rajshahi,Direct,5,450,375,116,Corporate
+2025-12-03,Radhuni Chilli Powder 200g,Grocery,Sylhet,Online,47,3760,2350,23,Household
+2025-12-03,RFL Plastic Chair,Furniture,Barishal,Online,48,31200,19200,349,Consumer
+2025-12-03,Walton Blender,Electronics,Chattogram,Online,20,60000,40000,319,Corporate
+2025-12-03,Pran Mango Juice 250ml,Beverages,Khulna,Wholesale,91,2730,1820,473,Consumer
+2025-12-04,Bata Formal Shoes,Footwear,Sylhet,Retail,96,240000,115200,369,Retailer
+2025-12-06,Ispahani Mirzapore Tea 500g,Food,Gazipur,Direct,96,24000,17280,183,Retailer
+2025-12-06,Bata Formal Shoes,Footwear,Chattogram,Retail,11,27500,13200,144,Consumer
+2025-12-06,RFL Plastic Chair,Furniture,Barishal,Wholesale,90,58500,36000,358,Consumer
+2025-12-08,Bata Formal Shoes,Footwear,Comilla,Direct,4,10000,4800,55,Consumer
+2025-12-10,Fresh Soybean Oil 5L,Grocery,Khulna,Online,63,50400,44100,492,Retailer
+2025-12-11,Beximco Paracetamol,Medicine,Mymensingh,Retail,30,600,300,362,Consumer
+2025-12-11,Pran Mango Juice 250ml,Beverages,Comilla,Retail,47,1410,940,30,Retailer
+2025-12-11,RFL Plastic Chair,Furniture,Rajshahi,Wholesale,38,24700,15200,474,Consumer
+2025-12-14,Aarong Milk 1L,Dairy,Gazipur,Online,43,3870,3225,145,Consumer
+2025-12-15,Bata Formal Shoes,Footwear,Gazipur,Retail,18,45000,21600,222,Retailer
+2025-12-16,Square Toiletries,Personal Care,Khulna,Direct,47,4700,2820,68,Corporate
+2025-12-16,Pran Mango Juice 250ml,Beverages,Mymensingh,Retail,57,1710,1140,295,Consumer
+2025-12-17,Walton Blender,Electronics,Rangpur,Direct,72,216000,144000,307,Retailer
+2025-12-18,RFL Plastic Chair,Furniture,Barishal,Direct,82,53300,32800,486,Household
+2025-12-18,Bata Formal Shoes,Footwear,Dhaka,Wholesale,21,52500,25200,210,Retailer
+2025-12-19,Bata Formal Shoes,Footwear,Khulna,Online,10,25000,12000,468,Retailer
+2025-12-19,Pran Mango Juice 250ml,Beverages,Dhaka,Direct,51,1530,1020,111,Corporate
+2025-12-20,Ispahani Mirzapore Tea 500g,Food,Barishal,Direct,42,10500,7560,368,Consumer
+2025-12-21,Bata Formal Shoes,Footwear,Sylhet,Online,6,15000,7200,274,Consumer
+2025-12-22,Bata Formal Shoes,Footwear,Sylhet,Direct,94,235000,112800,100,Consumer
+2025-12-23,Walton Blender,Electronics,Khulna,Retail,62,186000,124000,152,Corporate
+2025-12-25,Pran Mango Juice 250ml,Beverages,Gazipur,Wholesale,44,1320,880,467,Retailer
+2025-12-25,Pran Mango Juice 250ml,Beverages,Khulna,Online,13,390,260,107,Household
+2025-12-26,Beximco Paracetamol,Medicine,Rajshahi,Direct,62,1240,620,317,Consumer
+2025-12-28,Aarong Milk 1L,Dairy,Rangpur,Wholesale,28,2520,2100,411,Retailer
+2025-12-28,Walton Blender,Electronics,Gazipur,Direct,77,231000,154000,240,Consumer
+2025-12-28,Aarong Milk 1L,Dairy,Barishal,Direct,21,1890,1575,410,Consumer
+2025-12-28,Radhuni Chilli Powder 200g,Grocery,Chattogram,Retail,90,7200,4500,438,Consumer
+2025-12-28,Fresh Soybean Oil 5L,Grocery,Rajshahi,Online,50,40000,35000,82,Corporate
+2025-12-29,Fresh Soybean Oil 5L,Grocery,Gazipur,Direct,53,42400,37100,336,Retailer
+2025-12-29,Square Toiletries,Personal Care,Mymensingh,Online,9,900,540,265,Corporate
+2025-12-30,Square Toiletries,Personal Care,Chattogram,Retail,34,3400,2040,286,Consumer
+2025-12-30,Pran Mango Juice 250ml,Beverages,Rajshahi,Wholesale,6,180,120,154,Retailer
+2025-12-31,Walton Blender,Electronics,Rajshahi,Wholesale,27,81000,54000,359,Retailer
+2026-01-01,Pran Mango Juice 250ml,Beverages,Gazipur,Retail,5,150,100,170,Corporate
+2026-01-03,Aarong Milk 1L,Dairy,Khulna,Wholesale,7,630,525,120,Corporate
+2026-01-03,Fresh Soybean Oil 5L,Grocery,Khulna,Wholesale,10,8000,7000,149,Household
+2026-01-04,Pran Mango Juice 250ml,Beverages,Dhaka,Direct,94,2820,1880,305,Corporate
+2026-01-04,Bata Formal Shoes,Footwear,Khulna,Retail,44,110000,52800,322,Retailer
+2026-01-04,Ispahani Mirzapore Tea 500g,Food,Chattogram,Wholesale,92,23000,16560,152,Household
+2026-01-06,Aarong Milk 1L,Dairy,Chattogram,Direct,48,4320,3600,300,Consumer
+2026-01-06,Bata Formal Shoes,Footwear,Mymensingh,Wholesale,71,177500,85200,15,Corporate
+2026-01-07,Pran Mango Juice 250ml,Beverages,Comilla,Retail,10,300,200,173,Retailer
+2026-01-08,Ispahani Mirzapore Tea 500g,Food,Rangpur,Wholesale,80,20000,14400,153,Retailer
+2026-01-12,Bata Formal Shoes,Footwear,Sylhet,Wholesale,83,207500,99600,497,Household
+2026-01-13,Walton Blender,Electronics,Comilla,Direct,60,180000,120000,395,Household
+2026-01-13,RFL Plastic Chair,Furniture,Sylhet,Online,94,61100,37600,276,Household
+2026-01-14,Radhuni Chilli Powder 200g,Grocery,Sylhet,Direct,10,800,500,164,Consumer
+2026-01-14,Ispahani Mirzapore Tea 500g,Food,Comilla,Online,10,2500,1800,499,Retailer
+2026-01-14,Beximco Paracetamol,Medicine,Gazipur,Direct,64,1280,640,270,Consumer
+2026-01-14,Square Toiletries,Personal Care,Rajshahi,Direct,29,2900,1740,150,Household
+2026-01-15,Fresh Soybean Oil 5L,Grocery,Rangpur,Direct,89,71200,62300,60,Retailer
+2026-01-15,Walton Blender,Electronics,Comilla,Online,27,81000,54000,239,Household
+2026-01-16,Beximco Paracetamol,Medicine,Rangpur,Retail,44,880,440,292,Household
+2026-01-17,RFL Plastic Chair,Furniture,Rajshahi,Retail,34,22100,13600,482,Corporate
+2026-01-17,Bata Formal Shoes,Footwear,Rangpur,Direct,11,27500,13200,260,Corporate
+2026-01-20,Radhuni Chilli Powder 200g,Grocery,Mymensingh,Direct,30,2400,1500,57,Corporate
+2026-01-21,Aarong Milk 1L,Dairy,Khulna,Direct,73,6570,5475,145,Household
+2026-01-21,Radhuni Chilli Powder 200g,Grocery,Rajshahi,Online,73,5840,3650,391,Household
+2026-01-21,Aarong Milk 1L,Dairy,Rajshahi,Retail,34,3060,2550,420,Household
+2026-01-22,Square Toiletries,Personal Care,Comilla,Online,60,6000,3600,171,Consumer
+2026-01-22,Radhuni Chilli Powder 200g,Grocery,Gazipur,Retail,70,5600,3500,198,Retailer
+2026-01-23,Bata Formal Shoes,Footwear,Rajshahi,Wholesale,64,160000,76800,124,Household
+2026-01-23,Ispahani Mirzapore Tea 500g,Food,Rajshahi,Wholesale,84,21000,15120,285,Household
+2026-01-23,Pran Mango Juice 250ml,Beverages,Dhaka,Online,59,1770,1180,372,Household
+2026-01-24,Radhuni Chilli Powder 200g,Grocery,Mymensingh,Wholesale,89,7120,4450,212,Household
+2026-01-24,Pran Mango Juice 250ml,Beverages,Khulna,Retail,99,2970,1980,311,Corporate
+2026-01-24,Ispahani Mirzapore Tea 500g,Food,Dhaka,Direct,19,4750,3420,230,Retailer
+2026-01-25,Walton Blender,Electronics,Rangpur,Online,38,114000,76000,137,Consumer
+2026-01-25,Aarong Milk 1L,Dairy,Gazipur,Direct,76,6840,5700,326,Corporate
+2026-01-25,Bata Formal Shoes,Footwear,Rajshahi,Wholesale,21,52500,25200,266,Retailer
+2026-01-25,RFL Plastic Chair,Furniture,Dhaka,Online,39,25350,15600,477,Consumer
+2026-01-26,Pran Mango Juice 250ml,Beverages,Chattogram,Direct,17,510,340,376,Consumer
+2026-01-26,Walton Blender,Electronics,Sylhet,Direct,88,264000,176000,414,Household
+2026-01-28,Aarong Milk 1L,Dairy,Barishal,Online,24,2160,1800,288,Consumer
+2026-01-28,Fresh Soybean Oil 5L,Grocery,Sylhet,Retail,17,13600,11900,351,Household
+2026-01-28,Beximco Paracetamol,Medicine,Comilla,Wholesale,2,40,20,34,Consumer
+2026-01-29,Bata Formal Shoes,Footwear,Comilla,Retail,43,107500,51600,398,Corporate
+2026-01-30,Walton Blender,Electronics,Rangpur,Online,61,183000,122000,255,Corporate
+2026-01-30,Fresh Soybean Oil 5L,Grocery,Sylhet,Retail,37,29600,25900,47,Consumer
+2026-02-02,Walton Blender,Electronics,Sylhet,Online,6,18000,12000,455,Corporate
+2026-02-02,Beximco Paracetamol,Medicine,Dhaka,Online,13,260,130,207,Consumer
+2026-02-02,Walton Blender,Electronics,Barishal,Retail,73,219000,146000,300,Retailer
+2026-02-02,Ispahani Mirzapore Tea 500g,Food,Mymensingh,Wholesale,99,24750,17820,467,Corporate
+2026-02-02,Pran Mango Juice 250ml,Beverages,Gazipur,Wholesale,42,1260,840,136,Retailer
+2026-02-03,Bata Formal Shoes,Footwear,Barishal,Wholesale,32,80000,38400,185,Retailer
+2026-02-03,Fresh Soybean Oil 5L,Grocery,Dhaka,Retail,97,77600,67900,430,Consumer
+2026-02-03,Fresh Soybean Oil 5L,Grocery,Comilla,Online,38,30400,26600,488,Corporate
+2026-02-04,Square Toiletries,Personal Care,Khulna,Retail,19,1900,1140,93,Consumer
+2026-02-05,Beximco Paracetamol,Medicine,Rangpur,Retail,46,920,460,106,Retailer
+2026-02-06,Aarong Milk 1L,Dairy,Khulna,Retail,89,8010,6675,367,Retailer
+2026-02-06,Ispahani Mirzapore Tea 500g,Food,Barishal,Retail,6,1500,1080,244,Household
+2026-02-07,Ispahani Mirzapore Tea 500g,Food,Rajshahi,Retail,65,16250,11700,482,Household
+2026-02-08,Ispahani Mirzapore Tea 500g,Food,Rangpur,Direct,17,4250,3060,234,Corporate
+2026-02-08,Radhuni Chilli Powder 200g,Grocery,Comilla,Wholesale,58,4640,2900,128,Consumer
+2026-02-08,Square Toiletries,Personal Care,Dhaka,Direct,70,7000,4200,310,Household
+2026-02-09,Pran Mango Juice 250ml,Beverages,Khulna,Wholesale,67,2010,1340,96,Consumer
+2026-02-10,Fresh Soybean Oil 5L,Grocery,Rangpur,Wholesale,32,25600,22400,396,Household
+2026-02-10,Pran Mango Juice 250ml,Beverages,Chattogram,Online,24,720,480,310,Corporate
+2026-02-11,Beximco Paracetamol,Medicine,Gazipur,Wholesale,73,1460,730,311,Retailer
+2026-02-12,Walton Blender,Electronics,Gazipur,Online,19,57000,38000,170,Retailer
+2026-02-13,Fresh Soybean Oil 5L,Grocery,Comilla,Wholesale,74,59200,51800,437,Retailer
+2026-02-14,Pran Mango Juice 250ml,Beverages,Mymensingh,Retail,45,1350,900,160,Retailer
+2026-02-15,Ispahani Mirzapore Tea 500g,Food,Dhaka,Direct,23,5750,4140,26,Household
+2026-02-15,Beximco Paracetamol,Medicine,Chattogram,Wholesale,97,1940,970,23,Corporate
+2026-02-16,Square Toiletries,Personal Care,Chattogram,Wholesale,50,5000,3000,292,Retailer
+2026-02-16,Radhuni Chilli Powder 200g,Grocery,Sylhet,Wholesale,75,6000,3750,471,Retailer
+2026-02-16,Bata Formal Shoes,Footwear,Rajshahi,Wholesale,24,60000,28800,308,Retailer
+2026-02-17,RFL Plastic Chair,Furniture,Chattogram,Retail,48,31200,19200,249,Household
+2026-02-18,Pran Mango Juice 250ml,Beverages,Comilla,Retail,64,1920,1280,171,Corporate
+2026-02-18,Walton Blender,Electronics,Chattogram,Online,10,30000,20000,85,Corporate
+2026-02-19,Fresh Soybean Oil 5L,Grocery,Chattogram,Direct,47,37600,32900,13,Corporate
+2026-02-19,Walton Blender,Electronics,Sylhet,Retail,95,285000,190000,39,Retailer
+2026-02-20,Radhuni Chilli Powder 200g,Grocery,Comilla,Wholesale,67,5360,3350,172,Consumer
+2026-02-21,RFL Plastic Chair,Furniture,Chattogram,Direct,41,26650,16400,331,Retailer
+2026-02-21,Aarong Milk 1L,Dairy,Barishal,Online,84,7560,6300,460,Corporate
+2026-02-22,Radhuni Chilli Powder 200g,Grocery,Khulna,Online,36,2880,1800,295,Household
+2026-02-23,Aarong Milk 1L,Dairy,Mymensingh,Wholesale,34,3060,2550,219,Consumer
+2026-02-25,Fresh Soybean Oil 5L,Grocery,Chattogram,Online,42,33600,29400,500,Corporate
+2026-02-25,Aarong Milk 1L,Dairy,Mymensingh,Direct,47,4230,3525,27,Corporate
+2026-02-25,Beximco Paracetamol,Medicine,Rajshahi,Direct,63,1260,630,249,Household
+2026-02-26,Square Toiletries,Personal Care,Rangpur,Wholesale,22,2200,1320,101,Household
+2026-02-26,Walton Blender,Electronics,Khulna,Direct,95,285000,190000,160,Retailer
+2026-02-27,Fresh Soybean Oil 5L,Grocery,Sylhet,Direct,100,80000,70000,284,Consumer
+2026-02-27,Pran Mango Juice 250ml,Beverages,Mymensingh,Wholesale,89,2670,1780,261,Household
+2026-02-28,Fresh Soybean Oil 5L,Grocery,Rajshahi,Online,92,73600,64400,247,Retailer
+2026-02-28,Aarong Milk 1L,Dairy,Rangpur,Retail,94,8460,7050,449,Retailer
+2026-03-01,Square Toiletries,Personal Care,Rangpur,Direct,48,4800,2880,62,Retailer
+2026-03-01,Square Toiletries,Personal Care,Dhaka,Online,90,9000,5400,82,Retailer
+2026-03-03,Walton Blender,Electronics,Mymensingh,Wholesale,90,270000,180000,410,Household
+2026-03-04,Beximco Paracetamol,Medicine,Sylhet,Online,81,1620,810,194,Household
+2026-03-05,Bata Formal Shoes,Footwear,Khulna,Direct,14,35000,16800,310,Household
+2026-03-06,Walton Blender,Electronics,Khulna,Direct,68,204000,136000,353,Consumer
+2026-03-07,Walton Blender,Electronics,Comilla,Online,13,39000,26000,16,Consumer
+2026-03-08,Walton Blender,Electronics,Chattogram,Direct,88,264000,176000,235,Retailer
+2026-03-08,Ispahani Mirzapore Tea 500g,Food,Rangpur,Retail,93,23250,16740,474,Retailer
+2026-03-10,Aarong Milk 1L,Dairy,Comilla,Wholesale,49,4410,3675,295,Household
+2026-03-11,Beximco Paracetamol,Medicine,Rangpur,Direct,18,360,180,452,Retailer
+2026-03-11,Square Toiletries,Personal Care,Khulna,Online,9,900,540,156,Corporate
+2026-03-11,Bata Formal Shoes,Footwear,Rajshahi,Retail,84,210000,100800,362,Household
+2026-03-12,Aarong Milk 1L,Dairy,Rangpur,Direct,88,7920,6600,235,Retailer
+2026-03-13,Ispahani Mirzapore Tea 500g,Food,Rajshahi,Wholesale,64,16000,11520,449,Corporate
+2026-03-15,Fresh Soybean Oil 5L,Grocery,Chattogram,Online,39,31200,27300,145,Consumer
+2026-03-15,Radhuni Chilli Powder 200g,Grocery,Rajshahi,Retail,81,6480,4050,31,Household
+2026-03-17,Fresh Soybean Oil 5L,Grocery,Sylhet,Wholesale,14,11200,9800,494,Corporate
+2026-03-18,RFL Plastic Chair,Furniture,Dhaka,Online,64,41600,25600,211,Retailer
+2026-03-19,Bata Formal Shoes,Footwear,Rangpur,Online,56,140000,67200,374,Consumer
+2026-03-19,Pran Mango Juice 250ml,Beverages,Rajshahi,Retail,68,2040,1360,15,Corporate
+2026-03-19,Aarong Milk 1L,Dairy,Sylhet,Wholesale,92,8280,6900,269,Retailer
+2026-03-19,Pran Mango Juice 250ml,Beverages,Mymensingh,Direct,76,2280,1520,385,Consumer
+2026-03-20,Beximco Paracetamol,Medicine,Khulna,Online,4,80,40,196,Household
+2026-03-20,Pran Mango Juice 250ml,Beverages,Dhaka,Online,67,2010,1340,208,Retailer
+2026-03-21,Walton Blender,Electronics,Gazipur,Direct,30,90000,60000,43,Retailer
+2026-03-22,Fresh Soybean Oil 5L,Grocery,Khulna,Wholesale,9,7200,6300,83,Household
+2026-03-22,Pran Mango Juice 250ml,Beverages,Barishal,Retail,61,1830,1220,446,Corporate
+2026-03-23,Square Toiletries,Personal Care,Chattogram,Retail,31,3100,1860,27,Household
+2026-03-26,Ispahani Mirzapore Tea 500g,Food,Sylhet,Retail,69,17250,12420,352,Retailer
+2026-03-27,Beximco Paracetamol,Medicine,Chattogram,Wholesale,68,1360,680,370,Retailer
+2026-03-29,Walton Blender,Electronics,Barishal,Retail,82,246000,164000,109,Corporate
+2026-03-30,Aarong Milk 1L,Dairy,Mymensingh,Retail,55,4950,4125,36,Household
+2026-03-30,Beximco Paracetamol,Medicine,Rajshahi,Online,31,620,310,291,Consumer
+2026-03-31,Beximco Paracetamol,Medicine,Comilla,Direct,94,1880,940,195,Corporate
+2026-03-31,Aarong Milk 1L,Dairy,Mymensingh,Direct,92,8280,6900,152,Household
+2026-04-01,Pran Mango Juice 250ml,Beverages,Mymensingh,Retail,32,960,640,39,Retailer
+2026-04-01,Fresh Soybean Oil 5L,Grocery,Gazipur,Direct,100,80000,70000,304,Consumer
+2026-04-02,Aarong Milk 1L,Dairy,Khulna,Retail,20,1800,1500,86,Corporate
+2026-04-02,Walton Blender,Electronics,Khulna,Retail,45,135000,90000,251,Corporate
+2026-04-03,Aarong Milk 1L,Dairy,Comilla,Direct,34,3060,2550,61,Corporate
+2026-04-05,Ispahani Mirzapore Tea 500g,Food,Mymensingh,Online,55,13750,9900,63,Consumer
+2026-04-05,Ispahani Mirzapore Tea 500g,Food,Dhaka,Direct,64,16000,11520,252,Corporate
+2026-04-05,RFL Plastic Chair,Furniture,Rajshahi,Retail,42,27300,16800,96,Consumer
+2026-04-06,Pran Mango Juice 250ml,Beverages,Gazipur,Online,2,60,40,294,Household
+2026-04-06,Bata Formal Shoes,Footwear,Dhaka,Direct,99,247500,118800,211,Household
+2026-04-09,Ispahani Mirzapore Tea 500g,Food,Gazipur,Retail,76,19000,13680,462,Consumer
+2026-04-09,Walton Blender,Electronics,Dhaka,Online,74,222000,148000,377,Household
+2026-04-09,Square Toiletries,Personal Care,Comilla,Direct,46,4600,2760,73,Consumer
+2026-04-09,Ispahani Mirzapore Tea 500g,Food,Rajshahi,Online,29,7250,5220,246,Retailer
+2026-04-10,Beximco Paracetamol,Medicine,Rajshahi,Online,57,1140,570,44,Corporate
+2026-04-10,Walton Blender,Electronics,Chattogram,Direct,81,243000,162000,380,Retailer
+2026-04-11,RFL Plastic Chair,Furniture,Dhaka,Wholesale,8,5200,3200,81,Consumer
+2026-04-15,Radhuni Chilli Powder 200g,Grocery,Mymensingh,Direct,14,1120,700,198,Corporate
+2026-04-16,Radhuni Chilli Powder 200g,Grocery,Mymensingh,Wholesale,78,6240,3900,107,Household
+2026-04-16,RFL Plastic Chair,Furniture,Rangpur,Retail,79,51350,31600,105,Retailer
+2026-04-19,Fresh Soybean Oil 5L,Grocery,Chattogram,Wholesale,39,31200,27300,436,Consumer
+2026-04-20,Ispahani Mirzapore Tea 500g,Food,Comilla,Wholesale,60,15000,10800,279,Corporate
+2026-04-21,Ispahani Mirzapore Tea 500g,Food,Mymensingh,Retail,53,13250,9540,241,Corporate
+2026-04-22,Bata Formal Shoes,Footwear,Dhaka,Direct,33,82500,39600,489,Retailer
+2026-04-22,Radhuni Chilli Powder 200g,Grocery,Dhaka,Online,20,1600,1000,442,Corporate
+2026-04-23,RFL Plastic Chair,Furniture,Rajshahi,Direct,32,20800,12800,221,Retailer
+2026-04-25,Bata Formal Shoes,Footwear,Chattogram,Direct,51,127500,61200,32,Corporate
+2026-04-25,RFL Plastic Chair,Furniture,Rangpur,Retail,2,1300,800,245,Retailer
+2026-04-25,Square Toiletries,Personal Care,Gazipur,Retail,63,6300,3780,247,Corporate
+2026-04-25,Pran Mango Juice 250ml,Beverages,Rangpur,Retail,92,2760,1840,400,Household
+2026-04-26,Walton Blender,Electronics,Sylhet,Direct,33,99000,66000,466,Corporate
+2026-04-26,Ispahani Mirzapore Tea 500g,Food,Gazipur,Online,3,750,540,279,Retailer
+2026-04-28,Square Toiletries,Personal Care,Barishal,Direct,68,6800,4080,211,Retailer
+2026-04-28,Radhuni Chilli Powder 200g,Grocery,Rajshahi,Online,84,6720,4200,303,Retailer
+2026-04-28,Fresh Soybean Oil 5L,Grocery,Rajshahi,Online,21,16800,14700,338,Retailer
+2026-04-30,Radhuni Chilli Powder 200g,Grocery,Mymensingh,Retail,51,4080,2550,52,Household
+2026-05-01,Square Toiletries,Personal Care,Rangpur,Retail,68,6800,4080,324,Household
+2026-05-02,Fresh Soybean Oil 5L,Grocery,Khulna,Direct,31,24800,21700,339,Household
+2026-05-02,Radhuni Chilli Powder 200g,Grocery,Barishal,Retail,65,5200,3250,61,Retailer
+2026-05-03,Beximco Paracetamol,Medicine,Dhaka,Direct,83,1660,830,15,Consumer
+2026-05-03,RFL Plastic Chair,Furniture,Rangpur,Retail,33,21450,13200,265,Household
+2026-05-04,Aarong Milk 1L,Dairy,Gazipur,Retail,7,630,525,289,Consumer
+2026-05-05,Ispahani Mirzapore Tea 500g,Food,Comilla,Direct,83,20750,14940,189,Consumer
+2026-05-07,Ispahani Mirzapore Tea 500g,Food,Barishal,Wholesale,59,14750,10620,171,Corporate
+2026-05-07,Aarong Milk 1L,Dairy,Chattogram,Direct,42,3780,3150,262,Corporate
+2026-05-07,Beximco Paracetamol,Medicine,Rajshahi,Retail,90,1800,900,249,Retailer
+2026-05-08,Bata Formal Shoes,Footwear,Gazipur,Direct,51,127500,61200,421,Retailer
+2026-05-09,Square Toiletries,Personal Care,Mymensingh,Wholesale,77,7700,4620,323,Retailer
+2026-05-09,Pran Mango Juice 250ml,Beverages,Barishal,Retail,89,2670,1780,448,Household
+2026-05-10,Ispahani Mirzapore Tea 500g,Food,Chattogram,Wholesale,97,24250,17460,159,Household
+2026-05-10,Square Toiletries,Personal Care,Khulna,Retail,9,900,540,90,Household
+2026-05-10,Ispahani Mirzapore Tea 500g,Food,Mymensingh,Wholesale,98,24500,17640,419,Household
+2026-05-10,Fresh Soybean Oil 5L,Grocery,Barishal,Wholesale,70,56000,49000,163,Corporate
+2026-05-11,Fresh Soybean Oil 5L,Grocery,Rangpur,Retail,53,42400,37100,63,Corporate
+2026-05-11,Square Toiletries,Personal Care,Dhaka,Wholesale,13,1300,780,375,Retailer
+2026-05-12,Walton Blender,Electronics,Gazipur,Direct,68,204000,136000,306,Consumer
+2026-05-12,Walton Blender,Electronics,Mymensingh,Direct,26,78000,52000,436,Household
+2026-05-12,RFL Plastic Chair,Furniture,Sylhet,Direct,29,18850,11600,161,Corporate
+2026-05-12,Fresh Soybean Oil 5L,Grocery,Dhaka,Direct,37,29600,25900,400,Household
+2026-05-13,Fresh Soybean Oil 5L,Grocery,Comilla,Wholesale,17,13600,11900,147,Corporate
+2026-05-13,RFL Plastic Chair,Furniture,Comilla,Wholesale,61,39650,24400,322,Household
+2026-05-13,Square Toiletries,Personal Care,Gazipur,Direct,55,5500,3300,247,Household
+2026-05-14,Radhuni Chilli Powder 200g,Grocery,Barishal,Wholesale,42,3360,2100,131,Corporate
+2026-05-16,Bata Formal Shoes,Footwear,Barishal,Wholesale,95,237500,114000,483,Consumer
+2026-05-16,Walton Blender,Electronics,Rajshahi,Direct,70,210000,140000,50,Household
+2026-05-17,Aarong Milk 1L,Dairy,Rajshahi,Online,92,8280,6900,311,Corporate
+2026-05-17,Bata Formal Shoes,Footwear,Comilla,Online,100,250000,120000,38,Corporate
+2026-05-18,Fresh Soybean Oil 5L,Grocery,Chattogram,Wholesale,33,26400,23100,115,Corporate
+2026-05-19,Pran Mango Juice 250ml,Beverages,Rangpur,Online,23,690,460,317,Corporate
+2026-05-19,Fresh Soybean Oil 5L,Grocery,Gazipur,Wholesale,2,1600,1400,436,Household
+2026-05-20,RFL Plastic Chair,Furniture,Barishal,Wholesale,33,21450,13200,319,Corporate
+2026-05-20,Pran Mango Juice 250ml,Beverages,Mymensingh,Wholesale,21,630,420,363,Consumer
+2026-05-23,Pran Mango Juice 250ml,Beverages,Sylhet,Wholesale,53,1590,1060,424,Consumer
+2026-05-23,Bata Formal Shoes,Footwear,Rangpur,Direct,92,230000,110400,183,Retailer
+2026-05-23,RFL Plastic Chair,Furniture,Sylhet,Online,65,42250,26000,479,Corporate
+2026-05-23,Square Toiletries,Personal Care,Comilla,Retail,77,7700,4620,203,Household
+2026-05-25,Pran Mango Juice 250ml,Beverages,Gazipur,Wholesale,50,1500,1000,240,Corporate
+2026-05-26,Fresh Soybean Oil 5L,Grocery,Barishal,Direct,67,53600,46900,449,Retailer
+2026-05-26,Beximco Paracetamol,Medicine,Rajshahi,Retail,30,600,300,380,Consumer
+2026-05-26,Fresh Soybean Oil 5L,Grocery,Rajshahi,Retail,49,39200,34300,368,Corporate
+2026-05-27,RFL Plastic Chair,Furniture,Khulna,Online,72,46800,28800,140,Household
+2026-05-27,Bata Formal Shoes,Footwear,Chattogram,Wholesale,92,230000,110400,258,Retailer
+2026-05-29,Bata Formal Shoes,Footwear,Barishal,Retail,42,105000,50400,200,Retailer
+2026-05-29,Ispahani Mirzapore Tea 500g,Food,Sylhet,Retail,84,21000,15120,327,Consumer
+2026-05-29,Bata Formal Shoes,Footwear,Dhaka,Retail,2,5000,2400,493,Corporate
+2026-05-30,Aarong Milk 1L,Dairy,Sylhet,Wholesale,33,2970,2475,349,Retailer
+2026-05-30,Bata Formal Shoes,Footwear,Comilla,Online,83,207500,99600,309,Household
+2026-06-02,Ispahani Mirzapore Tea 500g,Food,Mymensingh,Direct,12,3000,2160,11,Corporate
+2026-06-02,Square Toiletries,Personal Care,Barishal,Retail,50,5000,3000,68,Retailer
+2026-06-03,Radhuni Chilli Powder 200g,Grocery,Comilla,Retail,39,3120,1950,269,Household
+2026-06-03,Square Toiletries,Personal Care,Mymensingh,Wholesale,64,6400,3840,280,Retailer
+2026-06-06,Pran Mango Juice 250ml,Beverages,Dhaka,Wholesale,74,2220,1480,431,Retailer
+2026-06-10,Bata Formal Shoes,Footwear,Khulna,Online,79,197500,94800,493,Household

@@ -1,5 +1,3 @@
-CREATE EXTENSION IF NOT EXISTS postgis;
---> statement-breakpoint
 CREATE TABLE "channel_performance" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"user_id" uuid,
@@ -29,6 +27,16 @@ CREATE TABLE "demand_timeseries" (
 	"created_at" timestamp with time zone DEFAULT now()
 );
 --> statement-breakpoint
+CREATE TABLE "inventory_facts" (
+	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"user_id" uuid,
+	"date" date NOT NULL,
+	"product_id" uuid,
+	"location_id" uuid,
+	"current_stock" integer NOT NULL,
+	"created_at" timestamp with time zone DEFAULT now()
+);
+--> statement-breakpoint
 CREATE TABLE "kpi_snapshots" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"user_id" uuid,
@@ -40,8 +48,17 @@ CREATE TABLE "kpi_snapshots" (
 	"created_at" timestamp with time zone DEFAULT now()
 );
 --> statement-breakpoint
+CREATE TABLE "locations" (
+	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"user_id" uuid,
+	"name" text NOT NULL,
+	"region" text,
+	"geom" geometry(point)
+);
+--> statement-breakpoint
 CREATE TABLE "market_forecasts" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"user_id" uuid,
 	"country" text NOT NULL,
 	"region" text NOT NULL,
 	"geom" geometry(point),
@@ -61,21 +78,13 @@ CREATE TABLE "performance_metrics" (
 	"value" numeric(5, 2)
 );
 --> statement-breakpoint
-CREATE TABLE "raw_data" (
+CREATE TABLE "products" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"user_id" uuid,
-	"date" date NOT NULL,
-	"product_id" text,
-	"product_name" text NOT NULL,
+	"name" text NOT NULL,
 	"category" text NOT NULL,
-	"location" text NOT NULL,
-	"sales_channel" text NOT NULL,
-	"units_sold" integer NOT NULL,
-	"revenue_bdt" numeric(12, 2) NOT NULL,
 	"unit_price" numeric(12, 2) NOT NULL,
 	"cost_price" numeric(12, 2) NOT NULL,
-	"current_stock" integer NOT NULL,
-	"customer_segment" text,
 	"created_at" timestamp with time zone DEFAULT now()
 );
 --> statement-breakpoint
@@ -86,6 +95,25 @@ CREATE TABLE "regional_revenue" (
 	"region" text NOT NULL,
 	"revenue" numeric(12, 2),
 	"percentage" numeric(5, 2)
+);
+--> statement-breakpoint
+CREATE TABLE "sales_channels" (
+	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"user_id" uuid,
+	"name" text NOT NULL
+);
+--> statement-breakpoint
+CREATE TABLE "sales_facts" (
+	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"user_id" uuid,
+	"date" date NOT NULL,
+	"product_id" uuid,
+	"location_id" uuid,
+	"channel_id" uuid,
+	"units_sold" integer NOT NULL,
+	"revenue_bdt" numeric(12, 2) NOT NULL,
+	"customer_segment" text,
+	"created_at" timestamp with time zone DEFAULT now()
 );
 --> statement-breakpoint
 CREATE TABLE "users" (
@@ -102,8 +130,18 @@ CREATE TABLE "users" (
 ALTER TABLE "channel_performance" ADD CONSTRAINT "channel_performance_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "data_pipeline_events" ADD CONSTRAINT "data_pipeline_events_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "demand_timeseries" ADD CONSTRAINT "demand_timeseries_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "inventory_facts" ADD CONSTRAINT "inventory_facts_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "inventory_facts" ADD CONSTRAINT "inventory_facts_product_id_products_id_fk" FOREIGN KEY ("product_id") REFERENCES "public"."products"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "inventory_facts" ADD CONSTRAINT "inventory_facts_location_id_locations_id_fk" FOREIGN KEY ("location_id") REFERENCES "public"."locations"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "kpi_snapshots" ADD CONSTRAINT "kpi_snapshots_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "locations" ADD CONSTRAINT "locations_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "market_forecasts" ADD CONSTRAINT "market_forecasts_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "performance_metrics" ADD CONSTRAINT "performance_metrics_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
-ALTER TABLE "raw_data" ADD CONSTRAINT "raw_data_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "products" ADD CONSTRAINT "products_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "regional_revenue" ADD CONSTRAINT "regional_revenue_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "sales_channels" ADD CONSTRAINT "sales_channels_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "sales_facts" ADD CONSTRAINT "sales_facts_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "sales_facts" ADD CONSTRAINT "sales_facts_product_id_products_id_fk" FOREIGN KEY ("product_id") REFERENCES "public"."products"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "sales_facts" ADD CONSTRAINT "sales_facts_location_id_locations_id_fk" FOREIGN KEY ("location_id") REFERENCES "public"."locations"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "sales_facts" ADD CONSTRAINT "sales_facts_channel_id_sales_channels_id_fk" FOREIGN KEY ("channel_id") REFERENCES "public"."sales_channels"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 CREATE INDEX "market_forecasts_geom_idx" ON "market_forecasts" USING gist ("geom");

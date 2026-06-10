@@ -1,8 +1,8 @@
 import { Hono } from 'hono';
 import { db } from '../db';
-import { rawData } from '../db/schema';
+import { products, locations, salesChannels, salesFacts, inventoryFacts } from '../db/schema';
 import { authMiddleware } from '../middleware/auth';
-import { eq, desc, sql } from 'drizzle-orm';
+import { eq, desc, sql, and } from 'drizzle-orm';
 
 const rawDataRoutes = new Hono<{ Variables: { userId: string } }>();
 
@@ -18,16 +18,37 @@ rawDataRoutes.get('/', async (c) => {
   // Fetch count
   const countResult = await db
     .select({ count: sql<number>`count(*)` })
-    .from(rawData)
-    .where(eq(rawData.userId, userId));
+    .from(salesFacts)
+    .where(eq(salesFacts.userId, userId));
   const total = Number(countResult[0]?.count || 0);
 
   // Fetch paginated rows
   const data = await db
-    .select()
-    .from(rawData)
-    .where(eq(rawData.userId, userId))
-    .orderBy(desc(rawData.date))
+    .select({
+      date: salesFacts.date,
+      productId: products.id,
+      productName: products.name,
+      category: products.category,
+      location: locations.name,
+      salesChannel: salesChannels.name,
+      unitsSold: salesFacts.unitsSold,
+      revenueBdt: salesFacts.revenueBdt,
+      unitPrice: products.unitPrice,
+      costPrice: products.costPrice,
+      customerSegment: salesFacts.customerSegment,
+      currentStock: inventoryFacts.currentStock,
+    })
+    .from(salesFacts)
+    .innerJoin(products, eq(salesFacts.productId, products.id))
+    .innerJoin(locations, eq(salesFacts.locationId, locations.id))
+    .innerJoin(salesChannels, eq(salesFacts.channelId, salesChannels.id))
+    .leftJoin(inventoryFacts, and(
+      eq(salesFacts.productId, inventoryFacts.productId),
+      eq(salesFacts.locationId, inventoryFacts.locationId),
+      eq(salesFacts.date, inventoryFacts.date)
+    ))
+    .where(eq(salesFacts.userId, userId))
+    .orderBy(desc(salesFacts.date))
     .limit(limit)
     .offset(offset);
   
@@ -43,7 +64,7 @@ rawDataRoutes.get('/', async (c) => {
       Revenue_BDT: d.revenueBdt ? Number(d.revenueBdt) : 0,
       Unit_Price: d.unitPrice ? Number(d.unitPrice) : 0,
       Cost_Price: d.costPrice ? Number(d.costPrice) : 0,
-      Current_Stock: d.currentStock,
+      Current_Stock: d.currentStock || 0,
       Customer_Segment: d.customerSegment || '',
     })),
     pagination: {
@@ -58,12 +79,32 @@ rawDataRoutes.get('/', async (c) => {
 rawDataRoutes.get('/export', async (c) => {
   const userId = c.get('userId');
   
-  // Fetch all user's rows for export
   const data = await db
-    .select()
-    .from(rawData)
-    .where(eq(rawData.userId, userId))
-    .orderBy(desc(rawData.date));
+    .select({
+      date: salesFacts.date,
+      productId: products.id,
+      productName: products.name,
+      category: products.category,
+      location: locations.name,
+      salesChannel: salesChannels.name,
+      unitsSold: salesFacts.unitsSold,
+      revenueBdt: salesFacts.revenueBdt,
+      unitPrice: products.unitPrice,
+      costPrice: products.costPrice,
+      customerSegment: salesFacts.customerSegment,
+      currentStock: inventoryFacts.currentStock,
+    })
+    .from(salesFacts)
+    .innerJoin(products, eq(salesFacts.productId, products.id))
+    .innerJoin(locations, eq(salesFacts.locationId, locations.id))
+    .innerJoin(salesChannels, eq(salesFacts.channelId, salesChannels.id))
+    .leftJoin(inventoryFacts, and(
+      eq(salesFacts.productId, inventoryFacts.productId),
+      eq(salesFacts.locationId, inventoryFacts.locationId),
+      eq(salesFacts.date, inventoryFacts.date)
+    ))
+    .where(eq(salesFacts.userId, userId))
+    .orderBy(desc(salesFacts.date));
   
   const headers = [
     'Date',
@@ -94,7 +135,7 @@ rawDataRoutes.get('/export', async (c) => {
       row.revenueBdt,
       row.unitPrice,
       row.costPrice,
-      row.currentStock,
+      row.currentStock || 0,
       `"${(row.customerSegment || '').replace(/"/g, '""')}"`
     ].join(','));
   }

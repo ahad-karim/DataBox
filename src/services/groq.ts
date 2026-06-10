@@ -27,7 +27,7 @@ async function queryGroq(systemMessage: string, userMessage: string): Promise<an
     throw new Error(`Groq API returned error status ${response.status}: ${errorBody}`);
   }
 
-  const result = await response.json();
+  const result = await response.json() as any;
   const text = result.choices?.[0]?.message?.content || '{}';
   return JSON.parse(text);
 }

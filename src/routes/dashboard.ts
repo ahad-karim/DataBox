@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
 import { db } from '../db';
-import { kpiSnapshots, demandTimeseries, channelPerformance, performanceMetrics, regionalRevenue, rawData } from '../db/schema';
+import { kpiSnapshots, demandTimeseries, channelPerformance, performanceMetrics, regionalRevenue, salesFacts } from '../db/schema';
 import { eq, desc } from 'drizzle-orm';
 import { authMiddleware } from '../middleware/auth';
 import { zValidator } from '@hono/zod-validator';
@@ -13,7 +13,7 @@ dashboardRoutes.use('*', authMiddleware);
 
 dashboardRoutes.get('/kpis', zValidator('query', periodQuerySchema), async (c) => {
   const userId = c.get('userId');
-  const userSales = await db.select().from(rawData).where(eq(rawData.userId, userId));
+  const userSales = await db.select().from(salesFacts).where(eq(salesFacts.userId, userId));
 
   if (userSales.length === 0) {
     const [kpi] = await db.select().from(kpiSnapshots).where(eq(kpiSnapshots.userId, userId)).orderBy(desc(kpiSnapshots.snapshotDate)).limit(1);

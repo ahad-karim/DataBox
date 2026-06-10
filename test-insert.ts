@@ -1,11 +1,18 @@
 import { db } from './src/db';
 import { marketForecasts } from './src/db/schema';
-import { v4 as uuidv4 } from 'uuid';
-
 async function testInsert() {
   try {
     const userId = "e86d8470-730b-455c-80df-f370bd44c937"; // Assuming the demo user
     console.log("Attempting insert...");
+
+    // Insert user first to avoid foreign key violation
+    await db.insert(require('./src/db/schema').users).values({
+      id: userId,
+      name: "Demo User",
+      email: "demo@example.com",
+      password: "password"
+    }).onConflictDoNothing();
+
     await db.insert(marketForecasts).values({
       userId,
       country: 'Bangladesh',

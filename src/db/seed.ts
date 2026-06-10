@@ -7,7 +7,6 @@ import {
   performanceMetrics,
   regionalRevenue,
   marketForecasts,
-  rawData,
 } from './schema';
 import * as bcrypt from 'bcryptjs';
 
@@ -22,7 +21,7 @@ async function seed() {
   await db.delete(performanceMetrics);
   await db.delete(regionalRevenue);
   await db.delete(marketForecasts);
-  await db.delete(rawData);
+
   await db.delete(users);
 
   // 1. Create User
@@ -59,12 +58,6 @@ async function seed() {
     { date: '2026-05-29', productName: 'Ispahani Mirzapore Tea 500g', category: 'Food', location: 'Sylhet', salesChannel: 'Retail', unitsSold: 220, revenueBdt: '55000.00', unitPrice: '250.00', costPrice: '190.00', currentStock: 180, productId: 'PRD-TEA', customerSegment: 'Consumer' },
   ];
 
-  await db.insert(rawData).values(
-    sampleSales.map(s => ({
-      userId,
-      ...s
-    }))
-  );
   console.log('Inserted Raw SME Sales Data');
 
   // Calculate Aggregates dynamically from Raw Sales

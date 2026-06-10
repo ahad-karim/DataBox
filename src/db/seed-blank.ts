@@ -7,7 +7,6 @@ import {
   performanceMetrics,
   regionalRevenue,
   marketForecasts,
-  rawData,
 } from './schema';
 import * as bcrypt from 'bcryptjs';
 
@@ -22,7 +21,7 @@ async function seedBlank() {
   await db.delete(performanceMetrics);
   await db.delete(regionalRevenue);
   await db.delete(marketForecasts);
-  await db.delete(rawData);
+
   await db.delete(users);
 
   // 1. Create a fresh, empty demo user (optional, but needed to login)

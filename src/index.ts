@@ -26,29 +26,23 @@ app.use('*', cors({
 
 app.get('/', (c) => c.text('DataBox API is running'));
 
+// Auth
 app.route('/api/v1/auth', authRoutes);
-app.route('/api/v1/dashboard/kpis', dashboardRoutes); // Let's mount dashboard properly
-// Wait, the routes in dashboard.ts are:
-// `/kpis`
-// `/demand-forecast`
-// `/channel-performance`
-// `/regional-revenue`
-// `/performance-metrics`
-// So I should mount dashboardRoutes to `/api/v1/dashboard`
+
+// Dashboard
 app.route('/api/v1/dashboard', dashboardRoutes);
-// And marketsRoutes has `/` and `/top`, mount to `/api/v1/dashboard/market-forecasts`
 app.route('/api/v1/dashboard/market-forecasts', marketsRoutes);
-// And pipelineRoutes has `/events` and `/trigger`, mount to `/api/v1/dashboard/pipeline`
 app.route('/api/v1/dashboard/pipeline', pipelineRoutes);
-// And rawDataRoutes has `/` and `/export`, mount to `/api/v1/dashboard/raw-data`
 app.route('/api/v1/dashboard/raw-data', rawDataRoutes);
-// And AI routes `/insights`
-app.route('/api/v1/ai', aiRoutes);
-// And AI forecast generation `/api/v1/dashboard/demand-forecast/generate`
 app.route('/api/v1/dashboard/demand-forecast/generate', generateForecastRoute);
+
+// AI — includes /insights, /chat, /impute, /forecast-insight
+app.route('/api/v1/ai', aiRoutes);
+
 // Notifications
 app.route('/api/v1/notifications', notificationsRoutes);
-// CSV Upload
+
+// CSV / JSON Upload
 app.route('/api/v1/data/upload', uploadRoutes);
 
 // Error handling
@@ -57,4 +51,7 @@ app.onError((err, c) => {
   return c.json({ error: err.message, code: 'INTERNAL_ERROR', details: {} }, 500);
 });
 
-export default app;
+export default {
+  port: process.env.PORT || 3001,
+  fetch: app.fetch,
+};
