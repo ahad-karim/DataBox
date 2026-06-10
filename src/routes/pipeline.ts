@@ -59,7 +59,7 @@ pipelineRoutes.post('/trigger', zValidator('json', triggerPipelineSchema), async
     }).returning();
     
     return c.json({
-      jobId: newEvent[0].id,
+      jobId: newEvent[0]?.id || 'unknown',
       status: 'success',
       message: `${source} ingestion completed`
     }, 202);

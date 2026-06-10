@@ -78,3 +78,5 @@ const port = parseInt(process.env.PORT ?? '3001', 10);
 console.log(`DataBox API starting on port ${port}`);
 
 serve({ fetch: app.fetch, port });
+
+export default app;
