@@ -21,6 +21,13 @@ export const users = pgTable('users', {
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
 });
 
+export const datasets = pgTable('datasets', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }),
+  fileName: text('file_name').notNull(),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+});
+
 export const kpiSnapshots = pgTable('kpi_snapshots', {
   id: uuid('id').defaultRandom().primaryKey(),
   userId: uuid('user_id').references(() => users.id),
@@ -124,7 +131,8 @@ export const salesChannels = pgTable('sales_channels', {
 
 export const salesFacts = pgTable('sales_facts', {
   id: uuid('id').defaultRandom().primaryKey(),
-  userId: uuid('user_id').references(() => users.id),
+  userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }),
+  datasetId: uuid('dataset_id').references(() => datasets.id, { onDelete: 'cascade' }),
   date: date('date').notNull(),
   productId: uuid('product_id').references(() => products.id),
   locationId: uuid('location_id').references(() => locations.id),
@@ -137,7 +145,8 @@ export const salesFacts = pgTable('sales_facts', {
 
 export const inventoryFacts = pgTable('inventory_facts', {
   id: uuid('id').defaultRandom().primaryKey(),
-  userId: uuid('user_id').references(() => users.id),
+  userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }),
+  datasetId: uuid('dataset_id').references(() => datasets.id, { onDelete: 'cascade' }),
   date: date('date').notNull(),
   productId: uuid('product_id').references(() => products.id),
   locationId: uuid('location_id').references(() => locations.id),

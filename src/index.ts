@@ -9,6 +9,8 @@ import rawDataRoutes from './routes/rawData';
 import aiRoutes, { generateForecastRoute } from './routes/ai';
 import notificationsRoutes from './routes/notifications';
 import uploadRoutes from './routes/upload';
+import datasetRoutes from './routes/datasets';
+import integrationsRoutes from './routes/integrations';
 
 const app = new Hono();
 
@@ -44,6 +46,10 @@ app.route('/api/v1/notifications', notificationsRoutes);
 
 // CSV / JSON Upload
 app.route('/api/v1/data/upload', uploadRoutes);
+app.route('/api/v1/data/datasets', datasetRoutes);
+
+// Integrations
+app.route('/api/v1/integrations', integrationsRoutes);
 
 // Error handling
 app.onError((err, c) => {
@@ -51,7 +57,4 @@ app.onError((err, c) => {
   return c.json({ error: err.message, code: 'INTERNAL_ERROR', details: {} }, 500);
 });
 
-export default {
-  port: process.env.PORT || 3001,
-  fetch: app.fetch,
-};
+export default app;
