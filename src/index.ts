@@ -1,5 +1,6 @@
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
+import { serve } from '@hono/node-server';
 
 import authRoutes from './routes/auth';
 import dashboardRoutes from './routes/dashboard';
@@ -57,12 +58,8 @@ app.onError((err, c) => {
   return c.json({ error: err.message, code: 'INTERNAL_ERROR', details: {} }, 500);
 });
 
-// Start server explicitly for Render (picks up PORT env var)
+// Start server with Node.js (Render-compatible)
 const port = parseInt(process.env.PORT ?? '3001', 10);
 console.log(`DataBox API starting on port ${port}`);
 
-export default {
-  port,
-  fetch: app.fetch,
-};
-
+serve({ fetch: app.fetch, port });

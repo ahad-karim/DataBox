@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "bun run --watch src/index.ts",
+    "start": "npx tsx src/index.ts",
     "test": "bun test --preload ./tests/setup.ts",
     "test:watch": "bun test --watch --preload ./tests/setup.ts",
     "db:generate": "drizzle-kit generate",
@@ -23,12 +24,14 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
+    "@hono/node-server": "^2.0.4",
     "@hono/zod-validator": "^0.8.0",
     "@neondatabase/serverless": "^1.1.0",
     "bcryptjs": "^3.0.3",
     "drizzle-orm": "^0.45.2",
     "hono": "^4.12.23",
     "papaparse": "^5.5.3",
+    "tsx": "^4.22.4",
     "zod": "^4.4.3"
   }
 }
