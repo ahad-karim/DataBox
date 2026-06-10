@@ -64,6 +64,7 @@ export async function generateInsights(context: string, data: object): Promise<s
   const systemMessage = 'You are a business intelligence assistant. You must output ONLY a valid JSON object matching the requested schema.';
   const userMessage = `
 Analyse the following ${context} data and return 3-5 concise, actionable business insights.
+Each insight MUST be a short, punchy sentence (bullet point format) rather than a long paragraph.
 You must return a JSON object with a single "insights" key containing an array of strings.
 
 Data:

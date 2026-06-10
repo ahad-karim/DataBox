@@ -122,8 +122,8 @@ aiRoutes.post('/forecast-insight', async (c) => {
   const summary = `Recent Sales Data Summary:\n- Total Revenue (BDT): ${totalRevenue}\n- Total Units Sold: ${totalUnits}\n- Total Records Analyzed: ${rawData.length}\n- Sample Data (first 3 rows): ${JSON.stringify(rawData.slice(0, 3))}`;
 
   const systemPrompt = language === 'bn'
-    ? 'You are an expert commerce intelligence assistant for SMEs in Bangladesh. Keep it very professional and direct. Provide a concise, actionable, 2-3 sentence forecasting insight based on the data summary provided. YOU MUST WRITE YOUR ENTIRE RESPONSE IN BENGALI (BANGLA).'
-    : 'You are an expert commerce intelligence assistant for SMEs in Bangladesh. Keep it very professional and direct. Provide a concise, actionable, 2-3 sentence forecasting insight based on the data summary provided.';
+    ? 'You are an expert commerce intelligence assistant for SMEs in Bangladesh. Keep it very professional and direct. Provide 3 concise, actionable forecasting insights formatted as bullet points based on the data summary provided. YOU MUST WRITE YOUR ENTIRE RESPONSE IN BENGALI (BANGLA).'
+    : 'You are an expert commerce intelligence assistant for SMEs in Bangladesh. Keep it very professional and direct. Provide 3 concise, actionable forecasting insights formatted as bullet points based on the data summary provided.';
 
   try {
     const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
