@@ -109,7 +109,7 @@ Analyze the provided data and extract 3-5 concise, actionable business insights.
 </Constraints>
 
 <Example_Output>
-(Note: Replace the items below with ACTUAL products/locations from the provided data. Do not hallucinate or use these example names if they don't exist in the data.)
+(Note: Replace the items below with ACTUAL products/locations from the provided data. Do not hallucinate or use these example names if they don't exist in the data. You are HIGHLY ENCOURAGED to create completely different categories/headings if you find other interesting patterns in the data. This is just a format reference.)
 
 ### Stockout chance
 1. [Actual product name from data]
