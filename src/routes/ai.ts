@@ -121,9 +121,39 @@ aiRoutes.post('/forecast-insight', async (c) => {
   const totalUnits = rawData.reduce((acc: number, row: any) => acc + (row.Units_Sold || 0), 0);
   const summary = `Recent Sales Data Summary:\n- Total Revenue (BDT): ${totalRevenue}\n- Total Units Sold: ${totalUnits}\n- Total Records Analyzed: ${rawData.length}\n- Sample Data (first 3 rows): ${JSON.stringify(rawData.slice(0, 3))}`;
 
-  const systemPrompt = language === 'bn'
-    ? 'You are an expert commerce intelligence assistant for SMEs in Bangladesh. Keep it very professional and direct. Provide 3 concise, actionable forecasting insights formatted as bullet points based on the data summary provided. YOU MUST WRITE YOUR ENTIRE RESPONSE IN BENGALI (BANGLA).'
-    : 'You are an expert commerce intelligence assistant for SMEs in Bangladesh. Keep it very professional and direct. Provide 3 concise, actionable forecasting insights formatted as bullet points based on the data summary provided.';
+  const basePrompt = `
+<Role>
+You are an expert Retail Data Analyst specializing in inventory and market trends.
+</Role>
+
+<Task>
+Analyze the provided data and extract 3-5 concise, actionable business insights.
+</Task>
+
+<Constraints>
+- Do NOT return JSON. Return the response in formatted Markdown.
+- Group the insights into clear categories using Markdown headings (e.g., ### Stockout chance).
+- Under each heading, use a numbered list for specific items or insights.
+- Keep each point to a short, punchy phrase or sentence.
+- Provide ONLY the formatted headings and lists. Do not include any introductory greetings, explanations, or concluding remarks.
+${language === 'bn' ? '- YOU MUST WRITE YOUR ENTIRE RESPONSE IN BENGALI (BANGLA).' : ''}
+</Constraints>
+
+<Example_Output>
+### Stockout chance
+1. Pran mango juice
+2. Radhuni masala
+
+### Should expand to
+1. Natore
+2. Madaripur Sadar
+
+### Products performing bad
+1. ACI aerocol
+2. Black mosquito coil
+3. LACME cerum
+</Example_Output>
+`;
 
   try {
     const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
@@ -132,8 +162,8 @@ aiRoutes.post('/forecast-insight', async (c) => {
       body: JSON.stringify({
         model: 'llama-3.1-8b-instant',
         messages: [
-          { role: 'system', content: systemPrompt },
-          { role: 'user', content: `Analyze this sales data and provide insights on stockout risks, trends, or pricing recommendations:\n\n${summary}` },
+          { role: 'system', content: basePrompt },
+          { role: 'user', content: `<Data>\n${summary}\n</Data>` },
         ],
       }),
     });
