@@ -109,18 +109,19 @@ Analyze the provided data and extract 3-5 concise, actionable business insights.
 </Constraints>
 
 <Example_Output>
+(Note: Replace the items below with ACTUAL products/locations from the provided data. Do not hallucinate or use these example names if they don't exist in the data.)
+
 ### Stockout chance
-1. Pran mango juice
-2. Radhuni masala
+1. [Actual product name from data]
+2. [Another product from data]
 
 ### Should expand to
-1. Natore
-2. Madaripur Sadar
+1. [Actual location from data]
+2. [Another location from data]
 
 ### Products performing bad
-1. ACI aerocol
-2. Black mosquito coil
-3. LACME cerum
+1. [Actual product from data]
+2. [Actual product from data]
 </Example_Output>
 `;
   const userMessage = `
