@@ -18,10 +18,25 @@ const app = new Hono();
 app.use('*', cors({
   origin: (origin) => {
     if (!origin) return '*';
-    if (origin.startsWith('http://localhost:') || origin.startsWith('http://127.0.0.1:') || origin === process.env.CORS_ORIGIN) {
+    if (origin.startsWith('http://localhost:') || origin.startsWith('http://127.0.0.1:')) {
       return origin;
     }
-    return process.env.CORS_ORIGIN ?? 'https://ai-buildfest.netlify.app';
+    
+    // Allow any Vercel deployment preview or production domain
+    if (origin.endsWith('.vercel.app')) {
+      return origin;
+    }
+
+    let allowedOrigin = process.env.CORS_ORIGIN ?? 'https://ai-buildfest.netlify.app';
+    if (allowedOrigin.endsWith('/')) {
+      allowedOrigin = allowedOrigin.slice(0, -1);
+    }
+    
+    if (origin === allowedOrigin) {
+      return origin;
+    }
+    
+    return allowedOrigin;
   },
   allowMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowHeaders: ['Content-Type', 'Authorization'],
