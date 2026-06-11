@@ -25,7 +25,6 @@ integrationsRoutes.post('/sync', async (c) => {
         console.log(`Fetching actual data from ${url} using Jina...`);
         const jinaResponse = await fetch(`https://r.jina.ai/${url}`, {
           headers: {
-            // Tell Jina we prefer markdown and no images
             'X-Return-Format': 'markdown'
           }
         });
@@ -37,13 +36,13 @@ integrationsRoutes.post('/sync', async (c) => {
             mockProducts = extractedProducts;
             console.log(`Successfully extracted ${mockProducts.length} products!`);
           } else {
-            console.log('Groq returned 0 products, falling back to mock data.');
+            throw new Error("No products could be found or extracted from this URL.");
           }
         } else {
-          console.error(`Jina request failed with status: ${jinaResponse.status}`);
+          throw new Error(`Website scraping blocked or failed (Status: ${jinaResponse.status})`);
         }
-      } catch (e) {
-        console.error('Error fetching actual data via Jina/Groq, falling back to mock data:', e);
+      } catch (e: any) {
+        throw new Error(`Data extraction failed: ${e.message}`);
       }
     }
 

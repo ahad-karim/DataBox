@@ -207,8 +207,8 @@ Example output:
 export async function extractProductsFromWebsite(markdown: string): Promise<any[]> {
   const systemMessage = 'You are an e-commerce data extraction assistant. You must output ONLY a valid JSON object matching the requested schema. Do not include markdown blocks or extra text.';
   
-  // Truncate markdown to fit within Groq context window if it's too large (~32k tokens, we'll slice to ~25k chars safely)
-  const truncatedMarkdown = markdown.length > 25000 ? markdown.slice(0, 25000) + '... (truncated)' : markdown;
+  // Truncate markdown to fit within Groq context window if it's too large (Llama 8b limit is 8k tokens, slice to ~15k chars safely)
+  const truncatedMarkdown = markdown.length > 15000 ? markdown.slice(0, 15000) + '... (truncated)' : markdown;
 
   const userMessage = `
 Given the following raw markdown content scraped from a website, extract a list of products available for sale or display.
