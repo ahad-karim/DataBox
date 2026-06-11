@@ -204,3 +204,45 @@ Example output:
   return {};
 }
 
+export async function extractProductsFromWebsite(markdown: string): Promise<any[]> {
+  const systemMessage = 'You are an e-commerce data extraction assistant. You must output ONLY a valid JSON object matching the requested schema. Do not include markdown blocks or extra text.';
+  
+  // Truncate markdown to fit within Groq context window if it's too large (~32k tokens, we'll slice to ~25k chars safely)
+  const truncatedMarkdown = markdown.length > 25000 ? markdown.slice(0, 25000) + '... (truncated)' : markdown;
+
+  const userMessage = `
+Given the following raw markdown content scraped from a website, extract a list of products available for sale or display.
+You must return a JSON object with a single "products" key containing an array of objects. 
+If no products are found, return an empty array for "products".
+Each object in the array must contain:
+- "name": string
+- "price": number (the price as a numeric value, strip out currency symbols, default to 0 if unknown)
+- "category": string (guess the category if not explicitly stated, e.g. "Electronics", "Apparel", "Software", "Unknown")
+- "stock": number (guess a random integer between 10 and 200 if stock is not mentioned)
+- "reviewCount": number (extract if present, otherwise guess a random integer between 0 and 500)
+- "rating": number (extract if present, otherwise guess a random float between 3.5 and 5.0)
+
+Website Markdown Content:
+${truncatedMarkdown}
+  `;
+
+  try {
+    const parsed = await queryGroq(systemMessage, userMessage);
+    if (parsed && Array.isArray(parsed.products)) {
+      // Add fake IDs to the products
+      return parsed.products.map((p: any, i: number) => ({
+        id: `ext-prod-${i + 1}-${Math.random().toString(36).substring(2, 7)}`,
+        name: p.name || 'Unknown Product',
+        price: Number(p.price) || 0,
+        category: p.category || 'Uncategorized',
+        stock: Number(p.stock) || Math.floor(Math.random() * 190) + 10,
+        reviewCount: Number(p.reviewCount) || Math.floor(Math.random() * 500),
+        rating: Number(p.rating) || (Math.random() * 1.5 + 3.5).toFixed(1)
+      }));
+    }
+  } catch (error) {
+    console.error('Groq product extraction failed:', error);
+  }
+
+  return [];
+}
