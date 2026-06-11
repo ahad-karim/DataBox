@@ -22,24 +22,63 @@ integrationsRoutes.post('/sync', async (c) => {
 
     if (platform === 'custom' && url) {
       try {
-        console.log(`Fetching actual data from ${url} using Jina...`);
-        const jinaResponse = await fetch(`https://r.jina.ai/${url}`, {
-          headers: {
-            'X-Return-Format': 'markdown'
+        const customToken = body.keys?.bearerToken;
+        console.log(`Attempting direct API fetch from ${url}...`);
+        
+        const headers: Record<string, string> = { 'Accept': 'application/json' };
+        if (customToken) {
+          headers['Authorization'] = customToken.startsWith('Bearer ') ? customToken : `Bearer ${customToken}`;
+        }
+        
+        const directResponse = await fetch(url, { headers });
+        const contentType = directResponse.headers.get('content-type') || '';
+        
+        if (directResponse.ok && contentType.includes('application/json')) {
+          console.log(`Direct API returned JSON. Parsing...`);
+          const jsonData = await directResponse.json();
+          
+          let productsArray: any[] = [];
+          if (Array.isArray(jsonData)) {
+            productsArray = jsonData;
+          } else if (jsonData && typeof jsonData === 'object') {
+             productsArray = jsonData.products || jsonData.items || jsonData.data || Object.values(jsonData).find(v => Array.isArray(v)) || [];
           }
-        });
-        if (jinaResponse.ok) {
-          const markdown = await jinaResponse.text();
-          console.log(`Successfully fetched markdown from Jina (${markdown.length} chars). Extracting products via Groq...`);
-          const extractedProducts = await extractProductsFromWebsite(markdown);
-          if (extractedProducts && extractedProducts.length > 0) {
-            mockProducts = extractedProducts;
-            console.log(`Successfully extracted ${mockProducts.length} products!`);
+          
+          if (productsArray.length > 0) {
+            console.log(`Found ${productsArray.length} items in JSON API.`);
+            mockProducts = productsArray.map((p: any, i: number) => ({
+              id: p.id || p._id || `api-prod-${i}`,
+              name: p.name || p.title || p.productName || 'Unknown Product',
+              price: Number(p.price || p.cost || p.amount) || Math.floor(Math.random() * 5000),
+              category: p.category || p.type || 'Uncategorized',
+              stock: Number(p.stock || p.quantity || p.inventory) || Math.floor(Math.random() * 190) + 10,
+              reviewCount: Number(p.reviewCount || p.reviews) || Math.floor(Math.random() * 500),
+              rating: Number(p.rating || p.score) || Number((Math.random() * 1.5 + 3.5).toFixed(1))
+            }));
           } else {
-            throw new Error("No products could be found or extracted from this URL.");
+            throw new Error("Direct API returned JSON but no products array could be found.");
           }
         } else {
-          throw new Error(`Website scraping blocked or failed (Status: ${jinaResponse.status})`);
+          // Not a JSON API (likely a webpage), fallback to Jina + Groq Web Scraper
+          console.log(`URL did not return JSON (Status: ${directResponse.status}). Falling back to Jina Web Scraper...`);
+          const jinaResponse = await fetch(`https://r.jina.ai/${url}`, {
+            headers: {
+              'X-Return-Format': 'markdown'
+            }
+          });
+          if (jinaResponse.ok) {
+            const markdown = await jinaResponse.text();
+            console.log(`Successfully fetched markdown from Jina (${markdown.length} chars). Extracting products via Groq...`);
+            const extractedProducts = await extractProductsFromWebsite(markdown);
+            if (extractedProducts && extractedProducts.length > 0) {
+              mockProducts = extractedProducts;
+              console.log(`Successfully extracted ${mockProducts.length} products!`);
+            } else {
+              throw new Error("No products could be found or extracted from this URL.");
+            }
+          } else {
+            throw new Error(`Website scraping blocked or failed (Status: ${jinaResponse.status})`);
+          }
         }
       } catch (e: any) {
         throw new Error(`Data extraction failed: ${e.message}`);
