@@ -1,6 +1,5 @@
 import { Hono } from 'hono';
 import { authMiddleware } from '../middleware/auth';
-import { extractProductsFromWebsite } from '../services/groq';
 
 const integrationsRoutes = new Hono<{ Variables: { userId: string } }>();
 
@@ -35,7 +34,7 @@ integrationsRoutes.post('/sync', async (c) => {
         
         if (directResponse.ok && contentType.includes('application/json')) {
           console.log(`Direct API returned JSON. Parsing...`);
-          const jsonData = await directResponse.json();
+          const jsonData: any = await directResponse.json();
           
           let productsArray: any[] = [];
           if (Array.isArray(jsonData)) {
@@ -59,26 +58,7 @@ integrationsRoutes.post('/sync', async (c) => {
             throw new Error("Direct API returned JSON but no products array could be found.");
           }
         } else {
-          // Not a JSON API (likely a webpage), fallback to Jina + Groq Web Scraper
-          console.log(`URL did not return JSON (Status: ${directResponse.status}). Falling back to Jina Web Scraper...`);
-          const jinaResponse = await fetch(`https://r.jina.ai/${url}`, {
-            headers: {
-              'X-Return-Format': 'markdown'
-            }
-          });
-          if (jinaResponse.ok) {
-            const markdown = await jinaResponse.text();
-            console.log(`Successfully fetched markdown from Jina (${markdown.length} chars). Extracting products via Groq...`);
-            const extractedProducts = await extractProductsFromWebsite(markdown);
-            if (extractedProducts && extractedProducts.length > 0) {
-              mockProducts = extractedProducts;
-              console.log(`Successfully extracted ${mockProducts.length} products!`);
-            } else {
-              throw new Error("No products could be found or extracted from this URL.");
-            }
-          } else {
-            throw new Error(`Website scraping blocked or failed (Status: ${jinaResponse.status})`);
-          }
+          throw new Error(`Direct API call failed. Status: ${directResponse.status}. Make sure it returns valid JSON.`);
         }
       } catch (e: any) {
         throw new Error(`Data extraction failed: ${e.message}`);
