@@ -1,12 +1,12 @@
 # DataBox API: SME Intelligence & Demand Forecasting 🚀
 
-The DataBox API is the backend engine powering Bizanolytics, an AI-driven SME intelligence dashboard. Built for speed and spatial intelligence, this architecture handles automated data imputation via CSV uploads, complex PostGIS spatial queries for global market forecasting, and seamless integration with the Google Gemini API for predictive analytics and actionable business insights.
+The DataBox API is the backend engine powering Bizanolytics, an AI-driven SME intelligence dashboard. Built for speed and spatial intelligence, this architecture handles automated data imputation via CSV uploads, complex PostGIS spatial queries for global market forecasting, and seamless integration with the Groq API for predictive analytics and actionable business insights.
 
 ## 🧠 Core Architecture & Key Features
 
 * **High-Performance Runtime:** Built on **Bun** and **Hono** for a blazingly fast, edge-ready API deployed on Vercel Serverless Functions.
 * **Geospatial Intelligence:** Utilizes **Neon Postgres** with the **PostGIS** extension to calculate real-time global demand forecasting, rendering interactive heatmaps and proximity-based market leaderboards.
-* **AI-Powered Demand Synthesis:** Integrates the **Google Gemini API** (`gemini-1.5-flash`) to dynamically analyze historical time-series data, generate future demand horizons, and synthesize raw data into natural language business insights.
+* **AI-Powered Demand Synthesis:** Integrates the **Groq API** to dynamically analyze historical time-series data, generate future demand horizons, and synthesize raw data into natural language business insights.
 * **Automated Data Pipelines:** Features a robust CSV upload and parsing engine (powered by Papaparse) for handling sales, inventory, and expense data with automatic validation and skipped-row reporting.
 * **Bulletproof Type Safety:** End-to-end type safety leveraging **TypeScript**, **Drizzle ORM** for database interactions, and **Zod** for stringent request validation.
 
@@ -21,7 +21,7 @@ The DataBox API is the backend engine powering Bizanolytics, an AI-driven SME in
 | **ORM** | Drizzle ORM |
 | **Database** | Neon Postgres (with PostGIS) |
 | **Auth** | JWT (access + refresh tokens) |
-| **AI / Forecasting** | Google Gemini API |
+| **AI / Forecasting** | Groq API |
 | **Testing** | `bun:test` |
 | **Hosting** | Vercel (Serverless Functions) |
 
@@ -103,8 +103,8 @@ All protected endpoints (`🔒`) require: `Authorization: Bearer <access_token>`
 
 ### 3. Demand Forecasting & AI Integrations
 * **`GET /dashboard/demand-forecast`** 🔒: Time-series data of actual vs. predicted demand.
-* **`POST /dashboard/demand-forecast/generate`** 🔒: Triggers the Gemini API to analyze the last 90 days of `demand_timeseries` and generate a future forecast array.
-* **`POST /ai/insights`** 🔒: Submits a specific dashboard data context to the Gemini API (`gemini-1.5-flash`), returning actionable, natural language insights.
+* **`POST /dashboard/demand-forecast/generate`** 🔒: Triggers the Groq API to analyze the last 90 days of `demand_timeseries` and generate a future forecast array.
+* **`POST /ai/insights`** 🔒: Submits a specific dashboard data context to the Groq API, returning actionable, natural language insights.
 
 ### 4. PostGIS Spatial Markets
 * **`GET /dashboard/market-forecasts`** 🔒: Fetches global forecast data, utilizing PostGIS to map longitudes and latitudes for frontend plotting. Supports regional filtering.
@@ -117,31 +117,6 @@ All protected endpoints (`🔒`) require: `Authorization: Bearer <access_token>`
 
 ---
 
-## 🤖 Gemini API Implementation Details
-
-The backend utilizes `@google/generative-ai` to drive predictive capabilities.
-
-```typescript
-// src/services/gemini.ts
-import { GoogleGenerativeAI } from '@google/generative-ai'
-
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!)
-const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
-
-export async function generateDemandForecast(historicalData: DemandRow[], horizonDays: number) {
-  const prompt = `
-You are a demand forecasting model for an SME dashboard.
-Given the following historical daily demand data (JSON array), generate a ${horizonDays}-day forecast.
-Return ONLY a valid JSON array with no markdown, no explanation.
-Historical data: ${JSON.stringify(historicalData)}
-  `
-  const result = await model.generateContent(prompt)
-  const text = result.response.text().replace(/```json|```/g, '').trim()
-  return JSON.parse(text)
-}
-```
-
----
 
 ## 🚀 Local Development & Testing
 
@@ -151,7 +126,7 @@ Create a `.env` file in the root directory:
 DATABASE_URL=postgresql://user:pass@host/db   # Neon Postgres connection string
 JWT_SECRET=your_jwt_secret
 JWT_REFRESH_SECRET=your_refresh_secret
-GEMINI_API_KEY=AIza...
+GROQ_API_KEY=AIza...
 CORS_ORIGIN=https://ai-buildfest.netlify.app
 ```
 
@@ -168,7 +143,7 @@ bun run dev
 ```
 
 ### Test Coverage (`bun:test`)
-The architecture includes an extensive API integration test suite covering authentication flows, valid/invalid CSV uploads, PostGIS market filtering, and mocked Gemini API responses.
+The architecture includes an extensive API integration test suite covering authentication flows, valid/invalid CSV uploads, PostGIS market filtering, and mocked Groq API responses.
 ```bash
 bun test
 ```
