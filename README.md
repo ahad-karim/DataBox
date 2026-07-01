@@ -1,105 +1,174 @@
-# Bizanolytics API: AI-Powered Commerce Intelligence 🚀[cite: 1]
+# DataBox API: SME Intelligence & Demand Forecasting 🚀
 
-The Bizanolytics API is a robust backend architecture designed to transform messy, raw sales data from Small and Medium Enterprises (SMEs) into actionable business foresight[cite: 1]. Built to power an "AI Command Center," this system handles automated data imputation, dynamic demand forecasting, and complex spatial queries to drive predictive heatmaps and generative action cards[cite: 1].
+The DataBox API is the backend engine powering Bizanolytics, an AI-driven SME intelligence dashboard. Built for speed and spatial intelligence, this architecture handles automated data imputation via CSV uploads, complex PostGIS spatial queries for global market forecasting, and seamless integration with the Google Gemini API for predictive analytics and actionable business insights.
 
-## 🧠 Core Architecture & Key Features[cite: 1]
+## 🧠 Core Architecture & Key Features
 
-* **Automated Data Imputation:** Cleanses and synthesizes raw, fragmented sales data in real-time to ensure forecasting models have reliable inputs[cite: 1].
-* **Geospatial Intelligence:** Utilizes PostGIS to handle spatial database routing, geofencing, and location-based data aggregation for real-time tracking and mapping[cite: 1].
-* **Natural Language Processing Integration:** Structures complex data pipelines to seamlessly feed the frontend natural language search bar, translating user queries into direct database actions[cite: 1].
-* **Predictive Demand Forecasting:** Calculates core KPIs and future demand metrics to dynamically populate frontend heatmaps and action cards[cite: 1].
-* **Hackathon-Ready Demo Seeding:** Includes comprehensive database seeding scripts to instantly spin up a live demo environment with realistic mock data[cite: 1].
-
----
-
-## 🛠 Tech Stack[cite: 1]
-
-| Category | Technology |
-| :--- | :--- |
-| **Language** | TypeScript[cite: 1] |
-| **Database** | PostgreSQL[cite: 1] |
-| **Spatial Extension** | PostGIS[cite: 1] |
-| **API Architecture** | RESTful[cite: 1] |
-
-*(Placeholder: Insert a link to your system architecture diagram here using Eraser.io or Excalidraw)*[cite: 1]
+* **High-Performance Runtime:** Built on **Bun** and **Hono** for a blazingly fast, edge-ready API deployed on Vercel Serverless Functions.
+* **Geospatial Intelligence:** Utilizes **Neon Postgres** with the **PostGIS** extension to calculate real-time global demand forecasting, rendering interactive heatmaps and proximity-based market leaderboards.
+* **AI-Powered Demand Synthesis:** Integrates the **Google Gemini API** (`gemini-1.5-flash`) to dynamically analyze historical time-series data, generate future demand horizons, and synthesize raw data into natural language business insights.
+* **Automated Data Pipelines:** Features a robust CSV upload and parsing engine (powered by Papaparse) for handling sales, inventory, and expense data with automatic validation and skipped-row reporting.
+* **Bulletproof Type Safety:** End-to-end type safety leveraging **TypeScript**, **Drizzle ORM** for database interactions, and **Zod** for stringent request validation.
 
 ---
 
-## 📡 API Reference Matrix[cite: 1]
+## 🛠 Tech Stack & Setup
 
-Below are the core RESTful routes exposed by the Bizanolytics API[cite: 1].
+| Layer | Technology |
+|---|---|
+| **Runtime** | Bun |
+| **Framework** | Hono |
+| **ORM** | Drizzle ORM |
+| **Database** | Neon Postgres (with PostGIS) |
+| **Auth** | JWT (access + refresh tokens) |
+| **AI / Forecasting** | Google Gemini API |
+| **Testing** | `bun:test` |
+| **Hosting** | Vercel (Serverless Functions) |
 
-| Endpoint | Method | Description |
-| :--- | :--- | :--- |
-| `/api/v1/forecast/heatmaps` | `GET` | Retrieves spatial data coordinates and intensity values for frontend heatmaps[cite: 1]. |
-| `/api/v1/data/impute` | `POST` | Uploads raw sales data for automated cleansing and synthesis[cite: 1]. |
-| `/api/v1/search/query` | `POST` | Processes natural language search inputs and returns structured business insights[cite: 1]. |
-| `/api/v1/analytics/kpi` | `GET` | Fetches aggregated Key Performance Indicators for the main dashboard[cite: 1]. |
+### Vercel Deployment
 
----
+This Hono app is deployed as Vercel Serverless Functions. All endpoints are standard HTTP REST (No Redis, No WebSockets).
 
-## 💻 Request & Response Example[cite: 1]
-
-**`GET /api/v1/forecast/heatmaps`**[cite: 1]
-
-**Response:**[cite: 1]
+**`vercel.json`**
 ```json
 {
-  "status": "success",
-  "data": {
-    "region": "Dhaka_Central",
-    "timestamp": "2026-07-01T10:00:00Z",
-    "forecast": [
-      {
-        "coordinates": [90.4125, 23.8103],
-        "demand_index": 87.5,
-        "action_card_trigger": "High Volume Expected"
-      },
-      {
-        "coordinates": [90.4200, 23.8000],
-        "demand_index": 45.2,
-        "action_card_trigger": "Monitor Inventory"
-      }
-    ]
-  }
+  "rewrites": [{ "source": "/api/(.*)", "destination": "/api/index" }]
+}
+```
+
+**Entry point: `api/index.ts`**
+```typescript
+import { handle } from 'hono/vercel'
+import app from '../src/index'
+
+export const config = { runtime: 'edge' } 
+export default handle(app)
+```
+
+---
+
+## 🗄️ Database Schema
+
+Requires the PostGIS extension: `CREATE EXTENSION IF NOT EXISTS postgis;`
+
+### Core Tables
+
+* **`users`**: Manages authentication (bcrypt password hashing, JWTs) and profiles.
+* **`kpi_snapshots`**: Daily performance records (total revenue, active products, forecast accuracy, active users).
+* **`demand_timeseries`**: Tracks actual vs. forecasted demand by day.
+* **`channel_performance`**: Monthly revenue breakdown by channel (Online, Retail, Wholesale, Direct).
+* **`performance_metrics`**: Multi-dimensional radar chart data comparing current vs. previous periods.
+* **`regional_revenue`**: Geographic revenue distribution (North, South, East, West).
+* **`data_pipeline_events`**: Logs data ingestion, transformation, and export statuses.
+* **`raw_data`**: Stores unaggregated data points uploaded via CSV.
+
+### Spatial Table: `market_forecasts`
+Drives the global heatmap and top-markets leaderboard using PostGIS.
+```sql
+CREATE TABLE market_forecasts (
+  id                UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  country           TEXT NOT NULL,
+  region            TEXT NOT NULL,
+  geom              GEOMETRY(Point, 4326),  -- PostGIS point (lon, lat)
+  forecasted_demand NUMERIC(12, 2),
+  current_stock     NUMERIC(12, 2),
+  confidence        NUMERIC(5, 2),
+  growth_rate       NUMERIC(6, 2),
+  period            DATE NOT NULL,
+  created_at        TIMESTAMPTZ DEFAULT now()
+);
+
+CREATE INDEX market_forecasts_geom_idx ON market_forecasts USING GIST(geom);
+```
+
+---
+
+## 📡 Detailed API Reference
+
+Base URL: `https://<your-vercel-app>.vercel.app/api/v1`
+
+All protected endpoints (`🔒`) require: `Authorization: Bearer <access_token>`
+
+### 1. Authentication
+* **`POST /auth/register`**: Accepts `name`, `email`, `password`. Returns user profile + JWTs.
+* **`POST /auth/login`**: Authenticates user and returns JWTs.
+* **`POST /auth/refresh`**: Accepts a refresh token and returns a new access token.
+* **`GET /auth/me`** 🔒: Returns the authenticated user's profile.
+
+### 2. Dashboard KPIs & Metrics
+* **`GET /dashboard/kpis`** 🔒: Fetches aggregate snapshots based on `?period=30d`.
+* **`GET /dashboard/channel-performance`** 🔒: Returns revenue distribution across sales channels for a specific month.
+* **`GET /dashboard/performance-metrics`** 🔒: Radar chart data across dimensions (Sales, Marketing, Support, Logistics, Finance).
+* **`GET /dashboard/regional-revenue`** 🔒: Revenue splits by geographic regions (North, South, East, West).
+
+### 3. Demand Forecasting & AI Integrations
+* **`GET /dashboard/demand-forecast`** 🔒: Time-series data of actual vs. predicted demand.
+* **`POST /dashboard/demand-forecast/generate`** 🔒: Triggers the Gemini API to analyze the last 90 days of `demand_timeseries` and generate a future forecast array.
+* **`POST /ai/insights`** 🔒: Submits a specific dashboard data context to the Gemini API (`gemini-1.5-flash`), returning actionable, natural language insights.
+
+### 4. PostGIS Spatial Markets
+* **`GET /dashboard/market-forecasts`** 🔒: Fetches global forecast data, utilizing PostGIS to map longitudes and latitudes for frontend plotting. Supports regional filtering.
+* **`GET /dashboard/market-forecasts/top`** 🔒: Ranks the most lucrative markets using `ST_DWithin` spatial proximity filters and growth indicators.
+
+### 5. Data Pipeline & CSV Imputation
+* **`GET /dashboard/raw-data`** 🔒: Paginated view of raw uploaded inputs. 
+* **`GET /dashboard/raw-data/export`** 🔒: Triggers a direct CSV download of the raw data view.
+* **`POST /api/v1/data/upload`** 🔒: Accepts `multipart/form-data`. Processes CSVs up to 5MB utilizing Papaparse. Automatically maps data based on the provided `type` parameter (`sales`, `inventory`, `demand`, or `expenses`), skipping and logging invalid rows without failing the entire batch.
+
+---
+
+## 🤖 Gemini API Implementation Details
+
+The backend utilizes `@google/generative-ai` to drive predictive capabilities.
+
+```typescript
+// src/services/gemini.ts
+import { GoogleGenerativeAI } from '@google/generative-ai'
+
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!)
+const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
+
+export async function generateDemandForecast(historicalData: DemandRow[], horizonDays: number) {
+  const prompt = `
+You are a demand forecasting model for an SME dashboard.
+Given the following historical daily demand data (JSON array), generate a ${horizonDays}-day forecast.
+Return ONLY a valid JSON array with no markdown, no explanation.
+Historical data: ${JSON.stringify(historicalData)}
+  `
+  const result = await model.generateContent(prompt)
+  const text = result.response.text().replace(/```json|```/g, '').trim()
+  return JSON.parse(text)
 }
 ```
 
 ---
 
-## 🚀 Getting Started[cite: 1]
+## 🚀 Local Development & Testing
 
-Follow these steps to set up the development environment locally[cite: 1].
-
-### 1. Clone the Repository[cite: 1]
-```bash
-git clone [https://github.com/YourUsername/Bizanolytics.git](https://github.com/YourUsername/Bizanolytics.git)
-cd Bizanolytics
+### Environment Setup
+Create a `.env` file in the root directory:
+```env
+DATABASE_URL=postgresql://user:pass@host/db   # Neon Postgres connection string
+JWT_SECRET=your_jwt_secret
+JWT_REFRESH_SECRET=your_refresh_secret
+GEMINI_API_KEY=AIza...
+CORS_ORIGIN=https://ai-buildfest.netlify.app
 ```
 
-### 2. Environment Variables[cite: 1]
-Create a `.env` file in the root directory[cite: 1]. Use the provided `.env.example` file as a reference for the required connection strings and API keys[cite: 1].
+### Installation & Database Seeding
 ```bash
-cp .env.example .env
+bun install
+bun run db:migrate  # Push Drizzle schema to Neon
+bun run db:seed     # Populate demo user, 90-day time-series, and 29 PostGIS market coordinates
 ```
 
-### 3. Install Dependencies[cite: 1]
+### Start Development Server
 ```bash
-npm install
+bun run dev
 ```
 
-### 4. Database Setup & Seeding[cite: 1]
-Initialize the PostGIS database and run the seeding script to populate the development environment with synthesized data[cite: 1].
+### Test Coverage (`bun:test`)
+The architecture includes an extensive API integration test suite covering authentication flows, valid/invalid CSV uploads, PostGIS market filtering, and mocked Gemini API responses.
 ```bash
-npm run db:setup
-npm run db:seed
+bun test
 ```
-
-### 5. Start the Server[cite: 1]
-```bash
-npm run dev
-```
-
----
-
-**Note to Recruiters/Developers:** A Postman collection for this API is included in the `/docs` folder for frictionless endpoint testing[cite: 1].
